@@ -1,21 +1,21 @@
 <form data-toggle="validator" #loginForm="ngForm" class="col-sm-12" (ngSubmit)="onLogin(loginForm)">
     <div class="credentials-content">
         <div class="form-group">
-            <label for="email" class="control-label">{{ 'auth.emailLabel' | translate }}</label>
+            <label for="email" class="control-label">{{ 'generic.components.auth.emailLabel' | translate }}</label>
             <input #emailInput id="email" type="email" class="form-control" [placeholder]="'auth.emailLabel' | translate" name="email" ngModel required
                    email/>
         </div>
         <div class="form-group">
-            <label for="password" class="control-label">{{ 'auth.passwordLabel' | translate }}</label>
+            <label for="password" class="control-label">{{ 'generic.components.auth.passwordLabel' | translate }}</label>
             <input #passwordInput id="password" type="password" class="form-control" [placeholder]="'auth.passwordLabel' | translate" name="password"
                    ngModel required/>
         </div>
     </div>
-    <button class="btn btn-success" [disabled]="loginForm.invalid || isLoading">{{ 'auth.buttons.login' | translate }}</button>
+    <button class="btn btn-success" [disabled]="loginForm.invalid || isLoading">{{ 'generic.components.auth.buttons.login' | translate }}</button>
     <div id="loading-indicator-container">
         <img *ngIf="isLoading" src="assets/images/atom_loading_spinner.gif" style="width: 60px; height: auto;">
     </div>
     <div class="alert alert-danger" *ngIf="loginError">
-        <strong>{{'generic.error' | translate}} </strong> {{'auth.invalidCredentialsError' | translate }}
+        <strong>{{'generic.label.error' | translate}} </strong> {{'generic.components.auth.invalidCredentialsError' | translate }}
     </div>
 </form>

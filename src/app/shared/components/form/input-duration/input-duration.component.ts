@@ -85,7 +85,7 @@ export class InputDurationComponent implements ControlValueAccessor {
     }
 
     private translateTimeUnits() {
-        this.translateService.get("timeUnits").subscribe(units => {
+        this.translateService.get("generic.components.input-duration.timeUnits").subscribe(units => {
             this.timeUnits = this.timeUnits.map(timeUnit => {
                 timeUnit.label = units[timeUnit.code];
                 return timeUnit;

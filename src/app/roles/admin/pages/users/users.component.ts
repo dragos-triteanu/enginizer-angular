@@ -1,7 +1,7 @@
 import { UserService } from '../../../../core/services/user.service';
 import { TranslateParser, TranslateService } from '@ngx-translate/core';
 import { User } from '@models/user.model';
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TableConfig } from 'app/shared/util/table-config.utils';
 import { UserRole } from '@models/role.model';
 import { ToastsManager } from 'ng2-toastr';
@@ -58,6 +58,9 @@ export class UserListComponent implements OnInit {
             this.isLoadingUsers = false;
             this.setUsers(data.users)
             this.tableConfig.pager.count = data.count;
+        }, error => {
+            this._logger.error('getAll:: API returned error', error);
+            this.isLoadingUsers = false;
         });
     }
 
@@ -77,21 +80,21 @@ export class UserListComponent implements OnInit {
     onUserRoleUpdate(payload) {
         this.isLoadingUsers = true;
         this.userService.updateUserRole(payload.user, payload.role)
-            .subscribe((user) => {
-                this.handleSuccessfulUpdate(payload.user);
-            }, (error) => {
-                this.handleUpdateError(error, payload.user);
-            });
+        .subscribe((user) => {
+            this.handleSuccessfulUpdate(payload.user);
+        }, (error) => {
+            this.handleUpdateError(error, payload.user);
+        });
     }
 
     onUserStatusUpdate(payload) {
         this.isLoadingUsers = true;
         this.userService.updateUserStatus(payload.user, payload.isActive)
-            .subscribe((data) => {
-                this.handleSuccessfulUpdate(payload.user);
-            }, (error) => {
-                this.handleUpdateError(error, payload.user);
-            })
+        .subscribe((data) => {
+            this.handleSuccessfulUpdate(payload.user);
+        }, (error) => {
+            this.handleUpdateError(error, payload.user);
+        })
     }
 
     private getUserRoles() {
@@ -111,19 +114,18 @@ export class UserListComponent implements OnInit {
         });
     }
 
-    // TODO good for demo, bad for general use
     private getUserStates() {
         return [
             {
-                name: this.translate.instant('admin.users.table.filters.status.all'),
+                name: this.translate.instant('roles.admin.users.table.filters.status.all'),
                 value: 'All'
             },
             {
-                name: this.translate.instant('admin.users.table.filters.status.active'),
+                name: this.translate.instant('roles.admin.users.table.filters.status.active'),
                 value: true
             },
             {
-                name: this.translate.instant('admin.users.table.filters.status.disabled'),
+                name: this.translate.instant('roles.admin.users.table.filters.status.disabled'),
                 value: false
             }
         ];

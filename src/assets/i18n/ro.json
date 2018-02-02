@@ -1,2078 +1,299 @@
 {
-    "All": "Toate",
-    "InProgress": "În Desfășurare",
-    "Available": "Valabil",
-    "Unavailable": "Nedisponibil",
-    "NotAvailable": "Non-valabil",
-    "New": "Nou",
-    "Ready": "Pregătit",
-    "Approved": "Aprobat",
-    "WaitingForProcessing": "Așteptare Procesare",
-    "WaitingForApproval": "Așteptare Aprobare",
-    "WaitingForTools": "Așteptare Tool-uri",
-    "WaitingForConfirmation": "Așteptare Confirmare",
-    "Rejected": "Respins",
-    "Pending": "În Așteptare",
-    "Closed": "Închis",
-    "Canceled": "Anulat",
-    "Resolved": "Rezolvat",
-    "Delivered": "Livrat",
-    "Unresolved": "Nerezolvat",
-    "Processed": "Procesat",
-    "InTransport": "În Tranzit",
-    "Confirmed": "Confirmat",
-    "STORED_IN_LIFT": "Depozitat În Lift",
-    "STORED_IN_KARDEX": "Stocat În Kardex",
-    "AT_ATOM_STATION": "La Stația Atom",
-    "IN_TRANSPORT": "În Tranzit",
-    "AT_LINE": "La Linie",
-    "AT_FACILITY": "La Facility",
-    "AT_MECHANICAL": "La Mecanic",
-    "home": {
-        "language": "Limba curentă: Română",
-        "select": "Schimbă limba"
-    },
-    "nav": {
-        "sections": {
-            "usersAndRoles": {
-                "title": "Useri și Roluri",
-                "items": {
-                    "users": "Useri",
-                    "roles": "Roluri"
-                }
-            },
-            "infrastructure": {
-                "title": "Infrastructură",
-                "items": {
-                    "plants": "Fabrici",
-                    "lines": "Linii",
-                    "equipment": "Echipamente",
-                    "partNumber": "Part Numbere"
-                }
-            },
-            "tools": {
-                "title": "Tool-uri",
-                "items": {
-                    "tools": "Tool-url",
-                    "tool-history": "Istoric Tool-uri"
-                }
-            },
-            "issues": {
-                "title": "Probleme",
-                "items": {
-                    "viewIssues": "Probleme",
-                    "signalAnIssue": "Semnalare Problemă",
-                    "pendingIssues": "Probleme în așteptare"
-                }
-            },
-            "tickets": {
-                "title": "Tichete",
-                "items": {
-                    "manageTickets": "Gestiune Tichete"
-                }
-            },
-            "tool-requests":{
-                "title": "Cereri Tool-uri",
-                "items": {
-                    "requestTools": "Cerere Tool",
-                    "pendingToolRequests": "Cereri în așteptare"
-                }
-            },
-            "tool-returns": {
-                "title": "Retur Tool-uri",
-                "items": {
-                    "returnTools": "Retur Tool-uri",
-                    "pendingToolReturns": "Retururi în așteptare"
-                }
-            },
-            "approve-tool-requests": {
-                "title": "Gestiune cereri Tool-uri",
-                "items": {
-                    "approveLineRequests": "Aprobare cereri [Linii]",
-                    "approveFacilityRequests": "Aprobare cereri [Facilities]"
-                }
-            },
-            "approve-tool-returns": {
-                "title": "Gestiune retururi Tool-uri",
-                "items": {
-                    "approveLineRequests": "Aprobare retururi [Linii]",
-                    "approveFacilityRequests": "Aprobare retururi [Facilities]"
-                }
-            },
-            "process-tool-requests": {
-                "title": "Procesare cereri Tool-uri",
-                "items": {
-                    "processLines": "Procesare cereri [Linii]",
-                    "processFacilities": "Procesare cereri [Facilities]"
-                }
-            },
-            "process-tool-returns": {
-                "title": "Procesare retururi Tool-uri",
-                "items": {
-                    "processLines": "Procesare retururi [Linii]",
-                    "processFacilities": "Procesare retururi [Facilities]"
-                }
-            },
-            "process-ticket-all": {
-                "title": "Procesare tichete",
-                "items":{
-                    "processAll": "Toate"
-                }
-            },
-            "process-ticket-categories": {
-                "title": "Categorii"
-            }
-        }
-    },
     "generic": {
-        "error": "EROARE",
-        "success": "SUCCES",
-        "warning": "ATENȚIE",
-        "info": "INFO",
-        "all": "Toate",
-        "pageNotFound": "Pagina nu a fost gasită",
-        "yes": "DA",
-        "no": "NU",
-        "dropdown": {
-            "emptyMessage": "Selectați"
+        "nav": {
+            "sections": {
+                "usersAndRoles": {
+                    "title": "Useri și Roluri",
+                    "items": {
+                        "users": "Useri",
+                        "roles": "Roluri"
+                    }
+                },
+                "demo": {
+                    "title": "Demo"
+                }
+            }
         },
-        "tickets": {
-            "selectTools": "Selectați Tool-uri",
-            "ticketDetails": "Descriere tichet"
+        "components": {
+            "input-duration": {
+                "timeUnits": {
+                    "minutes": "Minute",
+                    "hours": "Ore",
+                    "days": "Secunde"
+                }
+            },
+            "date-picker": {
+                "labelMonthNext": "Luna viitoare",
+                "labelMonthPrev": "Luna trecută",
+                "labelMonthSelect": "Selectează luna",
+                "labelYearSelect": "Selectează anul",
+                "monthsFull": [
+                    "Ianuari",
+                    "Februarie",
+                    "Martie",
+                    "Aprilie",
+                    "Mai",
+                    "Iunie",
+                    "Iulie",
+                    "August",
+                    "Septembrie",
+                    "Octombrie",
+                    "Noiembrie",
+                    "Decembrie"
+                ],
+                "monthsShort": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "Mar",
+                    "Jun",
+                    "Jul",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ],
+                "weekdaysFull": [
+                    "Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "weekdaysShort": [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat"
+                ],
+                "today": "Today",
+                "clear": "Clear",
+                "close": "Ok"
+            },
+            "form": {
+                "validations": {
+                    "required": "This field is required",
+                    "max": "Value must be less than {{max}}",
+                    "roleNameRequired": "The role name is required",
+                    "lineNameRequired": "The line name is required",
+                    "lineDescriptionRequired": "The line description is required",
+                    "plantNameRequired": "The plant name is required",
+                    "plantDescriptionRequired": "The plant description is required",
+                    "plantRequired": "The plant is required",
+                    "invalidDateInterval": "The start date must be earlier than the end date",
+                    "atLeastOneTool": "At least one tool must be selected",
+                    "allToolsInspected": "All returned tools must be inspected",
+                    "allIssuesSolved": "All tools issues must be solved"
+                }
+            },
+            "auth": {
+                "buttons": {
+                    "login": "Login",
+                    "badge": "Folosește badge",
+                    "credentials": "Utilizează credențiale"
+                },
+                "message": {
+                    "existingBadgeId": "Badge deja existent în sistem"
+                },
+                "scanBadge": "Autentificare cu badge",
+                "enterCredentials": "Login cu badge",
+                "invalidCredentialsError": "Credențiale invalide",
+                "scanSwitch": "Authentificare cu badge angajat",
+                "credentialsSwitch": "Autentificare cu credențiale",
+                "emailLabel": "Email",
+                "passwordLabel": "Parolă",
+                "authenticationInfo": "Info Autentificare",
+                "missingRole": "Nu aveți rol asignat. Contactați admin.",
+                "badgeNotActive": "Badge-ul nu este activat.Va rugăm scanați-l."
+            },
+            "home": {
+                "language": "Limba: Română",
+                "select": "Schimbă limba",
+                "welcome": "Bun venit la ngnizr"
+            },
+            "scanner": {
+                "focused": "Focusat",
+                "notFocused": "Ne-focusat"
+            },
+            "table": {
+                "totalRecords": "Total",
+                "columns": {
+                    "index": "Id"
+                }
+            },
+            "report-download": {
+                "startDatePicker": {
+                    "placeholder": "Selectează dată start",
+                    "label": "Dată start"
+                },
+                "endDatePicker": {
+                    "placeholder": "Selectează data final",
+                    "label": "Dată final"
+                },
+                "downloadButton": "Descarcă"
+            }
         },
         "buttons": {
             "add": "Adaugă",
-            "edit": "Modifică",
-            "login": "Autentificare",
-            "logout": "Deconectare",
-            "activate": "Activează",
+            "edit": "Editează",
+            "login": "Login",
+            "logout": "Logout",
             "disable": "Dezactivează",
             "save": "Salvează",
-            "next": "Înainte",
+            "next": "Următorul",
             "back": "Înapoi",
             "cancel": "Anulează",
-            "delete": "Șterge",
-            "update": "Actualizează",
-            "create": "Creează",
-            "close": "Închide",
-            "skip": "Sari",
-            "process": "Procesează",
-            "resume": "Continuă Procesarea",
             "confirm": "Confirmă",
-            "resumeProcessing": "Continuă Procesare",
-            "reject": "Respinge",
-            "reset": "Resetează",
-            "approve": "Aprobă",
-            "promoteToTicket": "Ridică tichet",
-            "load": "Încarcă",
-            "unload": "Descarcă",
-            "finishOperation": "Stop",
-            "startOperation": "Start",
-            "requestTools": "Comanada Tool-uri"
+            "delete": "Șterge",
+            "update": "Modifiă",
+            "create": "Crează",
+            "close": "Închide",
+            "skip": "Sari peste"
         },
         "statuses": {
             "all": "Toate",
-            "inProgress": "În Desfășurare",
-            "available": "Valabil",
-            "unavailable": "Nedisponibil",
-            "notAvailable": "Non-valabil",
-            "new": "Nou",
-            "ready": "Pregătit",
-            "inTransport": "În Tranzit",
-            "approved": "Aprobat",
-            "waitingForProcessing": "Așteptare Procesare",
-            "rejected": "Respins",
-            "pending": "În Așteptare",
-            "closed": "Închis",
-            "canceled": "Anulat",
-            "storedInLift": "Depozitat În Lift",
-            "atAtomStation": "La Stația Atom",
-            "atLine": "La Linie",
-            "atFacility": "La Facility",
-            "waitingForApproval": "Așteptare Aprobare",
-            "waitingForTools": "Așteptare Tool-uri",
-            "atMechanical": "La Mecanic"
+            "inProgress": "In Progress"
         },
-        "scanner": {
-            "notFocused": "Ecanul nu este focusat! Vă rugăm să dați click pe ecran",
-            "focused": "În așteptarea inputului de la scanner"
+        "label": {
+            "error": "Error"
         },
-        "table": {
-            "columns": {
-                "action": "Acțiune"
-            }
-        }
-    },
-    "table": {
-        "filter": "Cauta",
-        "groupFilter": "Filtrează după",
-        "pagination": {
-            "from": "din totalul de"
-        },
-        "totalPages": "Total pagini:",
-        "totalRecords": "Total înregistrări:",
-        "columns": {
-            "index": "#"
-        }
-    },
-    "tree": {
-        "toolSelect": {
-            "title": "Selectează Tool-uri",
-            "emptyMessage": "Folosește scanner-ul pentru a scana Tool-uri",
-            "toasts": {
-                "alreadyScanned": "Tool-ul {{uid}} a fost deja scanat!",
-                "notRequired": "Tool-ul '{{uid}}' nu face parte din această cerere de retur!"
-            }
-        }
-    },
-    "toasts": {
-        "scanner-error": "Eroare în timpul scanării, vă rugăm încercați din nou",
-        "upcoming-feature": "Această opțiune va fi adăugată în curând"
-    },
-    "confirmModal": {
-        "reason": "Precizați motivul prioritizării comenzii"
-    },
-    "timeUnits": {
-        "minutes": "Minute",
-        "hours": "Ore",
-        "days": "Zile"
-    },
-    "datepicker": {
-        "labelMonthNext": "Luna viitoare",
-        "labelMonthPrev": "Luna trecuta",
-        "labelMonthSelect": "Alege luna",
-        "labelYearSelect": "Alege an",
-        "monthsFull": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "March",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ],
-        "monthsShort": [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "Mar",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec"
-        ],
-        "weekdaysFull": [
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-        ],
-        "weekdaysShort": [
-            "Sun",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thu",
-            "Fri",
-            "Sat"
-        ],
-        "today": "Azi",
-        "clear": "Sterge",
-        "close": "Ok"
-    },
-    "reportDownloadForm": {
-        "startDatePicker": {
-            "placeholder": "Introduceți dată început",
-            "label": "Dată început"
-        },
-        "endDatePicker": {
-            "placeholder": "Introduceți dată sfârșit",
-            "label": "Dată sfârșit"
-        },
-        "downloadButton": "Descărcați .csv",
         "toasts": {
-            "noEntriesError": "Nu s-au găsit înregistrări. Încercați să filtrați după alte criterii."
-        }
-    },
-    "form": {
-        "validations": {
-            "required": "Câmpul este obligatoriu",
-            "roleNameRequired": "Numele rolului este obligatoriu",
-            "lineNameRequired": "Numele liniei este obligatoriu",
-            "lineDescriptionRequired": "Descrierea liniei este obligatorie",
-            "plantNameRequired": "Numele fabricii este obligatoriu",
-            "plantDescriptionRequired": "Descrierea fabricii este obligatorie",
-            "plantRequired": "Fabrica este obligatorie",
-            "invalidDateInterval": "Data de început trebuie să fie înaintea celei de sfârșit",
-            "atLeastOneTool": "Cel puțin un tool trebuie selectat",
-            "allToolsInspected": "Toate Tool-urile returnate trebuiesc verificate",
-            "allIssuesSolved": "Toate problemele Tool-urilor trebuiesc rezolvate"
-        }
-    },
-    "auth": {
-        "buttons": {
-            "switch": "Login utilizând badge-ul",
-            "login": "Login",
-            "badge": "Card de access",
-            "credentials": "Credentiale Bosch"
         },
-        "message": {
-            "existingBoschId": "Cardul este deja folosit. Vă rugăm folositi un card neinregistrat."
-        },
-        "scanBadge": "Scanați cardul de acces",
-        "enterCredentials": "Introduceți credențialele Bosch",
-        "invalidCredentialsError": "Credențiale invalide",
-        "scanSwitch": "Folosiți cardul de acces",
-        "credentialsSwitch": "Folosiți detaliile contului",
-        "emailLabel": "Email",
-        "passwordLabel": "Parolă",
-        "missingBoschId": "Cardul de acces nu este activat.Vă rugăm scanați pentru activare.",
-        "authenticationInfo": "Informații de autentificare",
-        "missingRole": "Nu aveți nici un rol asignat.Vă rugăm contactați administratorul"
+        "messages": {
+            "correlationId": "If you don't manage to fix the problem,contact the administrator and use this code {{correlationId}}",
+            "401": {
+                "missingBadgeId": "Badge Id is missing",
+                "invalidBadgeId": "Badge Id is invalid",
+                "user": {
+                    "notAuthorized": "The user is not authorized."
+                }
+            },
+            "400": {
+                "role": {
+                    "create": "Role cannot be created. Please make sure that all the properties are filled in with correct values.",
+                    "update": "Role cannot be updated. Please make sure that all the properties are filled in with correct values."
+                },
+                "user": {
+                    "update": "User cannot be updated. Please make sure that all the properties are filled in with correct values.",
+                    "setBadgeId": "The badge id cannot be assigned to the current user.Please make sure that you are using a valid code"
+                }
+            },
+            "403": {
+                "role": {
+                    "inUse": "The selected Role cannot be deleted because it is assigned to at least one user."
+                }
+            },
+            "404": {
+                "user": "User not found."
+            },
+            "409": {
+                "role": {
+                    "nameUsed": "The name is already used for other Role. Please use a different name."
+                }
+            }
+        }
     },
     "roles": {
-        "ADMIN": "Admin",
-        "LINE_SETTER": "Line setter",
-        "MILKRUN_OPERATOR": "Milkrun operator",
-        "KARDEX_OPERATOR": "Kardex operator",
-        "ATOM_OPERATOR": "Atom operator",
-        "SYSTEM_SERVICE":"Operator system"
-    },
-    "permissions": {
-        "MANAGE_USERS": "Management Utilizatori",
-        "VIEW_USERS": "Vizualizare Utilizatori",
-        "MANAGE_ROLES": "Management Roluri",
-        "VIEW_ROLES": "Vizualizare Roluri",
-        "MANAGE_PLANTS": "Management Fabrici",
-        "VIEW_PLANTS": "Vizualizare Fabrici",
-        "MANAGE_EQUIPMENT": "Management Echipamente",
-        "VIEW_EQUIPMENT": "Vizualizare Echipamente",
-        "MANAGE_TICKETS": "Management Tickets",
-        "VIEW_TICKETS": "Vizualizare Tickets",
-        "MANAGE_PARTNUMBERS": "Management Part Numbers",
-        "VIEW_PARTNUMBERS": "Vizualizare Part Numbers",
-        "MANAGE_LINES": "Management Linii",
-        "VIEW_LINES": "Vizualizare Linii",
-        "MANAGE_TOOLS": "Management Tool-uri",
-        "VIEW_TOOLS": "Vizualizare Tool-uri"
-    },
-    "admin": {
-        "users": {
-            "title": "Management Utilizatori",
-            "table": {
-                "columns": {
-                    "badge": "Număr Ecuson",
-                    "email": "Email",
-                    "fullMame": "Nume",
-                    "role": "Rol",
-                    "status": "Status"
-                },
-                "rows": {
-                    "active": "Activ",
-                    "disabled": "Dezactivat",
-                    "updateRole": {
-                        "label": "Asignează rol nou",
-                        "emptyText": "Alege rol nou "
-                    },
-                    "updateStatus": {
-                        "topLabel": "Schimbă status",
-                        "onLabel": "Activ",
-                        "offLabel": "Dezactivat"
-                    }
-                },
-                "filters": {
-                    "byRole": "Filtrare după Rol",
-                    "status": {
-                        "label": "Filtrare dupa status",
-                        "all": "Toate",
-                        "active": "Activ",
-                        "disabled": "Dezactivat"
-                    }
-                }
-            },
-            "toasts": {
-                "updated": "Utilizatorul '{{user}}' a fost modificat cu succes!",
-                "error": "Nu s-a putut modifica utilizatorul '{{user}}'! "
-            },
-            "user": {
-                "all": "All",
-                "active": "Activ",
-                "disabled": "Dezactivat"
-            }
-        },
-        "lines": {
-            "table": {
-                "title": "Management Linii",
-                "columns": {
-                    "lineName": "Nume linie",
-                    "lineDescription": "Descriere"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Căutați după nume",
-                        "description": "Căutați după descriere"
-                    }
-                }
-            },
-            "buttons": {
-                "addLine": "Adaugați linie"
-            },
-            "create-modal": {
-                "title": "Adaugați linie",
-                "name-input": {
-                    "label": "Nume linie",
-                    "placeholder": "Introduceți nume linie"
-                },
-                "description-input": {
-                    "label": "Descriere linie",
-                    "placeholder": "Introduceți descriere linie"
-                },
-                "plant-input": {
-                    "label": "Fabrică",
-                    "placeholder": "Alege o fabrică"
-                },
-                "mesId-input": {
-                    "label": "MES Id",
-                    "placeholder": "Introduceți MES Id"
-                },
-                "mesStationIs-input": {
-                    "label": "MES Station Id",
-                    "placeholder": "Introduceți MES Station Id"
-                },
-                "pick-list": {
-                    "leftHeader": "Echipamente disponibile",
-                    "rightHeader": "Echipamente selectate"
-                },
-                "alert": {
-                    "message": "Faceți drag și drop la echipamentele din stânga în caseta din dreapta pentru a le asigna",
-                    "error": {
-                        "line-name-required": "Numele liniei este obligatoriu",
-                        "line-description-required": "Descrierea liniei este obligatorie",
-                        "line-plant-required": "Fabrica asignată liniei este obligatorie"
-                    }
-                },
-                "button": {
-                    "create": "Creați",
-                    "update": "Modificați",
-                    "delete": "Ștergeți"
-                }
-            },
-            "update-modal": {
-                "title": "Modificați linie"
-            },
-            "toasts": {
-                "created": "Linia '{{lineName}}' creată cu success!",
-                "updated": "Linia '{{lineName}}' modificată!",
-                "deleted": "Linia '{{lineName}}' ștearsă!"
-            }
-        },
-        "plants": {
-            "table": {
-                "title": "Management Fabrici",
-                "columns": {
-                    "plantName": "Nume Fabrică",
-                    "plantDescription": "Descriere"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Căutați după nume",
-                        "description": "Căutați după descriere"
-                    }
-                }
-            },
-            "buttons": {
-                "addPlant": "Adaugați Fabrică"
-            },
-            "create-modal": {
-                "title": "Adaugați Fabrică",
-                "name-input": {
-                    "label": "Nume Fabrică",
-                    "placeholder": "Introduceți nume fabrică"
-                },
-                "description-input": {
-                    "label": "Descriere Fabrică",
-                    "placeholder": "Introduceți descriere fabrică"
-                },
-                "pick-list": {
-                    "leftHeader": "Linii disponibile",
-                    "rightHeader": "Linii selectate"
-                },
-                "alert": {
-                    "message": "Faceți Drag și drop la liniile din stânga în caseta din dreapta pentru a le asigna",
-                    "error": {
-                        "plant-name-required": "Numele fabricii este obligatoriu",
-                        "plant-description-required": "Descrierea fabricii este obligatorie"
-                    }
-                },
-                "button": {
-                    "create": "Creați",
-                    "update": "Modificați",
-                    "delete": "Ștergeți"
-                }
-            },
-            "update-modal": {
-                "title": "Modificați Fabrică"
-            },
-            "toasts": {
-                "created": "Fabrica '{{plantName}}' creată cu success!",
-                "updated": "Fabrica '{{plantName}}' modificată!",
-                "deleted": "Fabrica '{{plantName}}' ștearsă!"
-            }
-        },
-        "equipment": {
-            "table": {
-                "title": "Gestionare Echipament",
-                "columns": {
-                    "name": "Nume echipament",
-                    "line": "Linie curentă",
-                    "MESId": "MES ID/Layout Number"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Căutați după nume",
-                        "line": "Căutați după numele liniei",
-                        "MESId": "Căutați după MES ID/Layout Number"
-                    }
-                }
-            },
-            "buttons": {
-                "addEquipment": "Adăugați echipament",
-                "manageProcessTypes": "Gestionați tipuri de procese"
-            },
-            "create-modal": {
-                "title": "Adăugați echipament",
-                "name-input": {
-                    "label": "Nume echipament",
-                    "placeholder": "Introduceți nume echipament"
-                },
-                "description-input": {
-                    "label": "Descriere echipament",
-                    "placeholder": "Introduceți descriere echipament"
-                },
-                "process-types-input": {
-                    "leftHeader": "Tipuri de procese disponibile",
-                    "rightHeader": "Tipuri de procese selectate"
-                },
-                "line-input": {
-                    "label": "Linie",
-                    "placeholder": "Alegeți o linie"
-                },
-                "mes-id-input": {
-                    "label": "MES ID/Layout Number",
-                    "placeholder": "Introduceți MES ID/Layout Number echipament"
-                },
-                "button": {
-                    "create": "Creați",
-                    "update": "Modificați",
-                    "delete": "Ștergeți",
-                    "cancel": "Anulați"
-                }
-            },
-            "update-modal": {
-                "title": "Modificați echipament"
-            },
-            "toasts": {
-                "created": "Echipamentul '{{equipmentName}}' creat cu success!",
-                "updated": "Echipamentul '{{equipmentName}}' modificat!",
-                "deleted": "Echipamentul '{{equipmentName}}' șters!"
-            },
-            "processTypes": {
+        "admin": {
+            "users": {
+                "title": "Gestiune Useri",
                 "table": {
-                    "title": "Gestionare Tipuri de Procese",
                     "columns": {
-                        "name": "Nume proces",
-                        "description": "Descriere proces",
-                        "inUse": "În folosință"
+                        "badge": "Număr badge",
+                        "email": "Email",
+                        "fullMame": "Nume",
+                        "role": "Rol",
+                        "status": "Status"
+                    },
+                    "rows": {
+                        "active": "Activ",
+                        "disabled": "Dezactivat",
+                        "updateRole": {
+                            "label": "Asignează rol",
+                            "emptyText": "Alege rol"
+                        },
+                        "updateStatus": {
+                            "topLabel": "Schimbă status",
+                            "onLabel": "Activ",
+                            "offLabel": "Dezactivat"
+                        }
+                    },
+                    "filters": {
+                        "byRole": "Filtrare după rol",
+                        "status": {
+                            "label": "Filtrare după status",
+                            "all": "Toate",
+                            "active": "Activ",
+                            "disabled": "Dezactivat"
+                        }
+                    }
+                },
+                "toasts": {
+                    "updated": "Utilizatoru '{{user}}' modificat cu success",
+                    "error": "Nu s-a putut modifica utilizatorul {{user}}"
+                }
+            },
+            "roles": {
+                "table": {
+                    "title": "Getsiune Roluri",
+                    "columns": {
+                        "roleName": "Nume rol"
                     },
                     "filter": {
                         "placeholder": {
-                            "name": "Căutați după nume",
-                            "description": "Căutați după descriere",
-                            "inUse": "Căutați după stare"
+                            "name": "Filtrează după nume"
                         }
-                    },
-                    "status": {
-                        "inUse": "DA",
-                        "notInUse": "NU"
                     }
                 },
                 "buttons": {
-                    "backToEquipment": "Înapoi la echipamente",
-                    "addProcessType": "Adăugați tip de proces"
+                    "addRole": "Creare rol"
                 },
                 "create-modal": {
-                    "title": "Adăugați Tip de Proces",
+                    "title": "Creare rol nou",
                     "name-input": {
-                        "label": "Nume proces",
-                        "placeholder": "Introduceți nume proces"
+                        "label": "Nume rol",
+                        "placeholder": "Inserați un nume"
                     },
-                    "description-input": {
-                        "label": "Descriere proces",
-                        "placeholder": "Introduceți descriere proces"
-                    },
-                    "button": {
-                        "create": "Creați",
-                        "update": "Modificați",
-                        "delete": "Ștergeți",
-                        "cancel": "Anulați"
-                    }
-                },
-                "update-modal": {
-                    "title": "Modificați proces"
-                },
-                "toasts": {
-                    "created": "Procesul '{{processTypeName}}' creat cu success!",
-                    "updated": "Procesul '{{processTypeName}}' modificat!",
-                    "deleted": "Procesul '{{processTypeName}}' șters!"
-                }
-            }
-        },
-        "tickets": {
-            "table": {
-                "title": "Gestionare Tichete",
-                "columns": {
-                    "id": "ID tichet",
-                    "status": "Statut",
-                    "createdBy": "Creat de",
-                    "createdDate": "Data creării",
-                    "startDate": "Dată început",
-                    "endDate": "Dată sfârșit",
-                    "isAutomatic": "Automatizat"
-                },
-                "filter": {
-                    "placeholder": {
-                        "id": "Căutați după ID tichet",
-                        "status": "Căutați după status",
-                        "createdBy": "Căutați după utilizator",
-                        "createdDate": "Căutați după dată",
-                        "startDate": "Căutați după dată",
-                        "endDate": "Căutați după dată",
-                        "isAutomatic": "Căutați după statut"
-                    }
-                },
-                "isAutomatic": {
-                    "true": "DA",
-                    "false": "NU"
-                }
-            },
-            "buttons": {
-                "addTicket": "Adăugați tichet",
-                "manageOperationTypes": "Tipuri de operații"
-            },
-            "create-modal": {
-                "title": "Adăugați tichet",
-                "description-input": {
-                    "label": "Descriere tichet",
-                    "placeholder": "Introduceți descriere tichet"
-                },
-                "tools-input": {
-                    "leftHeader": "Tool-uri disponibile",
-                    "rightHeader": "Tool-uri selectate"
-                },
-                "operation-types-input": {
-                    "leftHeader": "Tipuri de operații disponibile",
-                    "rightHeader": "Tipuri de operații selectate"
-                },
-                "selectedTool": "Tool selectat",
-                "button": {
-                    "create": "Creați",
-                    "close": "Închideți",
-                    "cancel": "Anulați"
-                }
-            },
-            "details-modal": {
-                "title": "Detalii Tichet",
-                "panel": {
-                    "selectedTools": "Tool-urile tichetului",
-                    "currentOperation": "Operația curentă",
-                    "status": "Status",
-                    "createdDate": "Data creării",
-                    "createdBy": "Creat de",
-                    "ticketStartDate": "Data start tichet",
-                    "ticketEndDate": "Data finalizare ticket",
-                    "description": "Descriere",
-                    "issue": "Problemă",
-                    "operations": "Operații",
-                    "accordion": {
-                        "title": "Operații",
-                        "startDate": "Data start",
-                        "endDate": "Data final",
-                        "status": "Status operație",
-                        "assignedTo": "Asignat la",
-                        "comment": "Comentariu",
-                        "instructionFile":"Fișier cu instrucțiuni",
-                        "description":"Descriere",
-                        "document": "Document"
-                    }
-                }
-            },
-            "toasts": {
-                "created": "Tichetul '{{ticketId}}' creat cu success!",
-                "closed": "Tichetul '{{ticketId}}' închis cu success!"
-            },
-            "operation-types": {
-                "table": {
-                    "title": "Tipuri de operații",
-                    "columns": {
-                        "name": "Nume",
-                        "priority": "Prioritate"
-                    },
-                    "filter": {
-                        "name": "după Nume",
-                        "priority": "după Prioritate"
-                    }
-                },
-                "buttons": {
-                    "createOperationTypes": "Crează tip de operație"
-                },
-                "create-modal": {
-                    "title": "Crează tip de operație",
-                    "name-input": {
-                        "placeholder": "Inserați un nume",
-                        "label": "Nume operație"
-                    },
-                    "priority-input": {
-                        "placeholder": "Inserați o prioritate",
-                        "label": "Prioritate operație"
-                    }
-                },
-                "update-modal": {
-                    "title": "Modifică tip operație"
-                },
-                "toasts": {
-                    "created": "Operația '{{operationTypeName}}' a fost creată!",
-                    "updated": "Operația '{{operationTypeName}}' a fost modificată!",
-                    "deleted": "Operația '{{operationTypeName}}' a fost ștearsă!"
-                }
-            }
-        },
-        "roles": {
-            "table": {
-                "title": "Management Roluri",
-                "columns": {
-                    "roleName": "Nume Rol"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Căutați după nume"
-                    }
-                }
-            },
-            "buttons": {
-                "addRole": "Adaugați Rol"
-            },
-            "create-modal": {
-                "title": "Adaugați Rol",
-                "name-input": {
-                    "label": "Nume Rol",
-                    "placeholder": "Introduceți numele rolului"
-                },
-                "pick-list": {
-                    "leftHeader": "Permisiuni disponibile",
-                    "rightHeader": "Permisiuni selectate"
-                },
-                "alert": {
-                    "message": "Faceți Drag și drop la permisiunile din stânga în caseta din dreapta pentru a le asigna",
-                    "error": {
-                        "role-name-required": "Numele rolului este obligatoriu"
-                    }
-                },
-                "button": {
-                    "create": "Creați",
-                    "update": "Modificați",
-                    "delete": "Ștergeți"
-                }
-            },
-            "update-modal": {
-                "title": "Modificați Rol",
-                "oob": {
-                    "warning": "Acesta este un rol predefinit și nu poate fi modificat!"
-                }
-            },
-            "toasts": {
-                "created": "Rolul '{{roleName}}' creat cu success!",
-                "updated": "Rolul '{{roleName}}' modificat!",
-                "deleted": "Rolul '{{roleName}}' șters!"
-            },
-            "oobRoles": {
-                "ADMIN": "Administrator",
-                "LINE_SETTER": "Line Setter",
-                "MILKRUN_OPERATOR": "Operator Milkrun",
-                "ATOM_OPERATOR": "Operator Atom",
-                "LIFT_OPERATOR": "Operator Lift",
-                "SERVICE_OPERATOR": "Operator Service"
-            }
-        },
-        "tool-history": {
-            "header": {
-                "status": "Stare",
-                "lifecycle": "Durată de viață"
-            },
-            "status-history-table": {
-                "title": "Istoric stare Tool-uri",
-                "columns": {
-                    "toolUid": "UID Tool",
-                    "toolName": "Nume Tool",
-                    "updatedBy": "Actualizat de",
-                    "toolStatus": "Stare",
-                    "toolStance": "Detalii stare",
-                    "date": "Dată / Timp"
-                },
-                "filter": {
-                    "placeholder": {
-                        "toolUid": "Căutați după UID",
-                        "toolName": "Căutați după nume",
-                        "updatedBy": "Căutați după utilizator",
-                        "toolStatus": "Căutați după status",
-                        "date": "Căutați după Dată / Timp"
-                    }
-                }
-            },
-            "lifecycle-history-table": {
-                "title": "Istoric durată de viață Tool-uri",
-                "columns": {
-                    "toolUid": "UID Tool",
-                    "toolName": "Nume Tool",
-                    "line": "Linie",
-                    "partNumber": "Part number",
-                    "CPCRPC": "CPC/RPC",
-                    "CPTRPT": "CPT/RPT",
-                    "TPCSPC": "TPC/SPC",
-                    "TPTSPT": "TPT/SPT",
-                    "date": "Dată / Timp"
-                },
-                "filter": {
-                    "placeholder": {
-                        "toolUid": "Căutați după UID",
-                        "toolName": "Căutați după nume",
-                        "line": "Căutați după linie",
-                        "partNumber": "Căutați după part number",
-                        "CPCRPC": "Căutați după CPC/RPC",
-                        "CPTRPT": "Căutați după CPT/RPT",
-                        "TPCSPC": "Căutați după TPC/SPC",
-                        "TPTSPT": "Căutați după TPT/SPT",
-                        "date": "Căutați după Dată / Timp"
-                    }
-                },
-                "tooltips": {
-                    "CPCRPC": "Cicluri de producție curente / Cicluri de producție în revizie",
-                    "CPTRPT": "Timp de producție curent /  Timp de producție în revizie",
-                    "TPCSPC": "Cicluri de producție totale / Cicluri de producție respinse",
-                    "TPTSPT": "Timp de producție total / Timp de producție respins"
-                }
-            }
-        },
-        "partNumbers": {
-            "table": {
-                "title": "Gestionare Part Numbers",
-                "columns": {
-                    "name": "Numbe PartNumber",
-                    "SAPFamily": "Grupul Familiei în SAP",
-                    "SAPGroup": "Grupul Produsului în SAP"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Cautati dupa nume",
-                        "SAPFamily": "Cautati dupa grupul familiei în SAP",
-                        "SAPGroup": "Cautati dupa grupul produsului în SAP"
-                    }
-                }
-            },
-            "buttons": {
-                "addPartNumbers": "Adauga part number"
-            },
-            "toasts": {
-                "created": "Part Number '{{partNumberName}}' a fost creat cu succes",
-                "updated": "Part Number '{{partNumberName}}' a fost actualizat cu succes",
-                "deleted": "Part Number '{{partNumberName}}' a fost sters cu succes",
-                "error": "Eroare: '{{errorMessage}}'"
-            },
-            "create-modal": {
-                "title": "Adauga Part Number",
-                "pick-list": {
-                    "lines": {
-                        "leftHeader": "Liniile disponibile",
-                        "rightHeader": "Liniile selectate"
-                    },
-                    "equipment": {
-                        "leftHeader": "Echipamentele disponibile",
-                        "rightHeader": "Echipamentele selectate",
-                        "tooltip": {
-                            "line": "Linie: ",
-                            "processTypes": "Tipuri de procese: "
-                        }
-                    }
-                }
-            },
-            "update-modal": {
-                "title": "Actualizeaza Part Number"
-            },
-            "form": {
-                "sections": {
-                    "details": "Detalii",
-                    "lines": "Linii",
-                    "equipment": "Echipamente"
-                },
-                "placeholders": {
-                    "name": "Nume",
-                    "description": "Descriere",
-                    "sapFamily": "Grupul Familiei în SAP",
-                    "sapGroup": "Grupul Produsului în SAP",
-                    "valueStream": "Value Stream"
-                },
-                "labels": {
-                    "name": "Nume",
-                    "description": "Descriere",
-                    "sapFamily": "Grupul Familiei în SAP",
-                    "sapGroup": "Grupul Produsului în SAP",
-                    "valueStream": "Value Stream"
-                }
-            }
-        },
-        "tools": {
-            "title": "Management Tool-uri",
-            "tabs": {
-                "detailsTab": "Detalii",
-                "documentsTab": "Documente",
-                "interventionHistoryTab": "Intervenții",
-                "maintenancePlan": "Plan de mentenanță"
-            },
-            "table": {
-                "columns": {
-                    "toolUid": "UID Tool",
-                    "toolName": "Nume Tool",
-                    "toolOwner": "Owner",
-                    "toolStatus": "Status",
-                    "toolStance": "Detalii Status",
-                    "toolAvailable": {
-                        "header": "Tool valabil",
-                        "available": "Valabil",
-                        "unavailable": "Non-valabil"
-                    }
-                },
-                "filters": {
-                    "toolUid": "Caută după UID",
-                    "toolName": "Caută după nume",
-                    "updatedBy": "Caută după user",
-                    "toolAvailable": "Caută dupa valabilitate",
-                    "toolStatus": {
-                        "placeholder": "Caută după status",
-                        "options": {
-                            "all": "All",
-                            "active": "Active",
-                            "disabled": "Disabled"
-                        }
-                    },
-                    "toolStance": "Caută după stance"
-                },
-                "groupFilter": {
-                    "all": {
-                        "partNumbers": "Toate Partnumberurile",
-                        "items": "Toate Liniile",
-                        "equipment": "Toate Echipamentele"
-                    }
-                },
-                "rows": {
-                    "active": "Activ",
-                    "disabled": "Dezactivat",
-                    "updateRole": {
-                        "label": "Asignează alt role",
-                        "emptyText": "Alege rol pentru utilizator"
-                    },
-                    "updateStatus": {
-                        "topLabel": "Change status",
-                        "onLabel": "Active",
-                        "offLabel": "Disabled"
-                    }
-                },
-                "grouping": {
-                    "groupBy": "Grupați după",
-                    "addGroup": "Adăugați",
-                    "options": {
-                        "equipment": "Echipamente",
-                        "partNumber": "Part Numbere",
-                        "line": "Linii"
-                    }
-                }
-            },
-            "details": {
-                "header": {
-                    "details-labels": {
-                        "toolName": "Nume Tool",
-                        "manufacturingLine": "Linie",
-                        "mesCode": "Cod MES",
-                        "uid": "UID",
-                        "setSize": "Dimensiune set",
-                        "owner": "Responsabil",
-                        "status": "Status",
-                        "isValid": "Valid pentru producție"
-                    },
-                    "buttons": {
-                        "invalidate": "Invalidează",
-                        "revalidate": "Revalidează",
-                        "makeValid": "Fă valid",
-                        "intervention": "Ridică intervenție",
-                        "engrave": "Graveaza"
-                    }
-                },
-                "delete-confirmation-modal": {
-                    "title": "Confirmați ștergerea Tool-ului '{{toolName}}'",
-                    "question": "Sunteți sigur/ă că doriți să ștergeți Tool-ul '{{toolName}}' ?"
-                },
-                "reset-confirmation-modal": {
-                    "title": "Confirmați resetarea Tool-ului '{{toolName}}'",
-                    "question": "Sunteți sigur/ă că doriți să resetați statusul și stance-ul Tool-ului '{{toolName}}' la 'STORED_IN LIFT' ?"
-                },
-                "toasts": {
-                    "invalidated": "Tool-ul este invalid pentru producție",
-                    "revalidated": "Tool-ul este valid pentru producție"
-                },
-                "detailsPage": {
-                    "sections": {
-                        "toolLifecycle": "Lifecycle Tool",
-                        "toolDescription": "Descriere Tool"
-                    },
-                    "labels": {
-                        "description": "Descriere",
-                        "isSpare": "Este rezervă",
-                        "partNumbers": "Part Numbers",
-                        "equipment": "Echipamente",
-                        "monitoredInSAP": "Tool monitorizat SAP",
-                        "monitoredInMES": "Tool monitorizat MES",
-                        "monitoredInPLC": "Tool monitorizat PLC",
-                        "revisionPercent": "Procent revizie",
-                        "lifetimeEstimation": "Estimare durată de viată[timp]",
-                        "lifecycleEstimation": "Estimare durată de viată[cicluri]",
-                        "timeUntilRevision": "Durata până la revizie",
-                        "cyclesUntilRevision": "Cicluri până la revizie",
-                        "currentProductionCycles": "Număr curent cicluri",
-                        "currentProductionTime": "Durata curentă de producție",
-                        "toolExpirationDate": "Dată expirare",
-                        "lifetimeEstimationTime": "Estimare durată viață[timp]",
-                        "toolRevisionCycles": "Cicluri până la revizie",
-                        "toolRevisionTime": "Durata până la revizie",
-                        "noEquipments": "Tool-ul nu este asociat la un echipament!"
-                    },
-                    "maintenancePlanTable" : {
-                        "value": "Valoare",
-                        "operation": "Operațiune",
-                        "description": "Descriere",
-                        "document": "Document",
-                        "add": "Adăugați un nou plan de mentenanță",
-                        "delete": {
-                            "name": "Șterge",
-                            "popup": {
-                                "title": "Confirmați ștergerea planului de mentenanță",
-                                "question": "Sunteți sigur ca doriti să ștergeți planul de mentenanță?",
-                                "message": "Dacă doriți să continuați trebuie să confirmați acțiunea"
-                            }
-                        }
-                    },
-                    "maintenancePlanAddModal": {
-                        "title": "Adăugați plan de mentenanță"
-                    }
-                },
-                "documentsPage": {
-                    "labels": {
-                        "isDocumentationComplete": "Documentație completă"
-                    },
-                    "fileManager": {
-                        "title": "Documentele Tool-ului",
-                        "contextMenu": {
-                            "newVersion": "Versiune noua",
-                            "uploadFile": "Upload Fișier",
-                            "downloadFile": "Download Fișier"
-                        }
-                    },
-                    "create-modal": {
-                        "title": "Creare versiune",
-                        "version-input": {
-                            "label": "Nume versiune",
-                            "placeholder": "Inserați un nume de versiune"
-                        },
-                        "file-input": {
-                            "required": "Cel puțin un fișier trebuie selectat!"
-                        }
-                    }
-                },
-                "interventionsPage": {
-                    "table": {
-                        "title": "Intervenții",
-                        "columns": {
-                            "header": {
-                                "launchDate": "Dată Lansare",
-                                "launchedBy": "Lansat De",
-                                "interventionStart": "Start Intervenție",
-                                "interventionEnd": "Final Intervenție",
-                                "operationType": "Tip Operație",
-                                "responsible": "Responsabil"
-                            },
-                            "filter": {
-                                "placeholder": {
-                                    "launchDate": "după Dată Lansare",
-                                    "launchedBy": "după Lansat De",
-                                    "interventionStart": "după Start Intervenție",
-                                    "interventionEnd": "după Final Intervenție",
-                                    "operationType": "după Tip Operație",
-                                    "responsible": "după Responsabil"
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "form": {
-                "title": "Adăugați Tool",
-                "sections": {
-                    "details": "Detalii",
-                    "lifecycle": "Cicluri de viață",
-                    "parts": "Part Numbers",
-                    "mainEquipments": "Echipamente principale",
-                    "secondaryEquipments": "Echipamente secundare",
-                    "engrave": "Gravare",
-                    "maintenancePlan": "Plan de mentenanță"
-                },
-                "table": {
-                    "title": "Planuri de mentenanță: {type}"
-                },
-                "labels": {
-                    "isSet": "Parte din set",
-                    "setSize": "Dimensiune set",
-                    "spareSize": "Dimenisune rezervă",
-                    "name": "Nume",
-                    "description": "Descriere",
-                    "owner": {
-                        "label": "Responsabil",
-                        "placeholder": "Selectează responsabil"
-                    },
-                    "line": {
-                        "label": "Linie principală",
-                        "placeholder": "Selectează linie"
-                    },
-                    "MESCode": "MES Code",
-                    "lifeSAP": "Viața Tool-ului monitorizată în SAP",
-                    "lifeMES": "Viața Tool-ului monitorizată în MES",
-                    "lifePLC": "Viața Tool-ului monitorizată în PLC",
-                    "lifeEstimationTime": "Timpul de producție estimat (min)",
-                    "lifeEstimationCycles": "Numărul total de cicluri estimate (cycles)",
-                    "lifeRevisionCycles": "Ciclurile pentru revizie(cycles)",
-                    "lifeRevisionTime": "Timpul pentru revizie (min)",
-                    "lifeProductionTime": "Timpul curent de producție (min)",
-                    "lifeProductionCycles": "Ciclurile curente de producție(cycles)",
-                    "revisionPercent": "Procentaj pentru revizie",
-                    "expirationDate": "Data Expirării",
-                    "partNumbersTitle": "Alegeți Part Numbers",
-                    "equipmentsTitle": "Alegeți Echipamente",
-                    "maintenancePlanType": "Selectați tipul planului de mentenanță",
-                    "cycles": "Cicluri",
-                    "time": "Timp"
-                },
-                "notifications": {
-                    "success": "Tool-ul a fost creat cu succes.",
-                    "error": "Tool-ul nu a putut fi creat."
-                }
-            },
-            "create-modal": {
-                "pick-list": {
-                    "equipment": {
-                        "leftHeader": "Echipamente disponibile",
-                        "rightHeader": "Echipamente selectate"
-                    },
-                    "partNumbers": {
-                        "leftHeader": "Part Numbers disponobile",
-                        "rightHeader": "Part Numbers selectate"
-                    }
-                }
-            },
-            "engrave": {
-                "title": "Confirmă gravarea",
-                "message": "Va rog scanați Tool-urile",
-                "status": "Status",
-                "waiting": " În așteptarea inputului de la scanner",
-                "outOfFocus": "Ecanul nu este focusat! Vă rugăm să dați click pe fereastră",
-                "toolName": "Numele Tool-ului",
-                "complete": "Gravare confirmată"
-            },
-            "toasts": {
-                "created": "Tool-ul '{{toolName}}' a fost creat cu succes!",
-                "updated": "Utilizator '{{user}}' a fost modificat cu succes",
-                "deleted": "Tool-ul '{{toolName}}' a fost șters cu succes",
-                "reset": "Tool-ul '{{toolName}}' a fost resetat cu succes",
-                "error": "Nu a putut fi modificat utilizatorul cu id-ul {{user}}",
-                "engraved": "Tool-ul '{{toolName}}' gravat cu success",
-                "errorEngraved": "Codul {{scannedCode}} este invalid. Vă rugăm asigurați-vă că folosiți data matrixul corect."
-            }
-        },
-        "issues": {
-            "table": {
-                "title": "Management Probleme",
-                "columns": {
-                    "toolUid": "UID Tool",
-                    "status": "Status",
-                    "reason": "Motiv",
-                    "createdAt": "Data creării",
-                    "createdBy": "Creat de"
-                },
-                "filter": {
-                    "placeholder": {
-                        "toolUid": "Caută după UID Tool",
-                        "status": "Caută după status",
-                        "reason": "Caută după motiv",
-                        "createdAt": "Caută după dată",
-                        "createdBy": "Caută după utilizator"
-                    }
-                }
-            },
-            "modal": {
-                "title": {
-                    "add": "Semnalează Problemă",
-                    "view": "Detaliile problemei"
-                },
-                "toolUid": {
-                    "label": "Tool UID",
-                    "placeholder": "Scanează Tool"
-                },
-                "reason": {
-                    "label": "Motiv",
-                    "placeholder": "Alege un motiv"
-                },
-                "description": {
-                    "label": "Decriere",
-                    "placeholder": "Adaugă descriere"
-                },
-                "line": {
-                    "label": "Linie"
-                },
-                "createdAt": {
-                    "label": "Data creării"
-                },
-                "status": {
-                    "label": "Status"
-                },
-                "createdBy": {
-                    "label": "Creat de"
-                },
-                "isReplacementOrdered": {
-                    "label": "Este înlocuitor comandat"
-                }
-            },
-            "buttons": {
-                "manageReasons": "Management Motive"
-            }
-        },
-        "reasons": {
-            "table": {
-                "title": "Management Motive",
-                "columns": {
-                    "name": "Nume"
-                },
-                "filter": {
-                    "placeholder": {
-                        "name": "Filtrează după nume"
-                    }
-                }
-            },
-            "buttons": {
-                "addReasons": "Crează Motiv"
-            },
-            "toasts": {
-                "created": "Noul motiv '{{reasonName}}' a fost creat.",
-                "updated": "Motivul '{{reasonName}}' a fost actualizat cu succes.",
-                "deleted": "Motivul '{{reasonName}}' a fost streș"
-            },
-            "modal": {
-                "title": {
-                    "add": "Adaugă motiv nou",
-                    "edit": "Editează motiv"
-                },
-                "name": {
-                    "label": "Nume",
-                    "placeholder": "Nume"
-                }
-            }
-        }
-    },
-    "lineSetter": {
-        "toolRequest": {
-            "messages": {
-                "priorityMessagePlaceholder": "Vă rugăm scrieți motivul priorității",
-                "priorityMessageLabel": "Motivul priorității",
-                "maxToolRequests": "Număr maxim de cereri pentru Tool-uri (3) a fost atins",
-                "maxPriorityToolRequests": "Număr maxim de cereri cu prioritate pentru Tool-uri (2) a fost atins",
-                "toolRequestCreated": "Cerere Tool-uri a fost înregistrată"
-            },
-            "pages": {
-                "cancelToolRequest": {
-                    "popupTitle": "Confirmați închiderea cererii de Tool-uri",
-                    "popupQuestion": "Sunteți sigur ca doriți să închideți cererea?"
-                },
-                "changeoverRequest": "Cerere înlocuire Tool-uri",
-                "requestType": "Vă rugăm selectați tipul cererii",
-                "buttonIndividual": "Individual",
-                "buttonPartNumber": "Part number changeover",
-                "selectManufacturingLine": " Selectați linia de producție ",
-                "searchManufacturingLine": " Căutați liniile de producție ",
-                "scanTreeLabel": " Previzualizați comanda ",
-                "buttonOrder": "Comandă",
-                "buttonOrderPriority": "Comandă cu prioritate",
-                "popupTitle": "Confirmați cererea de Tool-uri",
-                "popupQuestion": " Sunteți sigur ca doriți să anulați cererea pentru Tool-urile selectate?",
-                "popupMessage": "Scanați cartela pentru a confirma!",
-                "selectLineAndPartNumber": " Selectați linia de producție și numărul componentei ",
-                "groupSubtitle": " Selectați linia de producție și numărul componentei ",
-                "groupPartNumber": " Numărul componentei ",
-                "searchPartNumber": "Cauta numărul componentei "
-            },
-            "stepper": {
-                "individualTitle": "Crează o cerere de Tool-uri individuale",
-                "groupTitle": "Crează o cerere de grupuri de Tool-uri",
-                "selectLine": "Selectare linie",
-                "selectTools": "Selectare Tool-uri",
-                "manufacturingLine": "Linia de producție:",
-                "partNumber": "Part Number:",
-                "neededToolsTitle": "Te rugăm selectează Tool-urile dorite pentru numarul componentei selectate"
-            },
-            "table": {
-                "title": "Selectează Tool-uri",
-                "groupFilter": {
-                    "all": {
-                        "items": "Toate Partnumberurile",
-                        "equipment": "Toate Echipamentele"
-                    }
-                }
-            },
-            "toasts": {
-                "maxToolRequests": "Număr maxim de cereri pentru Tool-uri (3) a fost atins",
-                "maxPriorityToolRequests": "Număr maxim de cereri cu prioritate pentru Tool-uri (2) a fost atins",
-                "toolRequestCreated": "Cerere Tool-uri a fost înregistrată"
-            }
-        },
-        "signalIssue": {
-            "sectionTitle": "Semnalați o problemă",
-            "stepTitles": {
-                "selectLine": "Selectați o linie",
-                "scanTool": "Scanați Tool",
-                "issueDetails": "Detalii problemă",
-                "confirm": "Confirmare"
-            },
-            "form": {
-                "line": {
-                    "label": "Linie de producție",
-                    "placeholder": "Selectați linie de producție"
-                },
-                "tool": {
-                    "label": "Tool",
-                    "placeholder": "Scanați un Tool pentru a continua"
-                },
-                "reason": {
-                    "label": "Motiv",
-                    "placeholder": "Alegeți un motiv"
-                },
-                "description": {
-                    "label": "Descriere",
-                    "placeholder": "Introduceți descriere problemă"
-                },
-                "isReplacementOrdered": {
-                    "topLabel": "Comandă un înlocuitor",
-                    "onLabel": "Da",
-                    "offLabel": "Nu"
-                },
-                "toasts": {
-                    "created": "Problema cu ID-ul: '{{issueId}}' a fost creată!"
-                }
-            },
-            "toasts": {
-                "created": "Problemă cu ID: '{{issueId}}' a fost semnalată!"
-            }
-        },
-        "tool-returns": {
-            "stepper": {
-                "select-line-and-tool-request": {
-                    "title": "Selectare linie și cerere Tool",
-                    "panel": {
-                        "line-input": {
-                            "label": "Selectați o linie",
-                            "placeholder": "Nicio linie selectată"
-                        }
-                    }
-                },
-                "select-tools": {
-                    "title": "Selectare Tool-uri",
-                    "table": {
-                        "title": "Selectați Tool-urile pe care le returnați"
-                    },
-                    "panel": {
-                    },
-                    "currentLine": "Linie selectată",
-                    "currentPartNumber": "Changeover pentru"
-                },
-                "confirm": {
-                    "title": "Confirmare",
-                    "panel": {
-                        "toolsTreeNeededAtLine": "Tool-uri de care este încă nevoie la linie",
-                        "toolsTreeNeededToBeReturned": "Tool-uri care vor fi returnate"
+                    "pick-list": {
+                        "leftHeader": "Permisiuni existente",
+                        "rightHeader": "Permisiuni selectate"
                     },
                     "alert": {
-                        "toolsNeededAtLine": "Tool-urile selectate sunt necesare la linie!"
-                    }
-                }
-            },
-            "toasts": {
-                "created": "Cerere returnare Tool-uri '{{toolReturnRequestName}}' a fost înregistrată!",
-                "error": "Nu s-a putut crea cererea de returnare Tool-uri!"
-            },
-            "pages": {
-                "cancelToolReturn": {
-                    "popupTitle": "Confirmați închiderea cererii de returnare",
-                    "popupQuestion": "Sunteți sigur ca doriți să închideți cererea?"
-                },
-                "selectLineAndToolRequest": "Selectați linia de producție și cererea pentru Tool-uri",
-                "toolRequest": "Cerere Tool-uri",
-                "popupTitle": "Confirmați returul de Tool-uri",
-                "popupQuestion": "Sunteți sigur că doriți să returnați Tool-urile?",
-                "popupMessage": "Scanați cartela pentru a confirma!"
-            }
-        },
-        "pending-tool-returns": {
-            "table": {
-                "title": "Returnări Tool-uri în așteptare",
-                "columns": {
-                    "toolRequestName": "Return Pentru",
-                    "line": "Linie",
-                    "creator": "Creator",
-                    "status": "Status"
-                },
-                "filter": {
-                    "byToolRequestName": "după Nume",
-                    "byLine": "după Linie",
-                    "byCreator": "după Creator",
-                    "byStatus": "după Status"
-                },
-                "details-modal": {
-                    "title": "Detalii returnare Tool-uri",
-                    "toolRequestName": "Return Pentru",
-                    "selectedTools": "Tool-uri",
-                    "createdDate": "Data creării",
-                    "assignedTo": "Asignat La",
-                    "createdBy": "Creat de",
-                    "closedDate": "Data închiderii",
-                    "status": "Status"
-                },
-                "toasts": {
-                    "closed": "Cerere returnare Tool-uri '{{pendingToolReturnRequestName}}' a fost anulată"
-                }
-            }
-        },
-        "pending-tool-requests": {
-            "table": {
-                "title": "Cereri Tool-uri în așteptare",
-                "columns": {
-                    "name": "Nume",
-                    "line": "Linie",
-                    "creator": "Creator",
-                    "status": "Status",
-                    "partNumber": "Part Number"
-                },
-                "filter": {
-                    "byName": "după Nume",
-                    "byLine": "după Linie",
-                    "byCreator": "după Creator",
-                    "byStatus": "după Status",
-                    "byPartNumber": "după Part Number"
-                },
-                "details-modal": {
-                    "title": "Detalii cerere Tool-uri",
-                    "name": "Nume",
-                    "selectedTools": "Tool-uri",
-                    "createdDate": "Data creării",
-                    "assignedTo": "Asignat La",
-                    "createdBy": "Creat de",
-                    "closedDate": "Data închiderii",
-                    "status": "Status"
-                },
-                "toasts": {
-                    "closed": "Cerere Tool-uri '{{pendingToolRequestName}}' a fost anulată"
-                }
-            }
-        }
-    },
-    "lift-operator": {
-        "incoming-tool-request": {
-            "table-title": "Cerere Tool-uri primite",
-            "manufacturing-line": "Linie producție",
-            "part-number": "Part number",
-            "facility": "Facility",
-            "createdBy": "Creator",
-            "date": "Data",
-            "status": "Status",
-            "title": "Confirmați retragerea Tool-uri",
-            "question": "Ești sigur că dorești să renunți la Tool-urile selectate?",
-            "message": "Confirmă scanând cu legitimația",
-            "tree-title": "Previzualizează Cererea",
-            "toasts": {
-                "processed": "Cerearea de Tool-uri {{toolRequestName}} a fost procesata"
-            }
-        },
-        "incoming-tools-returned": {
-            "table-title": "Returnare Tool-uri Primite",
-            "question": "Ești sigur că dorești să stochezi în lift Tool-urile selectate?",
-            "title": "Confirmă stocare Tool-uri",
-            "message": "Confirmă scanând cu legitimația",
-            "tree-title": "Previzualizează Returul",
-            "toasts": {
-                "processed": "Returul pentru cererea {{toolRequestName}} a fost procesata"
-            }
-        },
-        "incoming-tools-table": {
-            "createdAt": "Data creării",
-            "manufactureLine": "Linie producție",
-            "byLine": "După Linie",
-            "facility": "Facility",
-            "partNumber": "Part Number",
-            "byPartNumber": "După Nume",
-            "status": "Status",
-            "byStatus": "După Status",
-            "byFacility": "După Facility",
-            "actions": "Acțiuni",
-            "process": "Procesează",
-            "resumeProcess": " Continuă Procesarea"
-        }
-    },
-    "atom": {
-        "tool-returns": {
-            "table": {
-                "title-lines": "Returnări Tool-uri de la Linii",
-                "title-facilities": "Returnări Tool-uri de la Facilities",
-                "columns": {
-                    "toolRequest": "Returnat pentru",
-                    "line": "Linie",
-                    "facility": "Facility",
-                    "createdBy": "Creat de",
-                    "createdDate": "Data creării",
-                    "status": "Status",
-                    "action": "Acțiune"
-                },
-                "filter": {
-                    "toolRequest": "După cerere",
-                    "line": "După linie",
-                    "createdBy": "După utilizator",
-                    "facility": "După Facility",
-                    "createdDate": "După dată",
-                    "status": "După status"
-                }
-            },
-            "inspect-details": {
-                "title": "Inspectați Tool-urile returnate",
-                "display": {
-                    "toolRequest": "Returnat pentru",
-                    "line": "Linie",
-                    "facility": "Facility",
-                    "createdDate": "Data creării",
-                    "createdBy": "Creat de"
-                },
-                "scanner": {
-                    "label": "Scanează Tool-urile returnate",
-                    "emptyText": "Tool-urile returnate sunt în curs de încarcare..."
-                }
-            },
-            "toasts": {
-                "approved": "Cererea pentru returnarea Tool-urilor cu id {{toolReturnId}} a fost aprobată",
-                "error": "Cererea pentru returnarea Tool-urilor nu a putut fi aprobată, până când nu sunt scanate toate Tool-urile",
-                "couldNotOpenIssue": "Nu s-a putut deschide problema pentru procesare!",
-                "rejectFail": "Nu s-a putut respinge problema",
-                "rejectSuccess": "Problemă respinsă"
-            }
-        },
-        "tool-requests-lines": {
-            "table": {
-                "title": "Cereri Tool-uri în așteptare de la Linii",
-                "columns": {
-                    "toolRequestName": "Nume",
-                    "createdAt": "Data creării",
-                    "line": "Linie",
-                    "partNumber": "Part Number",
-                    "status": "Status",
-                    "actions": "Acțiuni"
-                },
-                "filters": {
-                    "byCreatedTime": "după Data Creare",
-                    "byLine": "după Linie",
-                    "byPartNumber": "după Part Number",
-                    "byStatus": "după Status"
-                }
-            },
-            "process-details": {
-                "title": "Inspectați Tool-urile cerute"
-            },
-            "process": {
-                "title": "Procesați cerere Tool-uri",
-                "labels": {
-                    "toolRequestName": "Nume",
-                    "manufacturingLine": "Linie Producție",
-                    "dateRequested": "Dată cerere",
-                    "partNumber": "Part Number",
-                    "hasPriority": "Are Prioritate",
-                    "priorityReason": "Motivul Priorității",
-                    "noPartNumber": "Tool Request Individual",
-                    "createdBy": "Creat de"
-                },
-                "table": {
-                    "columns": {
-                        "name": "Nume Tool",
-                        "uid": "UID Tool",
-                        "status": "Status",
-                        "stance": "Stance"
+                        "message": "Faceți drag și drop  cu permisiunile petru a le asigna unui rol",
+                        "error": {
+                            "role-name-required": "Nume rol necesar"
+                        }
                     },
-                    "filters": {
-                        "byName": "după Nume",
-                        "byUid": "după UID"
+                    "button": {
+                        "create": "Crează",
+                        "update": "Modifică",
+                        "delete": "Șterge"
                     }
                 },
-                "warnings": {
-                    "isAlreadyReservedForLine": "Tool-ul este rezervat deja acestei linii.",
-                    "shouldBeReplaced": "Acest Tool trebui schimbat. Click pentru a alege alt Tool."
-                },
-                "error": {
-                    "requestContainsUnavailableTools": "Exista Tool-uri care trebuie schimbate.Va rugam schimbati toate Tool-urile marcate.",
-                    "allToolsAtLine": "Toate Tool-urile sunt deja rezervate pentru linie."
-                }
-            },
-            "toasts": {
-                "cannotStartProcess": "Nu s-a putut începe procesarea cererii Tool-uri {{toolRequestName}}",
-                "toolRequestApproved": "Cerere Tool-uri {{toolRequestName}} a fost aprobată!",
-                "toolRequestRejected": "Cerere Tool-uri {{toolRequestName}} a fost refuzată!",
-                "cannotProcess": "Nu s-a putut procesa '{{toolRequestName}}'. Va rugam solicitați asistență tehnică.",
-                "cannotReplace": "Nu s-a putut înlocui '{{toolName}}' cu '{{replaceName}}'"
-            },
-            "replaceTools": {
-                "modal": {
-                    "label": "Tool-uri",
-                    "selectedTool": "Tool care va fi inlocuit",
-                    "reasonForReplacement": "Motivul înlocuirii",
-                    "replacementTool": "Tool înlocuitor",
-                    "placeholder": "Selează un Tool",
-                    "title": "Inlocuire Tool-uri",
-                    "message": "Selectati un inlocuitor pentru Tool-ul selectat",
-                    "errors": {
-                        "noReplacementTools": "Nu există Tool-uri pentru înlocuire!"
-                    }
-                },
-                "unavailabilityReason": {
-                    "notAvailableForManufacturing": "Tool-ul nu este valabil pentru producție",
-                    "atOtherLine": "Tool-ul se află la altă linie",
-                    "hasIssue": "Tool-ul are un issue, și nu este valid pentru producție",
-                    "returnedFromCurrentLine": "Tool-ul este returnat de la linia curentă",
-                    "notStoredInLift": "Tool-ul nu este depozitat în lift"
-                }
-            }
-        },
-        "tool-requests-facilities": {
-            "table": {
-                "title": "Cereri Tool-uri în așteptare de la Service",
-                "columns": {
-                    "toolRequestName": "Nume",
-                    "createdAt": "Data creării",
-                    "line": "Linie",
-                    "facility": "Facility",
-                    "partNumber": "Part Number",
-                    "status": "Status",
-                    "actions": "Acțiuni"
-                },
-                "filters": {
-                    "byCreatedTime": "după Data Creare",
-                    "byLine": "după Linie",
-                    "byFacility": "după Facility",
-                    "byPartNumber": "după Part Number",
-                    "byStatus": "după Status"
-                }
-            },
-            "process": {
-                "title": "Procesați cerere Tool-uri",
-                "labels": {
-                    "toolRequestName": "Nume",
-                    "manufacturingLine": "Linie Producție",
-                    "dateRequested": "Dată cerere",
-                    "partNumber": "Part Number",
-                    "facility": "Faciliy",
-                    "hasPriority": "Are Prioritate",
-                    "priorityReason": "Motivul Priorității",
-                    "createdBy": "Creat de"
-                },
-                "table": {
-                    "columns": {
-                        "name": "Nume Tool",
-                        "uid": "UID Tool",
-                        "status": "Status",
-                        "stance": "Stance"
-                    },
-                    "filters": {
-                        "byName": "după Nume",
-                        "byUid": "după UID",
-                        "byStatus": "după Status"
-                    }
-                }
-            },
-            "toasts": {
-                "cannotStartProcess": "Nu s-a putut începe procesarea cererii Tool-uri {{toolRequestName}}",
-                "toolRequestApproved": "Cerere Tool-uri {{toolRequestName}} a fost aprobată!",
-                "toolRequestRejected": "Cerere Tool-uri {{toolRequestName}} a fost refuzată!",
-                "cannotProcess": "Nu s-a putut procesa '{{toolRequestName}}'. Va rugam solicitați asistență tehnică."
-            }
-        },
-        "tickets": {
-            "closeTicketPopup": {
-                "popupTitle": "Confirmați închiderea tichetului",
-                "popupQuestion": "Sunteți sigur(ă) că doriți să închideți tichetul selectat?",
-                "popupMessage": "Scanați badgeul pentru confirmare!"
-            }
-        }
-    },
-    "milkrun": {
-        "transportation-requests": {
-            "title": "Listă de transport",
-            "atom-requests": {
-                "title": "Stație ATOM",
-                "table": {
-                    "title": "Cereri de Tool-uri în așteptare"
-                },
-                "confirmation": {
-                    "popupTitle": "Confirmați transportul Tool-urilor cerute",
-                    "popupQuestion": "Sunteți sigur(ă) că doriți să încărcați/descărcați Tool-urile cerute?",
-                    "popupMessage": "Confirmați acțiunea pentru a continua"
-                }
-            },
-            "line-requests": {
-                "title": "Linie de producție",
-                "table": {
-                    "title": "Cereri de retur Tool-uri în așteptare"
-                },
-                "confirmation": {
-                    "popupTitle": "Confirmați returnarea Tool-urilor",
-                    "popupQuestion": "Sunteți sigur(ă) că doriți să incărcați/descărcați Tool-urile returnate?",
-                    "popupMessage": "Confirmați acțiunea pentru a continua"
-                }
-            },
-            "table": {
-                "columns": {
-                    "label": "Etichetă",
-                    "location": "Locație",
-                    "destination": "Destinație"
-                }
-            },
-            "toasts": {
-                "toolRequestLoaded": "S-a încărcat cererea de Tool-uri cu eticheta: {{toolRequestName}}",
-                "toolRequestUnloaded": "S-a descărcat cererea de Tool-uri cu eticheta: {{toolRequestName}}",
-                "toolReturnLoaded": "S-a încărcat returul de Tool-uri cu eticheta: {{toolRequestName}}",
-                "toolReturnUnloaded": "S-a descărcat returul de Tool-uri cu eticheta: {{toolRequestName}}"
-            }
-        }
-    },
-    "service": {
-        "tickets": {
-            "title": "Tichete pentru service",
-            "table": {
-                "title": "Tichete pentru service",
-                "columns": {
-                    "date": "Data creării",
-                    "createdBy": "Creat de",
-                    "status": "Status"
-                }
-            },
-            "details": {
-                "title": "Detalii Tichet",
-                "display": {
-                    "id": "Tichet ID",
-                    "currentOperation": "Operația curentă",
-                    "status": "Status",
-                    "createdDate": "Data creării",
-                    "ticketStartDate": "Dată start ",
-                    "ticketEndDate": "Dată final",
-                    "createdBy": "Creat de",
-                    "description": "Descriere",
-                    "issue": "Problemă"
-                },
-                "tools": {
-                    "label": "Tool-urile din tichet",
-                    "emptyText": "Tool-urile se încarcă..."
-                },
-                "accordion": {
-                    "title": "Operațiile pentru service",
-                    "startDate": "Dată start",
-                    "endDate": "Dată final",
-                    "status": "Status",
-                    "assignedTo": "Asignat La",
-                    "comment": "Comentariu",
-                    "document": "Document"
-                },
-                "confirmation-modal": {
-                    "requestTools": {
-                        "popupTitle": "Confirmați cererea de Tool-uri",
-                        "popupQuestion": "Sunteți sigur că doriți să comandați Tool-urile?",
-                        "popupMessage": "Scanți badgeul pentru confirmare!"
-                    },
-                    "startOperation": {
-                        "popupTitle": "Confirmați inceperea operației",
-                        "popupQuestion": "Sunteți sigur că doriți să începeți operația de {{currentOperation}} ?",
-                        "popupMessage": "Scanți badgeul pentru confirmare!"
-                    },
-                    "finishOperation": {
-                        "popupTitle": "Confirmați finalizarea operației",
-                        "popupQuestion": "Sunteți sigur că doriți să finalizați operația de {{currentOperation}}?",
-                        "popupMessage": "Scanați badgeul pentru confirmare!"
+                "update-modal": {
+                    "title": "Modifică rol",
+                    "oob": {
+                        "warning": "Acesta este un rol Out Of the Box si nu poate fi modificat!"
                     }
                 },
                 "toasts": {
-                    "toolsRequested": "Cererea de Tool-uri a fost creată cu success.",
-                    "operationStarted": "Operația {{currentOperationName}} a fost pornită cu succes.",
-                    "operationFinished": "Operația {{currentOperationName}} a fost finalizată cu succes."
+                    "created": "Rolul '{{roleName}}' creat!",
+                    "updated": "Rolul '{{roleName}}' modificat!",
+                    "deleted": "Rolul '{{roleName}}' șters!"
                 },
-                "info-modal": {
-                    "title": "Informare",
-                    "lastOperation": {
-                        "infoMessage": "Tichetul a fost închis pentru că toate operațiile sunt finalizate",
-                        "actionMessage": "Vă rugăm transporți toolul la Stația ATOM."
-                    },
-                    "operationPending": {
-                        "infoMessage": "Tichetul a fost mutat la operația urmatoare ( {{nextOperation}} )",
-                        "actionMessage": "Vă rugăm transporți toolul la {{nextOperation}}."
-                    }
+                "oobRoles": {
+                    "ADMIN": "Admin",
+                    "COMPANY": "Company",
+                    "OTHER": "Other"
                 }
             }
-        }
-    },
-    "errorMessage": {
-        "correlationId": "Dacă nu puteți rezolva problema, transmiteți adminstratorul codul {{correlationId}}",
-        "401": {
-            "missingBoschId": "Codul Bosch lipsește",
-            "invalidBoschId": "Codul Bosch este invalid",
-            "user": {
-                "notAuthorized": "Utilizatorul nu este autorizat."
-            }
-        },
-        "400": {
-            "invalidEngraveData": "Codul scanat este invalid. Vă rugăm asigurați-vă că folosiți data matrixul corect.",
-            "invalidLines": "Liniile selectatate nu sunt valide",
-            "invalidEquipment": "Echipamentul selectat nu este valid",
-            "ticket": {
-                "createTicket": "Tichetul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "createToolReturn": "Cererea de retur nu a putut fi creată deoarece nu exista o cerere de Tool-uri.",
-                "createToolRequest": "Tool-urile pot fi cerute numai pentru tichetele noi",
-                "create": {
-                    "invalidTools": "Unul sau mai multe Tool-uri sunt invalide",
-                    "invalidOperation": "Una sau mai multe operații sunt invalide",
-                    "invalidIssue": "Numai problemele noi pot fi transformate in tichete"
-                },
-                "close": {
-                    "invalidStatus": "Tichetul nu poate fi închis in starea actuală."
-                },
-                "startOperation": {
-                    "invalidTicketStatus": "Operațiile pot fi începute numai pe tichetele care sunt noi sau în desfășurare",
-                    "invalidOperation": "Operație Invalidă",
-                    "invalidOperationStatus": "Numai operațiile noi pot fi începute"
-                },
-                "finishOperation": {
-                    "invalidTicketStatus": "Operațiile pot fi finalizate numai pentru tichetele care sunt in desfășurare.",
-                    "invalidOperation": "Operație invalidă",
-                    "invalidOperationStatus": "Numai operațiile in desfășurare pot fi finalizate.",
-                    "create": "Operația nu a putut fi finalizată deocarece descrierea operației lipsește."
-                }
-            },
-            "toolRequest": {
-                "approve": "Cererea de Tool-uri nu poate fi aprobată.",
-                "startApprove": "Procesul de aprobare nu poate începe pentru cererea de Tool-uri selectată.",
-                "startProcessing": "Faza de procesare nu poate începe pentru cererea de Tool-uri selectată.",
-                "process": "Cererea de Tool-uri nu poate fi procesată.",
-                "createToolRequest": {
-                    "invalidTools": "Cererea de Tool-uri nu poate fi creată pentru că conține Tool-uri invalide."
-                },
-                "replaceTools": {
-                    "replace": "Schimbarea de Tool-uri nu a putut fi efectuată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                    "invalidStatus": "Tool-urile nu pot fi înlocuite",
-                    "oldToolNotFound": "Tool-ul de înlocuit nu este găsit in sistem",
-                    "newToolNotFound": "Tool-ul înlocuitor nu este găsit in sistem",
-                    "newToolNotAvailable": "Tool-ul înlocuitor nu mai este disponibil"
-                },
-                "reject": "Cererea de Tool-uri nu poate fi respinsă.",
-                "cancel": "Cererea de Tool-uri nu poate fi anulată.",
-                "unavailableTool": "Unul sau mai multe Tool-uri nu sunt disponibile.",
-                "load": "Cererea de Tool-uri nu poate transportată.",
-                "close": "Cererea de Tool-uri nu poate fi închisă.",
-                "create": "Crearea de Tool-uri nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "toolReturn": {
-                "startApprove": "Procesul de aprobare nu poate începe pentru cererea de return selectată.",
-                "approve": {
-                    "invalidStatus": "Cererea de Tool-uri nu poate fi aprobată.",
-                    "notAllToolsAreScanned": "Toate Tool-urile trebuie sa fie scanate pentru a aproba cererea de retur.",
-                    "notAllIssuesAreProcessed": "Toate problemele trebuie să fie procesate pentru a aproba cererea de retur."
-                },
-                "confirmScan": {
-                    "invalidTool": "Tool-ul nu face parte din cererea de retur selectată."
-                },
-                "startProcessing": "Cererea de retur nu poate fi procesată.",
-                "close": "Cererea de retur nu potate fi inchisă",
-                "cancel": "Cererea de retur nu poate fi anulată",
-                "load": "Cererea de retur nu poate fi transportată",
-                "unload": "Cererea de retur nu poate livrată.",
-                "create": {
-                    "invalidToolRequest": "Cererea de Tool-uri este invalidă.",
-                    "toolsNotPartOfToolRequests": "Tool-uri invalide. Unul sau mai multe Tool-uri nu fac parte din cererea de Tool-uri selectată.",
-                    "toolsShouldNotBeReturn": "Tool-uri invalide : Unul sau mai multe Tool-uri nu ar trebui să fie returnate",
-                    "toolsWithInvalidStatus": "Tool-uri invalide : Unul sau mai multe Tool-uri se află într-un status invalid"
-                },
-                "createToolReturn": "Crearea de retur pentru Tool-uri nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "getToolsForReturn": "Linia și Cererea de Tool-uri sunt obligatorii pentru calcularea tool-ulrilor care trebuie returnate"
-            },
-            "issue": {
-                "create": "Problema nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "tool": {
-                "create": "Tool-ul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "uploadDocuments": {
-                    "missingData": "Încarcare eșuată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                    "exceedMaximumSize": "Încarcare eșuată. Unul sau mai multe fișiere depășesc dimensiunea maximă permisă.",
-                    "invalidDataType": "Încarcare eșuată. Unul sau mai multe fișiere sunt invalide."
-                },
-                "maintenancePlan": {
-                    "missingValue": "Valoarea planului de mentenanță nu a fost trimisă la server.",
-                    "operationMissing": "Operațiunea planului de mentenanță nu a fost trimisă la server.",
-                    "descriptionMissing": "Descrierea planului de mentenanță nu a fost trimisă la server.",
-                    "fileMissing": "Fișierul planului de mentenanță nu a fost trimis la server.",
-                    "wrongValueType": "Tipul valori trimise la server nu este corespunzător.",
-                    "invalidValue": "Valoarea planului de mentenață nu este validă.",
-                    "notSet": "Nu a fost setat planul de mentenanță.",
-                    "wrongOperationIdType": "Id-ul operațiunii planului de mentenanță nu are un tip corepunzător.",
-                    "uploadFailed": "Fișierul planului de mentenanță nu a fost trimis cu success la server.",
-                    "invalidOperationId": "Id-ul operațiunii planului de mentenanță nu este valid."
-                }
-            },
-            "equipment": {
-                "create": "Echipamentul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "update": "Echipamentul nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "partNumber": {
-                "create": "PartNumberul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "update": "PartNumberul nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "line": {
-                "create": "Linia nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corect.",
-                "update": "Linia nu a putut fi actulizată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "processType": {
-                "create": "Tipul de proces nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corect.",
-                "update": "Tipul de proces nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "facilityOperation": {
-                "create": "Operația nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corect.",
-                "update": "Operația nu a putut fi actulizată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "reason": {
-                "create": "Motivul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corect.",
-                "update": "Motivul nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "role": {
-                "create": "Rolul nu a putut fi creat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "update": "Rolul nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "plant": {
-                "create": "Fabrica nu a putut fi creată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "update": "Fabrica nu a putut fi actulizată. Asigurați-vă că toate propriețățile sunt completate cu valori corecte."
-            },
-            "user": {
-                "update": "Utilizatorul nu a putut fi actulizat. Asigurați-vă că toate propriețățile sunt completate cu valori corecte.",
-                "setBoschId": "Codul Bosch nu a putut fi atribuit la utilizator. Asigurați-vă că scanați un cod valid"
-            }
-        },
-        "403": {
-            "maxIssues": "Numai o singură problemă poate fi semnalata pentru un Tool.",
-            "partNumber": {
-                "inUse": "Partnumberul nu poate fi ștres pentru că este folosit în configurări de linii și echipamente."
-            },
-            "line": {
-                "inUse": "Linia selectată nu poate fi stresă pentru că este asignată la o fabrică."
-            },
-            "processType": {
-                "isUse": "Tipul de proces selectat nu poate fi stres pentru că este asignată la unul mai multe echipamente."
-            },
-            "role": {
-                "inUse": "Rolul selectat nu poate fi ștres pentru că este asignat la unul sau mai mulți utilizatori."
-            },
-            "plant": {
-                "inUse": "Fabrica selectat nu poate fi stresă pentru că are linii atribuite."
-            },
-            "equipment": {
-                "inUse": "Echipamentul selectat nu poate fi stres pentru ca este atribuit a una sau mai multe linii."
-            },
-            "generic": {
-                "inUse": "Entitatea selectată nu poate fi șteasă pentru că este folosită de către sistem."
-            }
-        },
-        "404": {
-            "toolRequestNotFound": "Cererea de Tool-uri invalidă. Nu a fost gasită în sistem.",
-            "toolReturnNotFound": "Cererea de retur invalidă. Nu a fost gasită în sistem.",
-            "toolNotFound": "Tool-ul nu există în sistem.",
-            "ticketNotFound": "Tichet invalid. Nu a fost găsit în sistem.",
-            "equipment": "Echipament invalid. Nu a fost găsit în sistem.",
-            "partNumber": "Part number invalid. Nu a fost găsit în sistem.",
-            "issueNotFound": "Problema nu fost gasită.",
-            "processType": "Tipul de proces este invalid.Nu a fost găsit în sistem.",
-            "facilityOperation": "Operație invalidă. Nu a fost găsită în sistem.",
-            "reason": "Motiv invalid. Nu a fost găsit în sistem.",
-            "plant": "Fabrică invalidă. Nu a fost găsită în sistem.",
-            "user": "Utilizator invalid. Nu a fost găsit în sistem.",
-            "tool": {
-                "maintenancePlan": {
-                    "notFound": "Planul de mentenanță nu a fost găsit."
-                }
-            }
-        },
-        "409": {
-            "tool": {
-                "nameUsed": "Numele este deja folosit pentru un alt Tool. Vă rugăm folosiți un alt nume."
-            },
-            "equipment": {
-                "nameMesIdInUse": "Perechea nume - layout number este deja folosită pentru un alt echipament. Vă rugăm actulizați cel puțin una din cele două."
-            },
-            "partNumber": {
-                "nameUsed": "Numele este deja folosit pentru un alt partnumber. Vă rugăm folosiți un alt nume."
-            },
-            "processType": {
-                "nameUsed": "Numele este deja folosit pentru un alt tip de proces. Vă rugăm folosiți un alt nume."
-            },
-            "facilityOperation": {
-                "nameUsed": "Numele este deja folosit pentru o altă operație. Vă rugăm folosiți un alt nume."
-            },
-            "plant": {
-                "nameUsed": "Numele este deja folosit pentru o altă fabrică. Vă rugăm folosiți un alt nume."
-            },
-            "line": {
-                "nameUsed": "Numele este deja folosit pentru o altă linie. Vă rugăm folosiți un alt nume."
-            },
-            "reason": {
-                "nameUsed": "Numele este deja folosit pentru un alt motiv. Vă rugăm folosiți un alt nume."
-            },
-            "role": {
-                "nameUsed": "Numele este deja folosit pentru un alt rol. Vă rugăm folosiți un alt nume."
-            }
-        }
-    },
-    "intervention-modal": {
-        "title": "Detalii intervenție",
-        "description": {
-            "label": "Descriere",
-            "placeholder": "Introduceți detalii despre operația efectuată"
         }
     }
 }

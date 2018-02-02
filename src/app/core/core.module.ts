@@ -1,11 +1,6 @@
 import { UserService } from './services/user.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { MaterializeModule } from 'angular2-materialize';
-
-import { TranslateModule } from '@ngx-translate/core';
 
 import { SharedModule } from '../shared/shared.module';
 import { CoreRoutingModule } from './core.routing';
@@ -18,6 +13,8 @@ import { HeaderComponent, SidebarComponent } from './layout';
 
 import { IntroComponent } from './layout/intro/intro.component';
 import { NotificationService } from '@services/notification.service';
+import { RoleService } from "@services/role.service";
+import { PermissionService } from "@app/authentication/services/permission.service";
 
 @NgModule({
     declarations: [
@@ -27,14 +24,14 @@ import { NotificationService } from '@services/notification.service';
         IntroComponent
     ],
     imports: [
-        RouterModule,
-        MaterializeModule,
         AdminModule,
         SharedModule,
         CoreRoutingModule,
     ],
     providers: [
         UserService,
+        RoleService,
+        PermissionService,
         NotificationService,
     ]
 })

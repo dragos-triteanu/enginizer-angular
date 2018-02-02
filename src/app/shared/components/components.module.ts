@@ -27,7 +27,6 @@ import {
     AccordionItemComponent,
     PageStepperComponent,
     StepperComponent,
-    InterventionModalComponent
 } from './';
 
 
@@ -60,7 +59,6 @@ import {
         AccordionComponent, AccordionItemComponent,
         PageStepperComponent,
         StepperComponent,
-        InterventionModalComponent,
         WizardModalComponent, WizardTitleComponent, WizardStepComponent
     ], exports: [
         ListboxModule,
@@ -85,7 +83,6 @@ import {
         AccordionComponent, AccordionItemComponent,
         PageStepperComponent,
         StepperComponent,
-        InterventionModalComponent,
         WizardModalComponent, WizardTitleComponent, WizardStepComponent
     ]
 })

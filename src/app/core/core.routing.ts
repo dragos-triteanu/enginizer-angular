@@ -12,6 +12,7 @@ import { RoleManagementComponent } from '../roles/admin/pages/role-management/ro
 import { Error404Component } from '@app/shared/pages/error404/error404.component';
 import { PermissionBasedGuard } from '@app/authentication/guards/permission-based-auth.guard';
 import { UserListComponent } from '@app/roles/admin/pages/users/users.component';
+import {DemoComponent} from "@app/shared/pages/demo/demo.component";
 
 const coreRoutes: Routes = [
     {
@@ -20,6 +21,7 @@ const coreRoutes: Routes = [
             {path: 'error404', component: Error404Component},
             {path: 'roles', component: RoleManagementComponent, canActivate: [PermissionBasedGuard]},
             {path: 'users', component: UserListComponent, canActivate: [PermissionBasedGuard]},
+            {path: 'demo', component: DemoComponent},
         ]
     }
 ];

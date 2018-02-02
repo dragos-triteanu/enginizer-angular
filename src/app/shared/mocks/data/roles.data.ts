@@ -1,18 +1,54 @@
 const roles = {
-    items: [
+    "total": 3,
+    "items": [
         {
-            id: 0,
-            name: 'ADMIN'
+            "inUse": true,
+            "isOob": true,
+            "permissions": [
+                {
+                    "id": 0,
+                    "name": "MANAGE_USERS"
+                },
+                {
+                    "id": 1,
+                    "name": "VIEW_USERS"
+                },
+                {
+                    "id": 2,
+                    "name": "MANAGE_ROLES"
+                },
+                {
+                    "id": 3,
+                    "name": "VIEW_ROLES"
+                }
+            ],
+            "id": 1,
+            "name": "ADMIN"
         },
         {
-            id: 1,
-            name: 'COMPANY'
+            "inUse": true,
+            "isOob": true,
+            "permissions": [
+                {
+                    "id": 1,
+                    "name": "VIEW_USERS"
+                },
+                {
+                    "id": 2,
+                    "name": "MANAGE_ROLES"
+                }
+            ],
+            "id": 2,
+            "name": "COMPANY"
         },
         {
-            id: 2,
-            name: 'OTHER'
-        }],
-    total: 3
+            "inUse": true,
+            "isOob": true,
+            "permissions": [],
+            "id": 3,
+            "name": "OTHER"
+        },
+    ]
 };
 
 export default roles;

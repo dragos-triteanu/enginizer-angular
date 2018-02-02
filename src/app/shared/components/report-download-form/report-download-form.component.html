@@ -3,22 +3,22 @@
         <div class="col s6" style="padding-left: 0">
             <app-input-datepicker [formControl]="reportDownloadForm.controls['startDate']"
                                   [showErrors]="showValidations"
-                                  [placeholder]="'reportDownloadForm.startDatePicker.placeholder' | translate"
-                                  [label]="'reportDownloadForm.startDatePicker.label' | translate"
+                                  [placeholder]="'generic.components.report-download.startDatePicker.placeholder' | translate"
+                                  [label]="'generic.components.report-download.startDatePicker.label' | translate"
                                   (dateChange)="onDateChange('startDate', $event)">
             </app-input-datepicker>
         </div>
         <div class="col s6">
             <app-input-datepicker [formControl]="reportDownloadForm.controls['endDate']"
                                   [showErrors]="showValidations"
-                                  [placeholder]="'reportDownloadForm.endDatePicker.placeholder' | translate"
-                                  [label]="'reportDownloadForm.endDatePicker.label' | translate"
+                                  [placeholder]="'generic.components.report-download.endDatePicker.placeholder' | translate"
+                                  [label]="'generic.components.report-download.endDatePicker.label' | translate"
                                   (dateChange)="onDateChange('endDate', $event)">
             </app-input-datepicker>
         </div>
         <div class="right-align">
             <button class="btn btn-primary btn-lg"
-                    (click)="onReportDownload()">{{'reportDownloadForm.downloadButton' | translate}}
+                    (click)="onReportDownload()">{{'generic.components.report-download.downloadButton' | translate}}
             </button>
         </div>
     </div>

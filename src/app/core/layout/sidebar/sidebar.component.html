@@ -14,13 +14,23 @@
             </ng-container>
         </ng-container>
     </ul>
+    <div class="spacer"></div>
+    <ul class="align-bottom">
+        <li routerLinkActive="active">
+            <a routerLink="/demo"
+               class="list-item">
+                <i class="material-icons">dashboard</i>
+                <span>{{'generic.nav.sections.demo.title' | translate}}</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <ng-template #usersAndRoles>
     <li>
         <div class="side-nav-category list-item">
             <i class="material-icons">assignment_ind</i>
-            <span>{{'nav.sections.usersAndRoles.title' | translate}}</span>
+            <span>{{'generic.nav.sections.usersAndRoles.title' | translate}}</span>
         </div>
     </li>
     <li routerLinkActive="active">
@@ -28,7 +38,7 @@
            *ngIf="hasPermission('VIEW_ROLES')"
            class="list-item">
             <i class="material-icons">security</i>
-            <span>{{'nav.sections.usersAndRoles.items.roles' | translate}}</span>
+            <span>{{'generic.nav.sections.usersAndRoles.items.roles' | translate}}</span>
         </a>
     </li>
     <li routerLinkActive="active"
@@ -36,7 +46,7 @@
         <a routerLink="/users"
            class="list-item">
             <i class="material-icons">group</i>
-            <span>{{'nav.sections.usersAndRoles.items.users' | translate}}</span>
+            <span>{{'generic.nav.sections.usersAndRoles.items.users' | translate}}</span>
         </a>
     </li>
 </ng-template>

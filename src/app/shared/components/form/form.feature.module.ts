@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FileUploadModule } from 'primeng/primeng';
+import { AutoCompleteModule, FileUploadModule } from 'primeng/primeng';
 import { TranslateModule } from '@ngx-translate/core';
 import { TextMaskModule } from 'angular2-text-mask/dist/angular2TextMask';
 import { MaterializeModule } from "angular2-materialize";
 import { Ng2CompleterModule } from 'ng2-completer';
-import { AutoCompleteModule } from 'primeng/primeng';
 
 import {
     DatepickerComponent,
+    DropdownAutocompleteComponent,
     DropdownComponent,
     FileInputComponent,
     FormErrorListComponent,
@@ -19,13 +19,11 @@ import {
     InputNumberComponent,
     SwitchComponent,
     TextareaComponent,
-    ToolScanComponent,
-    DropdownAutocompleteComponent
+    ToolScanComponent
 } from './';
 
 
-import { ScannerDirective } from '@app/shared/directives/scanner.directive';
-
+import { HIDScannerDirective } from "@app/shared/directives/hidscanner.directive";
 
 
 @NgModule({
@@ -52,7 +50,7 @@ import { ScannerDirective } from '@app/shared/directives/scanner.directive';
         FileInputComponent,
         TextareaComponent,
         ToolScanComponent,
-        ScannerDirective,
+        HIDScannerDirective,
         DropdownAutocompleteComponent
     ],
     exports: [
@@ -66,7 +64,7 @@ import { ScannerDirective } from '@app/shared/directives/scanner.directive';
         FileInputComponent,
         TextareaComponent,
         ToolScanComponent,
-        ScannerDirective,
+        HIDScannerDirective,
         DropdownAutocompleteComponent
     ]
 })

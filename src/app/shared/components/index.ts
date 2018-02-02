@@ -13,7 +13,6 @@ export { PageStepperComponent, StepperComponent } from './page-stepper/page-step
 export { WizardModalComponent, WizardTitleComponent, WizardStepComponent } from './wizard-modal/wizard-modal.component';
 export { AccordionComponent } from './accordion/accordion.component';
 export { AccordionItemComponent } from './accordion/components/accordion-item/accordion-item.component';
-export { InterventionModalComponent } from './intervention-modal/intervention-modal.component';
 export { InfoModalComponent } from "./info-modal/info-modal.component";
 export { Error404Component } from '../pages/error404/error404.component';
 

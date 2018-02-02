@@ -14,7 +14,7 @@ const permissions = {
         },
         {
             id: 3,
-            name: 'VIEW_USERS'
+            name: 'VIEW_ROLES'
         }
     ],
     total: 4

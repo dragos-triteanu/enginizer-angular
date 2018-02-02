@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
+import {
+    HttpEvent,
+    HttpHandler,
+    HttpInterceptor,
+    HttpRequest,
+    HttpResponse
+} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-
-import * as _ from 'lodash';
-import { RoleService } from '@services/role.service';
-
-import roles from './data/roles.data';
 import { PermissionService } from '@app/authentication/services/permission.service';
 
 

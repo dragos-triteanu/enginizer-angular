@@ -1,0 +1,106 @@
+<div class="page">
+    <div class="page-header text-center">
+        <h3>Demo components</h3>
+    </div>
+    <div class="page-content">
+        <div class="card">
+            <form [formGroup]="form">
+                <h5>Form elements</h5>
+                <div class="row">
+                    <div class="col s6">
+                        <app-input formControlName="text"
+                                   [formControl]="form.controls.text"
+                                   [showErrors]="showValidations"
+                                   placeholder="Insert text"
+                                   label="Textfield">
+                        </app-input>
+                        <app-input-number formControlName="number"
+                                          [formControl]="form.controls.number"
+                                          [showErrors]="showValidations"
+                                          placeholder="Insert number"
+                                          label="Numberfield">
+                        </app-input-number>
+                        <app-input-datepicker formControlName="datepicker"
+                                              [formControl]="form.controls.datepicker"
+                                              [showErrors]="showValidations"
+                                              placeholder="Insert date"
+                                              label="Datepicker">
+                        </app-input-datepicker>
+                        <app-dropdown formControlName="dropdown"
+                                      [formControl]="form.controls.dropdown"
+                                      [showErrors]="showValidations"
+                                      [items]="items"
+                                      displayField="name"
+                                      valueField="id"
+                                      label="Dropdown"
+                                      emptyText="Select items">
+                        </app-dropdown>
+                        <app-input-duration formControlName="duration"
+                                            [formControl]="form.controls.duration"
+                                            [showErrors]="showValidations"
+                                            placeholder="Insert text"
+                                            label="Time duration picker">
+                        </app-input-duration>
+                        <div class="row">
+                            <div class="col s12">
+                                <app-input-switch formControlName="switch"
+                                                  onLabel="On"
+                                                  offLabel="Off"
+                                                  topLabel="Toggle switch"></app-input-switch>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 left-labels">
+                        <app-input formControlName="text"
+                                   labelAlign="left"
+                                   [formControl]="form.controls.text"
+                                   [showErrors]="showValidations"
+                                   placeholder="Insert text"
+                                   label="Textfield">
+                        </app-input>
+                        <app-input-number formControlName="number"
+                                          labelAlign="left"
+                                          [formControl]="form.controls.number"
+                                          [showErrors]="showValidations"
+                                          placeholder="Insert number"
+                                          label="Numberfield">
+                        </app-input-number>
+                        <app-input-datepicker formControlName="datepicker"
+                                              labelAlign="left"
+                                              [formControl]="form.controls.datepicker"
+                                              [showErrors]="showValidations"
+                                              placeholder="Insert date"
+                                              label="Datepicker">
+                        </app-input-datepicker>
+                        <app-dropdown formControlName="dropdown"
+                                      labelAlign="left"
+                                      [formControl]="form.controls.dropdown"
+                                      [showErrors]="showValidations"
+                                      [items]="items"
+                                      displayField="name"
+                                      valueField="id"
+                                      label="Dropdown"
+                                      emptyText="Click to view items">
+                        </app-dropdown>
+                        <app-input-duration formControlName="duration"
+                                            labelAlign="left"
+                                            [formControl]="form.controls.duration"
+                                            [showErrors]="showValidations"
+                                            placeholder="Insert text"
+                                            label="Time duration picker">
+                        </app-input-duration>
+                        <app-dropdown-autocomplete formControlName="autocomplete"
+                                                   labelAlign="left"
+                                                   [formControl]="form.controls.autocomplete"
+                                                   [showErrors]="showValidations"
+                                                   [items]="items"
+                                                   label="Dropdown autocomplete"
+                                                   displayField="name"
+                                                   emptyText="Select items">
+                        </app-dropdown-autocomplete>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

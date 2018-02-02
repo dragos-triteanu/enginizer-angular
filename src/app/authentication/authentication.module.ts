@@ -1,11 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import { JwtHelper } from 'angular2-jwt';
-
-import { TranslateModule } from '@ngx-translate/core';
 
 import { ToastOptions, ToastsManager } from 'ng2-toastr';
 

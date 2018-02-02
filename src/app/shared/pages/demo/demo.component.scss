@@ -1,0 +1,27 @@
+:host {
+    /deep/ {
+        .left-labels {
+            padding-left: 40px;
+
+            label {
+                flex-basis: 200px;
+            }
+        }
+    }
+
+    .page-header {
+        text-align: center;
+    }
+
+    .page-content {
+        padding: 0 24px;
+
+        .card {
+            h5 {
+                padding: 24px 0;
+            }
+            padding: 40px;
+            min-height: 60vh;
+        }
+    }
+}

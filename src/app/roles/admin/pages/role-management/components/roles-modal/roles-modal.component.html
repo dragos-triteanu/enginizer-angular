@@ -1,9 +1,9 @@
 <app-modal class="roles-create-modal">
     <ng-container modal-header>
         <h5 class="modal-title"
-            *ngIf="!isEditMode; else editTitle">{{'admin.roles.create-modal.title' | translate}}</h5>
+            *ngIf="!isEditMode; else editTitle">{{'roles.admin.roles.create-modal.title' | translate}}</h5>
         <ng-template #editTitle>
-            <h5 class="modal-title">{{'admin.roles.update-modal.title' | translate}}</h5>
+            <h5 class="modal-title">{{'roles.admin.roles.update-modal.title' | translate}}</h5>
         </ng-template>
     </ng-container>
     <ng-container modal-body>
@@ -12,7 +12,7 @@
                 <app-alert *ngIf="isOobRole()"
                            [fullWidth]="true"
                            type="warning"
-                           message="{{'admin.roles.update-modal.oob.warning'| translate}}"></app-alert>
+                           message="{{'roles.admin.roles.update-modal.oob.warning'| translate}}"></app-alert>
             </div>
         </div>
         <form class="picklist-form"
@@ -23,8 +23,8 @@
                                [formControl]="form.controls.name"
                                [showErrors]="showValidations"
                                [isDisabled]="isOobRole()"
-                               placeholder="{{'admin.roles.create-modal.name-input.placeholder' | translate }}"
-                               label="{{'admin.roles.create-modal.name-input.label' | translate}}">
+                               placeholder="{{'roles.admin.roles.create-modal.name-input.placeholder' | translate }}"
+                               label="{{'roles.admin.roles.create-modal.name-input.label' | translate}}">
                     </app-input>
                 </div>
             </div>
@@ -33,9 +33,9 @@
                     <app-picklist [source]="permissions"
                                   [(target)]="role.permissions"
                                   [disabled]="isOobRole()"
-                                  sourceHeader="{{'admin.roles.create-modal.pick-list.leftHeader' | translate}}"
-                                  targetHeader="{{'admin.roles.create-modal.pick-list.rightHeader' | translate}}"
-                                  infoLabel="{{'admin.roles.create-modal.alert.message' | translate}}"></app-picklist>
+                                  sourceHeader="{{'roles.admin.roles.create-modal.pick-list.leftHeader' | translate}}"
+                                  targetHeader="{{'roles.admin.roles.create-modal.pick-list.rightHeader' | translate}}"
+                                  infoLabel="{{'roles.admin.roles.create-modal.alert.message' | translate}}"></app-picklist>
                 </div>
             </div>
         </form>
@@ -45,19 +45,19 @@
                 type="button"
                 class="btn btn-primary"
                 (click)="createRole()">
-            {{'admin.roles.create-modal.button.create'| translate}}
+            {{'roles.admin.roles.create-modal.button.create'| translate}}
         </button>
         <button *ngIf="isEditMode && !isOobRole() && shouldRenderModifiers()"
                 type="button"
                 class="btn btn-warning"
                 (click)="updateRole()">
-            {{'admin.roles.create-modal.button.update'| translate}}
+            {{'roles.admin.roles.create-modal.button.update'| translate}}
         </button>
         <button class="btn btn-danger"
                 *ngIf="isEditMode && !isOobRole() && shouldRenderModifiers()"
                 [class.disabled]="role.inUse"
                 (click)="deleteRole()">
-            {{'admin.roles.create-modal.button.delete' | translate}}
+            {{'roles.admin.roles.create-modal.button.delete' | translate}}
         </button>
         <button type="button"
                 class="waves-effect btn-flat"

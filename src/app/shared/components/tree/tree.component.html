@@ -1,6 +1,6 @@
 <div class="app-tree" [class.material]="isMaterial">
     <h5 [ngClass]="labelClass" class="tree-label">{{label}}</h5>
-    <ng-container *ngIf="!scanningEnabled;else withScanning">
+    <ng-container>
         <ng-container *ngTemplateOutlet="displayOnly"></ng-container>
     </ng-container>
 </div>
@@ -8,13 +8,6 @@
 <ng-template #displayOnly>
     <ng-container *ngIf="shouldRenderItems();else emptyMessageTemplate">
         <ng-container *ngTemplateOutlet="displayTree"></ng-container>
-    </ng-container>
-</ng-template>
-
-<ng-template #withScanning>
-    <div appBadgeScanner (scannerEvent)="triggerScanEvent($event)"></div>
-    <ng-container *ngIf="shouldRenderItems();else emptyMessageTemplate">
-        <ng-container *ngTemplateOutlet="scanTree"></ng-container>
     </ng-container>
 </ng-template>
 
@@ -28,29 +21,6 @@
     </p-tree>
 </ng-template>
 
-<ng-template #scanTree>
-    <p-tree [value]="items"
-            selectionMode="checkbox"
-            [loadingIcon]=""
-            [loading]="loading"
-            (onNodeSelect)="nodeSelect($event)"
-            (onNodeUnselect)="nodeUnselect($event)"
-            [propagateSelectionUp]="propagateSelectionUp"
-            [propagateSelectionDown]="propagateSelectionDown"
-            [(selection)]="_selectedItems">
-        <ng-template let-node pTemplate="default">
-            <input [(ngModel)]="node.label" type="text" #contextModel style="width:100%">
-        </ng-template>
-        <ng-template let-node pTemplate="tool-inspect">
-            <div class="tree-inspect-row">
-                <div class="inspect-label" [ngClass]="{'striked': node.inspected}">{{node.label}}</div>
-                <span class="inspect-warning-wrapper" (click)="clickRowAlert(node)">
-                    <i *ngIf="node.warning"
-                       class="material-icons inspect-warning">warning</i></span>
-            </div>
-        </ng-template>
-    </p-tree>
-</ng-template>
 
 <ng-template #emptyMessageTemplate>
     <span>{{emptyMessage}}</span>

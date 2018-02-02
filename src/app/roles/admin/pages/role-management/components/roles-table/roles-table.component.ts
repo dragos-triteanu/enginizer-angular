@@ -46,7 +46,7 @@ export class RolesTableComponent {
 
     getRoleName(role: UserRole) {
         if (role.isOob) {
-            return this.translateService.instant('admin.roles.oobRoles.' + role.name)
+            return this.translateService.instant('roles.admin.roles.oobRoles.' + role.name)
         }
 
         return role.name;

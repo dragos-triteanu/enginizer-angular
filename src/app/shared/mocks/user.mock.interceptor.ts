@@ -6,7 +6,7 @@ import * as _ from 'lodash';
 
 import 'rxjs/add/operator/map';
 
-import users from './data/users.data.';
+import users from './data/users.data';
 import roles from './data/roles.data';
 import { UserService } from 'app/core/services/user.service';
 import { Log } from 'ng2-logger';

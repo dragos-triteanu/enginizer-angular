@@ -1,15 +1,15 @@
 <app-table [data]="roles"
            [config]="tableConfig"
-           title="{{'admin.roles.table.title' | translate}}"
+           title="{{'roles.admin.roles.table.title' | translate}}"
            [rowExpand]="false"
            [isLoading]="isLoading"
            (sortChange)="onSortChange($event)"
            (filterChange)="onFilterChange($event)"
            (pageChange)="onPageChange($event)"
            (rowClick)="onRowClick($event)">
-    <app-table-column header="{{'admin.roles.table.columns.roleName' | translate}}"
+    <app-table-column header="{{'roles.admin.roles.table.columns.roleName' | translate}}"
                       filter="true"
-                      filterPlaceholder="{{'admin.roles.table.filter.placeholder.name' | translate}}"
+                      filterPlaceholder="{{'roles.admin.roles.table.filter.placeholder.name' | translate}}"
                       sortable="true"
                       field="name">
         <ng-template #body

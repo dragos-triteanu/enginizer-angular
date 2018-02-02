@@ -5,17 +5,29 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { MaterializeModule } from "angular2-materialize";
-import { ContextMenuModule, FileUploadModule } from 'primeng/primeng';
+import {
+    ContextMenuModule,
+    DataTableModule,
+    FileUploadModule,
+    ListboxModule,
+    PaginatorModule,
+    PickListModule,
+    SharedModule as PrimeSharedModule
+} from 'primeng/primeng';
+
 import { ComponentsModule } from '@components/components.module';
 import { TableModule } from '@components/custom-table/table.module';
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormFeatureModule } from '@components/form/form.feature.module';
 import { Error404Component } from "@app/shared/components";
+import { DemoComponent } from "@app/shared/pages/demo/demo.component";
+
 
 @NgModule({
     declarations: [
-        Error404Component
+        Error404Component,
+        DemoComponent
     ],
     imports: [
         CommonModule,
@@ -26,6 +38,11 @@ import { Error404Component } from "@app/shared/components";
         TranslateModule,
         MaterializeModule,
         ContextMenuModule,
+        DataTableModule,
+        PrimeSharedModule,
+        PaginatorModule,
+        PickListModule,
+        ListboxModule,
         FileUploadModule,
         BrowserAnimationsModule,
         // Feature modules
@@ -35,7 +52,12 @@ import { Error404Component } from "@app/shared/components";
     ],
     exports: [
         CommonModule,
+        PaginatorModule,
+        PickListModule,
         // Feature modules
+
+        ListboxModule,
+        DataTableModule,
         TableModule,
         ComponentsModule,
         FormFeatureModule,

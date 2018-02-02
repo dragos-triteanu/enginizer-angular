@@ -58,6 +58,7 @@ export class AuthenticationInfoModalComponent implements OnInit {
     }
 
     onScan(badgeId: string) {
+        debugger
         this._logger.info('onScan:: BadgeId: ' + badgeId);
 
         this.isScanninInProgress = true;
