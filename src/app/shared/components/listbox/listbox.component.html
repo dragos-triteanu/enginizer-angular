@@ -1,0 +1,10 @@
+<div class="app-listbox">
+    <h5 [ngClass]="labelClass" [ngStyle]="labelStyle">{{label}}</h5>
+    <p-listbox id="listbox" [options]="items">
+        <ng-template let-record pTemplate="item">
+            <div class="ui-helper-clearfix">
+                <div [ngClass]="valueClass" [ngStyle]="valueStyle">{{record[displayField]}}</div>
+            </div>
+        </ng-template>
+    </p-listbox>
+</div>

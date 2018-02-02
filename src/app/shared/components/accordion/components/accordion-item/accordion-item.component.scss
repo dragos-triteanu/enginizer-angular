@@ -1,0 +1,29 @@
+@import 'src/styles/_variables.scss';
+
+:host ::ng-deep {
+
+    .collapsible-header, .accordion-item {
+        z-index: 2;
+        overflow: visible;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .collapsible-body {
+        padding: $default-panel-padding;
+        border: none;
+        box-sizing: border-box;
+        display: inline-block !important;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .disabled {
+        color: darkgray;
+    }
+
+}

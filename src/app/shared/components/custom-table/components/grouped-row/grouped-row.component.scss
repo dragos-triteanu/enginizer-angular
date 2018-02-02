@@ -1,0 +1,24 @@
+$bg1: rgb( 241, 241, 241);
+$bg2: rgb( 241, 241, 241);
+
+:host {
+    /deep/ {
+        .items {
+            .table-group {
+                .header {
+                    background: $bg2;
+
+                    i {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header {
+    padding-left: 20px;
+    height: 40px;
+    background: $bg1;
+}

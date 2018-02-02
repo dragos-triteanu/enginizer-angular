@@ -1,0 +1,25 @@
+<label *ngIf="label && leftAlignLabel">{{label}}</label>
+<div class="input-field"
+     [class.invalid]="hasError">
+    <div class="row">
+        <div class="col s8 value">
+            <input [(ngModel)]="value"
+                   [textMask]="{mask: mask, guide: false}"
+                   [placeholder]="placeholder"
+                   type="text">
+        </div>
+        <div class="col s4 unit">
+            <app-dropdown [items]="timeUnits"
+                          [(ngModel)]="selectedUnit"
+                          displayField="label"
+                          valueField="id"
+                          emptyText="Select interval"
+                          (selectItem)="onTimeUnitChange($event)">
+            </app-dropdown>
+        </div>
+    </div>
+    <label class="active"
+           *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <app-form-error-list *ngIf="showErrors"
+                         [errorMap]="formControl.errors"></app-form-error-list>
+</div>

@@ -1,0 +1,126 @@
+@import '~materialize-css/sass/components/color';
+@import './_colors';
+
+$roboto-font-path: '~materialize-css/dist/fonts/roboto/' !default;
+$navbar-height: 64px;
+$logo-width: 300px;
+$sidebar-expanded: 170px;
+$sidebar-collapsed: 100px;
+$sidebar-bg: $blue-100;
+//navbar
+$navbar-font-color: rgba(0, 0, 0, .54);
+//sidenav variables
+// $sidenav-bg-color: $blue-100;
+$sidenav-bg-color: #3c4252;
+$sidenav-font-color: #fff;
+$sidenav-font-size: 14px !default;
+$sidenav-padding: 16px !default;
+$sidenav-item-height: 1rem !default;
+$sidenav-line-height: 1rem !default;
+$primary-color: $blue-100;
+$secondary-color: $blue-100;
+@import '~materialize-css/sass/materialize';
+$logo-bg: hsla(0, 0%, 100%, .05);
+
+//buttons
+$warning-button: color("amber", "base") !default;
+$danger-button: color("red", "base") !default;
+
+//categories (hidden but can be enabled)
+$category_icons: none;
+
+//Theming
+
+//Default background
+$default-background-color: #eee;
+
+// Supergraphic
+$supergraphic_height: 15px;
+
+//Sidebar
+$bosch_sidenav_bg-color: $sidenav-bg-color;
+$bosch_sidebar_heading: $bosch_dark_blue;
+$bosch_sidebar_item: $bosch_dark_gray;
+$bosch_sidebar_item_hover_color: $bosch_white;
+$bosch_sidebar_item_active_bg_color: $bosch_white;
+$bosch_sidebar_scroll_color: $bosch_light_blue;
+
+//Buttons
+$bosch_primary_button_color: $bosch_dark_blue;
+
+header {
+    nav {
+        background-color: #fff;
+        height: $navbar-height;
+
+        .left-menu {
+            margin-left: $sidebar-expanded;
+        }
+    }
+
+    .side-nav {
+        margin-top: $supergraphic_height;
+    }
+}
+
+main {
+    background: $light-gray;
+    padding-left: $sidebar-expanded;
+}
+
+.btn-danger {
+    background-color: $bosch_red;
+
+    &:hover {
+        background-color: $bosch_red;
+        @extend .darken-2;
+    }
+
+    &:visited {
+        background-color: $bosch_red;
+    }
+
+    &:focus {
+        background-color: $bosch_red;
+    }
+}
+
+.btn-warning {
+    @extend .amber;
+    @extend .lighten-1;
+}
+
+.btn-default {
+    background-color: $bosch_light_blue;
+
+    &:hover {
+        background-color: $bosch_light_blue;
+        @extend .darken-2;
+    }
+
+    &:visited {
+        background-color: $bosch_light_blue;
+    }
+
+    &:focus {
+        background-color: $bosch_light_blue;
+    }
+}
+
+.btn-primary {
+    background-color: $bosch_primary_button_color;
+
+    &:hover {
+        background-color: $bosch_primary_button_color;
+        @extend .darken-2;
+    }
+
+    &:visited {
+        background-color: $bosch_primary_button_color;
+    }
+
+    &:focus {
+        background-color: $bosch_primary_button_color;
+    }
+}
+

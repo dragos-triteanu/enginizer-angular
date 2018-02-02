@@ -1,0 +1,18 @@
+@import 'src/styles/_variables.scss';
+
+:host {
+    /deep/ {
+
+        .input-field.invalid textarea {
+            border-bottom: 1px solid #F44336;
+            box-shadow: 0 1px 0 0 #F44336;
+        }
+
+        .error-list {
+
+            .errors {
+                bottom: -36px;
+            }
+        }
+    }
+}

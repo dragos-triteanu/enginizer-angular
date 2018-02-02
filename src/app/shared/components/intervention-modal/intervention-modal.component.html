@@ -1,0 +1,36 @@
+<app-modal [dismissible]="false" class="intervention-modal">
+    <div class="modal-header" modal-header>
+        <h5 class="modal-title">{{title}}</h5>
+    </div>
+    <div class="modal-body" modal-body>
+        <form [formGroup]="interventionForm">
+        <app-textarea [formControl]="interventionForm.controls['description']"
+                      formControlName="description"
+                      [showErrors]="showValidations"
+                      [dataLength]="120"
+                      [label]="'intervention-modal.description.label' | translate"
+                      [placeholder]="'intervention-modal.description.placeholder' | translate">
+        </app-textarea>
+        <app-file-input #fileInput
+                        [acceptedTypes]="'.doc,.pdf,.docx,.xlx,.xlxs,.step,.dwg,image/*'"
+                        [required]="false"
+                        (onFileUpload)="selectFiles($event)"
+                        (onFilesSelected)="selectFiles($event)"
+                        (onFileRemoved)="selectFiles($event)">
+        </app-file-input>
+        </form>
+    </div>
+    <div class="modal-footer" modal-footer>
+        <button type="button"
+                class="btn btn-primary"
+                (click)="onConfirm($event)"
+                data-dismiss="modal">{{"generic.buttons.confirm" | translate}}
+        </button>
+        <button type="button"
+                class="waves-effect btn-flat"
+                (click)="onCancel()"
+                [disabled]="isConfirmationInProgress"
+                data-dismiss="modal">{{"generic.buttons.close" | translate}}
+        </button>
+    </div>
+</app-modal>

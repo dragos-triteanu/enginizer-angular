@@ -1,0 +1,29 @@
+:host {
+    //TODO I've reverted the alert component. Quest is to make it great again using far less hack css. Flex is ur friend.
+    .alert-content {
+        width: auto;
+        display: block;
+
+        .fullWidth {
+            width: 100%;
+        }
+
+        .card-panel {
+            padding: 1rem;
+            display: inline-flex;
+            align-items: flex-end;
+
+            .white-text {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+
+                div {
+                    margin-left: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+<div class="page">
+    <div class="material">
+        <div class="header">
+            <button class="btn btn-primary btn-lg"
+                    *ngIf="shouldRenderModifiers()"
+                    (click)="openRoleModal()">{{'admin.roles.buttons.addRole' | translate}}
+            </button>
+        </div>
+        <div class="content">
+            <app-roles-table [roles]="roles"
+                             [tableConfig]="tableConfig"
+                             [isLoading]="isLoadingRoles"
+                             (sortChange)="onSortChange($event)"
+                             (filterChange)="onFilter($event)"
+                             (rowClick)="onTableRowClick($event)"
+                             (pageChange)="onPageChange($event)">
+            </app-roles-table>
+        </div>
+    </div>
+</div>
+<app-roles-modal (onCreate)="create($event)"
+                 (onUpdate)="update($event)"
+                 (onDelete)="remove($event)"
+                 [role]="selectedRole"></app-roles-modal>

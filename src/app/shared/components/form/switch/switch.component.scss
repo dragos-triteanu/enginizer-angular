@@ -1,0 +1,22 @@
+@import 'src/styles/_variables.scss';
+
+:host {
+
+    .switch {
+
+        &.enabled {
+            .lever {
+                background-color: rgba(61, 153, 112, .5);
+
+                &:after {
+                    background-color: $color-active;
+                }
+            }
+
+            .on {
+                color: $color-active;
+                font-weight: 800;
+            }
+        }
+    }
+}

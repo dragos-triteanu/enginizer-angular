@@ -1,0 +1,19 @@
+:host {
+    .page{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .content{
+            text-align: center;
+        }
+
+        .logo-image{
+            width: 300px;
+            height: auto;
+        }
+
+    }
+}

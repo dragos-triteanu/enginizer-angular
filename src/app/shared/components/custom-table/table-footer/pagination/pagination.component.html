@@ -1,0 +1,9 @@
+<ul class="app-pager" *ngIf="pages.length">
+    <li [class.disabled]="isFirstPage()"
+      (click)="setPage(currentPage - 1)"><a><i class="material-icons">chevron_left</i></a></li>
+    <li *ngFor="let page of pages"
+      [class.active]="isCurrentPage(page)"
+      (click)="setPage(page)"><a>{{page}}</a></li>
+    <li [class.disabled]="isLastPage()"
+      (click)="setPage(currentPage + 1)"><a><i class="material-icons">chevron_right</i></a></li>
+</ul>

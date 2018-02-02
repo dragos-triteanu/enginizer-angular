@@ -1,0 +1,67 @@
+<div [class.vertical-steps]="verticalSteps" class="page-stepper">
+    <div class="page-stepper-header">
+        <div class="title-contain">
+            <ng-content select="[stepper-title]"></ng-content>
+            <ng-container *ngFor="let step of steps; let index = index;">
+                <div *ngIf="verticalSteps && index === activeStepIndex"
+                     class="step-title">
+                    <ng-container *ngTemplateOutlet="step.title"></ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="page-stepper-body">
+        <div class="body-wrapper">
+            <ul class="steps">
+                <li *ngFor="let step of steps; let index = index;"
+                    [class.active]="isStepActive(index)"
+                    [class.complete]="isStepComplete(index)">
+                    <div class="step-card">
+                        <div class="step-counter">
+                            <i *ngIf="isStepComplete(index)"
+                               class="material-icons">check</i>
+                            <span *ngIf="!isStepComplete(index)">{{index + 1}}</span>
+                        </div>
+                        <div class="step-label">
+                            <ng-container *ngTemplateOutlet="step.title"></ng-container>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                </li>
+            </ul>
+            <div class="step-content">
+                <ng-container *ngFor="let step of steps; let index = index;">
+                    <div [hidden]="index !== activeStepIndex">
+                        <ng-container *ngTemplateOutlet="step.content; context: {step: step}"></ng-container>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="page-stepper-footer">
+        <div class="actions">
+            <button type="button"
+                    *ngIf="!isFirstStep"
+                    class="btn btn-default back"
+                    (click)="prev()">
+                <i class="material-icons">chevron_left</i>  {{'generic.buttons.back'| translate}}
+            </button>
+            <div class="spacer"></div>
+            <button *ngIf="!isLastStep"
+                    [disabled]="nextDisabled"
+                    type="button"
+                    class="btn btn-default next"
+                    (click)="next()">
+                {{'generic.buttons.next'| translate}}
+                <i class="material-icons">chevron_right</i>
+            </button>
+            <button *ngIf="isLastStep && submitVisible"
+                    [disabled]="nextDisabled"
+                    type="button"
+                    class="btn btn-warning next"
+                    (click)="finalSubmit()">
+                {{'generic.buttons.save'| translate}}
+            </button>
+        </div>
+    </div>
+</div>

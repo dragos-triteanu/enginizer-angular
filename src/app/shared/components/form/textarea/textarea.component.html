@@ -1,0 +1,15 @@
+<label *ngIf="label && leftAlignLabel">{{label}}</label>
+<div class="input-field" [class.invalid]="hasError">
+    <textarea materialize="characterCounter"
+              [(ngModel)]="value"
+              [placeholder]="placeholder"
+              [disabled]="isDisabled"
+              [attr.data-length]="dataLength"
+              class="materialize-textarea"></textarea>
+    <label class="active"
+           *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <div class="error-list">
+        <app-form-error-list *ngIf="showErrors"
+                             [errorMap]="formControl.errors"></app-form-error-list>
+    </div>
+</div>

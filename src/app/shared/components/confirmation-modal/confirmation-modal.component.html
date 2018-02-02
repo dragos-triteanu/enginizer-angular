@@ -1,0 +1,47 @@
+<app-modal [dismissible]="false" class="popup-confirmation">
+    <div *ngIf="!displayReasonMode && !confirmOnlyMode && this.modal.isOpen()"
+         appHIDScanner
+         (scannerEvent)="onScan($event)"
+         (invalidBadge)="onInvalidBadge($event)"></div>
+    <div class="modal-header"
+         modal-header>
+        <h5 class="modal-title">{{title}}</h5>
+        <div *ngIf="!displayReasonMode && !confirmOnlyMode" class="scanner-status">
+            <label>Status:</label>
+            <span *ngIf="focused"
+                  class="message ok">{{'generic.scanner.focused' | translate}}</span>
+            <span *ngIf="!focused"
+                  class="message not-ok">{{'generic.scanner.notFocused' | translate}}</span>
+        </div>
+    </div>
+    <div class="modal-body" *ngIf="!displayReasonMode" modal-body>
+        <p>{{question}}</p>
+        <p>{{message}}</p>
+    </div>
+    <div class="modal-body" *ngIf="displayReasonMode" modal-body>
+        <app-textarea [formControl]="formGroup.controls['reason']"
+                      [showErrors]="showErrors"
+                      [dataLength]="120"
+                      [label]="displayReasonLabel"
+                      [placeholder]="displayReasonPlaceholder">
+        </app-textarea>
+    </div>
+    <div class="modal-footer" modal-footer>
+        <button *ngIf="displayReasonMode" type="button"
+                class="btn btn-secondary"
+                (click)="onConfirmReason()"
+                data-dismiss="modal">{{"generic.buttons.confirm" | translate}}
+        </button>
+        <button *ngIf="confirmOnlyMode" type="button"
+                class="btn btn-secondary"
+                (click)="onConfirmEvent()"
+                data-dismiss="modal">{{"generic.buttons.confirm" | translate}}
+        </button>
+        <button type="button"
+                class="waves-effect btn-flat"
+                (click)="onCancel()"
+                [disabled]="isConfirmationInProgress"
+                data-dismiss="modal">{{"generic.buttons.close" | translate}}
+        </button>
+    </div>
+</app-modal>

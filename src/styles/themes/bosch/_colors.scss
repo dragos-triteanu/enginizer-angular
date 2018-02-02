@@ -1,0 +1,60 @@
+//primary
+$blue-100: rgb(0, 59, 106);
+$blue-75: rgb(33, 95, 139);
+$blue-50: rgb(98, 140, 178);
+$blue-25: rgb(162, 186, 210);
+$gray: rgb(128, 130, 133);
+$light-gray: rgb(241, 241, 241);
+$silver: rgb(138, 141, 143);
+
+//sparingly (accent)
+$bosch_red: #D53627;
+
+//Bosch generic colors
+$bosch_dark_gray: #555D68;
+$bosch_light_gray: #CECFD1;
+$bosch_white: #fff;
+
+//Bosch combination 1 (from spec)
+$bosch_pink: #B40A73;
+$bosch_violet: #571778;
+
+//Bosch combination 2 (from spec)
+$bosch_violet: #571778;
+$bosch_dark_blue: #395692;
+
+//Bosch combination 3 (from spec) --: CURRENT
+$bosch_dark_blue: #395692;
+$bosch_light_blue: #4F8ACF;
+
+//Bosch combination 4 (from spec)
+$bosch_light_blue: #4F8ACF;
+$bosch_teal: #439FB2;
+
+//Bosch combination 5 (from spec)
+$bosch_teal: #439FB2;
+$bosch_light_green: #6DB74D;
+
+//Bosch combination 6 (from spec)
+$bosch_light_green: #6DB74D;
+$bosch_dark_green: #206A58;
+
+//secondary
+$blue-light: rgb(110, 176, 213);
+$red-brown: rgb(189, 70, 71);
+$yellow-green: rgb(192, 172, 0);
+$yellow-catcher: rgb(251, 243, 33);
+
+// Warnings
+$warning-color: #FFAB00;
+$important-color: #C62828;
+
+//exceptions
+$bosch-green: rgb(23, 63, 53);
+//borders
+$border-default-color: #ccc;
+//hover
+$hover_default_color: $gray;
+
+//label
+$label_default_color: $gray;

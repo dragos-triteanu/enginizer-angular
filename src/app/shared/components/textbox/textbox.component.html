@@ -1,0 +1,17 @@
+<label for="textbox"
+       [ngClass]="labelClass"
+       [ngStyle]="labelStyle">
+    {{label}}
+</label>
+<textarea *ngIf="editMode"
+          id="textbox"
+          [ngClass]="{'edit': editMode}"
+          [ngClass]="valueClass"
+          [ngStyle]="valueStyle">
+    {{value}}
+</textarea>
+<p *ngIf="!editMode"
+   id="textbox"
+   [ngClass]="{'simple': !editMode}"
+   [ngClass]="valueClass"
+   [ngStyle]="valueStyle">{{value}}</p>

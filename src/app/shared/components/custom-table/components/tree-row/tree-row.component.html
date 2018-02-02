@@ -1,0 +1,14 @@
+<div class="table-tree">
+    <div class="table-row"
+         (click)="toggleExpand()">
+        <i class="material-icons">{{isExpanded ? 'remove_circle_outline' : 'add_circle_outline'}}</i>
+        <ng-container *ngTemplateOutlet="columnsRenderer; context:{ record: record }"></ng-container>
+    </div>
+    <div class="items"
+         *ngIf="isExpanded">
+        <simple-row *ngFor="let child of children"
+                    [columnsRenderer]="columnsRenderer"
+                    [record]="child">
+        </simple-row>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+.app-listbox {
+
+    box-shadow: $default-box-shadow;
+    background-color: $default-panel-background-color;
+    padding: $default-panel-padding;
+
+    .highlighted {
+        font-weight: bold;
+        font-size: $label-font-size;
+    }
+
+    .ui-listbox {
+        width: 100%;
+        max-height: $tool-details-component-max-height;
+        overflow-y: auto;
+        padding: 0;
+
+        .ui-listbox-item {
+            padding: $default-input-padding;
+        }
+
+        .ui-widget-content {
+            border-radius: 4px;
+        }
+
+        .ui-state-highlight {
+            background-color: $default-panel-selection-color;
+        }
+
+        .ui-helper-clearfix {
+            font-weight: $default-text-bolder-font-weight;
+            font-size: $label-font-size;
+            margin: 0;
+            height: 23px;
+        }
+    }
+
+}
+
+
+

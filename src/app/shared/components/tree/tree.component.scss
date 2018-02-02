@@ -1,0 +1,91 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+.app-tree {
+    background-color: $default_panel-background-color;
+    padding: $default-panel-padding;
+
+    .material {
+        box-shadow: $default-box-shadow;
+    }
+
+    .highlighted {
+        font-weight: bold;
+        font-size: $label-font-size;
+    }
+
+    .tree-label {
+        font-weight: $default_text-bolder-font-weight;
+        font-size: $default_panel_title_font_size;
+    }
+
+    .ui-tree {
+        max-height: $tool-details-component-max-height;
+        overflow-y: auto;
+        width: 100%;
+
+        .ui-widget-content {
+            border-radius: 4px;
+        }
+
+        .ui-tree-container {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ui-treenode {
+            background-color: $default-panel-selection-color;
+            margin-bottom: 1px;
+            padding: $default-input-padding;
+
+            .tree-inspect-row {
+                display: inline-flex;
+
+                .inspect-label {
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .inspect-warning-wrapper {
+                    color: $warning-color;
+
+                    &:hover {
+                        color: darkorange;
+                    }
+
+                    .inspect-warning {
+
+                        font-size: 40px;
+                        pointer-events: none;
+
+                    }
+                }
+
+            }
+        }
+
+        .ui-treenode-label {
+            font-size: $label-font-size;
+            font-weight: $default-text-bolder-font-weight;
+        }
+
+        .ui-chkbox {
+            border: 1px solid gray;
+        }
+
+        .ui-widget-overlay {
+            background-color: $default-panel-selection-color;
+            opacity: 1;
+        }
+    }
+
+    .not-clickable {
+        pointer-events: none;
+    }
+
+    .striked {
+        text-decoration: line-through;
+    }
+}

@@ -1,0 +1,35 @@
+:host {
+    flex: 1 1 80%;
+    text-align: right;
+}
+
+.app-pager {
+    float: right;
+    margin: 0;
+
+    li {
+        float: left;
+        height: 22px;
+        min-width: 24px;
+        line-height: 22px;
+        padding: 0 6px;
+        border-radius: 3px;
+        margin: 6px 3px;
+        text-align: center;
+
+        &.active {
+            background-color: rgba(158, 158, 158, .2);
+            pointer-events: none;
+        }
+
+        &.disabled {
+            pointer-events: none;
+        }
+
+        a {
+            color: rgba(0, 0, 0, .54);
+            text-decoration: none;
+            vertical-align: bottom;
+        }
+    }
+}

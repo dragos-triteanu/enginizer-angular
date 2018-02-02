@@ -1,0 +1,96 @@
+<div class="table-head">
+    <div class="table-row title">
+        <div class="table-column">
+            {{title}}
+        </div>
+        <div class="table-column toolbar">
+            <a class="waves-effect btn-flat"
+               *ngIf="showExpandAll"
+               (click)="onToggleExpandAll()">
+                <i class="material-icons" *ngIf="!allExpanded">keyboard_arrow_down</i>
+                <i class="material-icons" *ngIf="allExpanded">keyboard_arrow_up</i>
+            </a>
+            <a class="waves-effect btn-flat"
+               *ngIf="filtersToggle"
+               (click)="toggleFilters()">
+                <i class="material-icons">filter_list</i>
+            </a>
+        </div>
+    </div>
+    <ng-container *ngTemplateOutlet="groupers"></ng-container>
+    <ng-container *ngTemplateOutlet="columnHeaders"></ng-container>
+    <ng-container *ngTemplateOutlet="filters"></ng-container>
+</div>
+
+<ng-template #groupers>
+    <div class="table-row groupers"
+         *ngIf="showGroupers">
+        <div class="table-column">
+            <span class="section-label">{{'admin.tools.table.grouping.groupBy' | translate}}</span>
+            <ul>
+                <li class="group-item"
+                    *ngFor="let grouper of groupableDropdownItems">
+                    <a class="waves-effect btn-flat"
+                       *ngIf="isActiveGrouper(grouper)">
+                        <span class="group-name">{{grouper.name}}</span>
+                        <i class="material-icons" (click)="removeChipsGrouper(grouper)">close</i>
+                    </a>
+                    <a class="waves-effect btn-flat grouper-disabled"
+                       *ngIf="!isActiveGrouper(grouper)"
+                       (click)="addChipsGrouper(grouper)">
+                        <span class="group-name">{{grouper.name}}</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="table-row groupers"
+         *ngIf="showGroupFilters">
+        <div class="table-column">
+            <span class="section-label">{{"table.groupFilter" | translate}}:</span>
+            <ul>
+                <li class="group-item"
+                    *ngFor="let groupFilter of groupFilterItems">
+                    <app-dropdown [(ngModel)]="groupFilter.selectedValue"
+                                  [items]="groupFilter.items"
+                                  [valueField]="groupFilter.value"
+                                  [displayField]="groupFilter.displayField"
+                                  [emptyText]="groupFilter.placeholder"
+                                  (selectItem)="onGroupFilterChanged($event, groupFilter)"
+                    ></app-dropdown>
+                </li>
+            </ul>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #filters>
+    <div class="table-row filters"
+         *ngIf="showFilters">
+        <div class="table-column editable {{column.cls}}"
+             *ngFor="let column of columns">
+            <app-input *ngIf="column.filter"
+                       placeholder="{{column.filterPlaceholder}}"
+                       [(ngModel)]="column.filterValue"
+                       (ngModelChange)="onFilterChange(column)"></app-input>
+            <ng-container
+                *ngTemplateOutlet="column.filterTmpl; context : {column: column, table: templateContext}"></ng-container>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #columnHeaders>
+    <div class="table-row headers">
+        <div class="table-column {{column.cls}}"
+             *ngFor="let column of columns"
+             (click)="onSort(column)">
+            <span>{{column.header}}</span>
+            <app-tooltip *ngIf="column.headerTooltip"
+                         type="info"
+                         displayType="tableHeader"
+                         [record]="column.headerTooltip"></app-tooltip>
+            <i class="material-icons sort-icon"
+               *ngIf="column.sort.active">{{ column.sort.direction === "asc" ? "arrow_drop_up" : "arrow_drop_down"}}</i>
+        </div>
+    </div>
+</ng-template>

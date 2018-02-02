@@ -1,0 +1,80 @@
+@import 'src/styles/style.scss';
+
+:host::ng-deep {
+    .ui-picklist {
+
+        .ui-widget-content {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .ui-picklist-caption {
+            text-align: left;
+            padding-left: 0;
+            font-weight: 800;
+        }
+
+        .ui-picklist-filter-container {
+            border: none;
+            padding: 0;
+
+            .ui-picklist-filter {
+                text-indent: 0;
+            }
+
+            .fa-search {
+                display: none;
+            }
+        }
+
+        .ui-picklist-buttons {
+            padding: 100px 20px 0;
+
+            button {
+                background: $bosch_primary_button_color;
+                color: $bosch_white;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .ui-picklist-source-controls {
+            display: none !important;
+        }
+
+        .ui-picklist-target-controls {
+            display: none !important;
+        }
+
+        .ui-picklist-listwrapper {
+            width: 45% !important;
+
+            .ui-picklist-list {
+                padding: 0 20px 0 10px;
+            }
+        }
+
+        .ui-picklist-item {
+            border: 1px solid lightgray;
+        }
+
+        .ui-state-highlight {
+            background-color: lightgray;
+        }
+
+        .ui-picklist-record {
+            position: relative;
+
+            .tooltip-icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                line-height: 1.5rem;
+                background-color: #fafafa;
+                padding-left: 1.875px;
+            }
+        }
+    }
+}
+
+

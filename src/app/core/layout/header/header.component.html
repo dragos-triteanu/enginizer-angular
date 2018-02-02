@@ -1,0 +1,22 @@
+<nav>
+    <div class="nav-wrapper z-depth-2">
+        <a routerLink="/"
+           class="brand-logo center"><img src="../../../../assets/images/enginizer-logo.png"></a>
+        <ul class="left-menu"
+            [ngClass]="{'no-sidebar': !hasSidebar}">
+            <li><a class="dropdown-button"
+                   data-activates="user-language"
+                   #languageDropdown>{{currentLanguage}}<i class="material-icons right">arrow_drop_down</i></a>
+            </li>
+        </ul>
+        <ul id="nav-mobile" class="right">
+            <li>{{userName}}</li>
+            <li class="logout" (click)="logout()"><a class="waves-effect waves-light">{{ 'generic.buttons.logout' | translate }}</a></li>
+        </ul>
+    </div>
+</nav>
+<ul id="user-language" class="dropdown-content">
+    <li *ngFor="let language of languages">
+        <a (click)="translate(language)">{{language}}</a>
+    </li>
+</ul>

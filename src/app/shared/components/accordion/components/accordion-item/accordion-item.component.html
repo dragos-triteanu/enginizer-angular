@@ -1,0 +1,8 @@
+<li #accordionItem [ngClass]="{disabled: disabled}" class="accordion-item">
+    <div class="collapsible-header active" (click)="!disabled && click()">
+        <ng-content select="[itemHeader]"></ng-content>
+    </div>
+    <div *ngIf="open" class="collapsible-body" [@expandCollapse]="open">
+        <ng-content select="[itemBody]"></ng-content>
+    </div>
+</li>

@@ -1,0 +1,66 @@
+@import 'src/styles/_variables.scss';
+
+:host {
+    .page {
+        height: calc(100vh - #{$bosch_header} - #{$supergraphic_height});
+        padding: $default-page-padding;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .material {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #fff;
+            padding: 18px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+            .header {
+                margin: 0;
+                border: none;
+                height: 38px;
+            }
+
+            .content {
+                flex: 1 1 0;
+                min-height: 0;
+                margin-top: 20px;
+                height: calc(100% - 38px - 20px);
+                display: flex;
+                flex-flow: column nowrap;
+                app-roles-table{
+                    height: 100%;
+                    /deep/ app-table .table {
+                        height: 100% !important;
+                        max-height: unset !important;
+                        app-table-header {
+                            height: 121px;
+                            &.show-filters {
+                                height: 200px;
+                            }
+                        }
+                        app-table-body{
+                            background-color: #fff !important;
+                            height: calc(100% - 121px - 48px);
+                            overflow-y: auto;
+                            &.show-filters{
+                                height: calc(100% - 200px - 48px);
+                            }
+                            .process-button {
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                width: auto;
+                            }
+                        }
+                        app-table-footer{
+                            height: 48px;
+                        }
+                        .card {
+                            height: 100%;
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

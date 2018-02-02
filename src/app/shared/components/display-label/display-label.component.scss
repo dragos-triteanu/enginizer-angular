@@ -1,0 +1,45 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+:host {
+    p {
+        margin: 0;
+        font-weight: bolder;
+        font-size: 14px;
+        max-width: 250px;
+    }
+
+    label {
+        color: $label_default_color;
+        font-weight: $default-text-bolder-font-weight;
+        width: 200px;
+    }
+
+    label.highlighted {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    p.good {
+        color: green;
+    }
+
+    p.evil {
+        color: red;
+    }
+
+    a {
+        display: block;
+        color: #0000EE;
+    }
+
+    .inline {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+
+        .compact {
+            width: 130px;
+        }
+    }
+}

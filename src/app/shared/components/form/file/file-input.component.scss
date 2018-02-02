@@ -1,0 +1,26 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+:host {
+
+}
+
+.input-file {
+
+    .ui-fileupload-content {
+        border: 1px dashed gray;
+        min-height: 80px;
+    }
+
+    .ui-fileupload-buttonbar {
+        @extend .blue;
+        @extend .darken-4;
+        color: white;
+    }
+
+    & .invalid {
+        color: red;
+        font-size: 12px;
+    }
+
+}

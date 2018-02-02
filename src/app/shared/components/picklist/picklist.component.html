@@ -1,0 +1,21 @@
+<div class="picklist-container">
+    <p-pickList [source]="filteredSource"
+                [(target)]="target"
+                [filterBy]="displayField"
+                [responsive]="responsive"
+                [disabled] = "disabled"
+                (onMoveToTarget)="onMoveToTarget()"
+                (onMoveToSource)="onMoveToSource()"
+                [dragdrop]="dragDrop"
+                [sourceHeader]="sourceHeader" [targetHeader]="targetHeader"
+                [sourceFilterPlaceholder]="sourceFilterPlaceholder" [targetFilterPlaceholder]="targetFilterPlaceholder">
+        <ng-template let-record pTemplate="item">
+            <div class="ui-picklist-record">{{record[displayField]}}
+                <app-tooltip *ngIf="hasTooltip"
+                             type="info"
+                             displayType="equipment"
+                             [record]="record"></app-tooltip>
+            </div>
+        </ng-template>
+    </p-pickList>
+</div>

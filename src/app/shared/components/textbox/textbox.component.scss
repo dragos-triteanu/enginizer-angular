@@ -1,0 +1,32 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+:host {
+
+    label{
+        color: $label_default_color;
+        font-weight: $default-text-bolder-font-weight;
+    }
+
+    label.highlighted {
+        font-weight: bold;
+        font-size: $label-font-size;
+    }
+
+    #textbox {
+        min-height: 100px;
+        font-weight: bold;
+        max-height: 150px;
+        margin: 0;
+
+        and .edit {
+            border: 1px solid $border-default-color;
+        }
+
+        and .resizable {
+            resize: none;
+        }
+
+    }
+
+}

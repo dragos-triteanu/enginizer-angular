@@ -1,0 +1,11 @@
+<div class="table-group">
+    <div class="table-row header"
+         (click)="toggleGroupExpand()">
+        <i class="material-icons">{{!isExpanded ? 'expand_more' : 'chevron_right'}}</i>
+        <span>{{data.name}} </span>
+    </div>
+    <div class="items"
+         *ngIf="!isExpanded">
+        <ng-content></ng-content>
+    </div>
+</div>

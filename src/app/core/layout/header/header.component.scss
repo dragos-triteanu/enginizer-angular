@@ -1,0 +1,24 @@
+:host::ng-deep {
+
+    .left-menu {
+
+        &.no-sidebar {
+            margin-left: 0;
+        }
+    }
+
+    .nav-wrapper {
+        .brand-logo img {
+            width: auto;
+            height: 50px;
+            margin-top: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .left-menu {
+        margin-left: 0;
+    }
+}

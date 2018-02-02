@@ -1,0 +1,19 @@
+:host {
+    /deep/ {
+        .input-field {
+            margin: 0;
+        }
+    }
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.col {
+    padding: 0;
+
+    &.unit {
+        padding-left: 1rem;
+    }
+}

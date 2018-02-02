@@ -1,0 +1,36 @@
+<ng-container [ngSwitch]="type">
+
+    <ng-template ngSwitchCase="info">
+        <i materialize="tooltip"
+           data-position="bottom"
+           data-delay="50"
+           data-html="true"
+           [attr.data-tooltip]="buildTooltip(record)"
+           [materializeActions]="tooltipActions"
+           class="material-icons tooltip-icon">info</i>
+    </ng-template>
+
+    <ng-template ngSwitchCase="warning">
+        <i materialize="tooltip"
+           data-position="bottom"
+           data-delay="50"
+           data-html="true"
+           [attr.data-tooltip]="buildTooltip(record)"
+           [materializeActions]="tooltipActions"
+           class="material-icons tooltip-icon warning-icon">warning</i>
+    </ng-template>
+
+    <ng-template ngSwitchCase="important">
+        <a (click)="onClick($event)">
+            <i materialize="tooltip"
+               data-position="bottom"
+               data-delay="50"
+               data-html="true"
+               [attr.data-tooltip]="buildTooltip(record)"
+               [materializeActions]="tooltipActions"
+               class="material-icons tooltip-icon important-icon">warning</i></a>
+
+        <!-- TODO: Find a way to properly position the dropdown relative to the icon -->
+    </ng-template>
+
+</ng-container>

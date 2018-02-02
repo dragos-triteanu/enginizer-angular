@@ -1,0 +1,11 @@
+<label *ngIf="label && leftAlignLabel">{{label}}</label>
+<div class="input-field" [class.invalid]="hasError">
+    <input #input [(ngModel)]="value"
+           [placeholder]="placeholder"
+           [disabled]="isDisabled"
+           type="text">
+    <label class="active"
+           *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <app-form-error-list *ngIf="showErrors"
+                         [errorMap]="formControl.errors"></app-form-error-list>
+</div>

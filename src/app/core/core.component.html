@@ -1,0 +1,16 @@
+<header>
+    <app-header (logoutFired)="onLogout()"
+                (languageChange)="onLanguageChange($event)"
+                [userName]="currentUser.sub"
+                [currentLanguage]="currentLanguage"
+                [languages]="languages"
+                [hasSidebar]="hasSidebar"></app-header>
+    <app-sidebar *ngIf="hasSidebar"
+                 [currentUser]="currentUser">
+    </app-sidebar>
+</header>
+<main [ngClass]="{'no-sidebar': !hasSidebar}">
+    <div class="main-container">
+        <router-outlet></router-outlet>
+    </div>
+</main>

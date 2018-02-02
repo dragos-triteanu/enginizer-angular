@@ -1,0 +1,23 @@
+<label class="dropdown-label" *ngIf="label && leftAlignLabel" [ngStyle]="labelStyle">{{label}}</label>
+<div class="input-field" [class.invalid]="hasError">
+    <p-autoComplete
+        [(ngModel)]="value"
+        [suggestions]="filteredItems"
+        (completeMethod)="search($event)"
+        [field]="displayField"
+        [placeholder]="emptyText"
+        [dropdown]="dropdown"
+        [size]="30"
+        [minLength]="1"
+        [required]="required"
+        (onSelect)="onItemSelect($event)"
+        (focusout)="focusOut && onFocusOut()">
+        <ng-template let-item pTemplate="items">
+            {{item[displayField]}}
+        </ng-template>
+    </p-autoComplete>
+    <label class="dropdown-label active"
+           [ngStyle]="labelStyle"
+           *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <app-form-error-list *ngIf="showErrors" [errorMap]="formControl.errors"></app-form-error-list>
+</div>

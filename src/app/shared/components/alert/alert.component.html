@@ -1,0 +1,25 @@
+<div class="alert-content left-align" [ngSwitch]="type">
+    <ng-template ngSwitchCase="info">
+        <div class="card-panel blue" [class.fullWidth]="fullWidth">
+            <div class="white-text">
+                <i class="material-icons">info</i>
+                <div>{{ message }}</div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template ngSwitchCase="error">
+        <div class="card-panel red" [class.fullWidth]="fullWidth">
+            <div class="white-text"><i class="material-icons">error</i>
+                <div>{{ message }}</div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template ngSwitchCase="warning">
+        <div class="card-panel orange" [class.fullWidth]="fullWidth">
+            <div class="white-text">
+                <i class="material-icons">warning</i>
+                <div>{{ message }}</div>
+            </div>
+        </div>
+    </ng-template>
+</div>

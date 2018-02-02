@@ -1,0 +1,168 @@
+@import 'src/styles/style.scss';
+$footer-height: 48px;
+$header-height: 48px;
+
+.table {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+
+    &.no-background {
+        box-shadow: none;
+
+        .table-body {
+            background: transparent;
+        }
+
+        .table-row {
+            box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+            //margin-left: 2px;
+        }
+    }
+}
+
+.table-footer {
+    min-height: $footer-height;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, .12);
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #757575;
+
+    .page-count {
+        flex: 1 1 20%;
+        padding-left: 1rem;
+    }
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 0;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+    .table-column {
+        position: relative;
+        font-weight: 500;
+        padding: 1em;
+        padding-left: 24px;
+        flex: 1 1 100px;
+        overflow: hidden;
+        white-space: normal;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        &.toolbar {
+            flex-grow: 0;
+            flex-basis: auto;
+        }
+
+        &.editable {
+            overflow: visible;
+        }
+
+        &.action {
+            flex-basis: 90px;
+            flex-grow: 0;
+            padding: 0;
+        }
+    }
+}
+
+.table-column.index {
+    flex-basis: 56px;
+    flex-grow: 0;
+}
+
+// TODO - move to theme styles
+$group-level-0: $bosch-green;
+$group-level-1: $yellow-green;
+$group-level-2: $red-brown;
+
+.table-head {
+    .group-item {
+        &:nth-child(1) {
+            a {
+                background: $group-level-0;
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                background: $group-level-1;
+            }
+        }
+
+        &:nth-child(3) {
+            a {
+                background: $group-level-2;
+            }
+        }
+    }
+}
+
+.table-row.group {
+    &.level-0 {
+        border-left: solid 2px $group-level-0;
+    }
+
+    &.level-1 {
+        border-left: solid 2px $group-level-1;
+    }
+
+    &.level-2 {
+        border-left: solid 2px $group-level-2;
+    }
+}
+
+.table-column.tree {
+    &.level-0 {
+        padding-left: 20px;
+    }
+
+    &.level-1 {
+        padding-left: 44px;
+    }
+
+    &.level-2 {
+        padding-left: 64px;
+    }
+
+    &.level-3 {
+        padding-left: 84px;
+    }
+
+    &.level-4 {
+        padding-left: 84px;
+
+        &:not(.has-children) {
+            text-indent: 50px;
+        }
+    }
+
+    &:not(.has-children) {
+        text-indent: 5px;
+    }
+
+    i {
+        vertical-align: top;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+}
+

@@ -1,0 +1,73 @@
+@import '~materialize-css/sass/components/color';
+@import './_colors';
+$roboto-font-path: '~materialize-css/dist/fonts/roboto/' !default;
+$navbar-height: 64px;
+$logo-width: 300px;
+$sidebar-expanded: 280px;
+$sidebar-collapsed: 100px;
+$sidebar-bg: $blue-100;
+//navbar
+$navbar-font-color: rgba(0, 0, 0, .54);
+//sidenav variables
+// $sidenav-bg-color: $blue-100;
+$sidenav-bg-color: #3c4252;
+$sidenav-font-color: #fff;
+$sidenav-font-size: 16px !default;
+$sidenav-padding: 16px !default;
+$sidenav-item-height: 64px !default;
+$sidenav-line-height: $sidenav-item-height !default;
+$primary-color: $blue-100;
+$secondary-color: $blue-100;
+@import '~materialize-css/sass/materialize';
+$logo-bg: hsla(0, 0%, 100%, .05);
+
+//categories (hidden but can be enabled)
+$category_icons: none;
+
+
+//Theming
+$bosch_sidebar_heading: $bosch_dark_blue;
+$bosch_sidebar_item: $bosch_light_blue;
+
+//Default background
+$default-background-color: #eee;
+
+
+
+header {
+    nav {
+        background-color: #fff;
+        height: $navbar-height;
+
+        .left-menu {
+            margin-left: $sidebar-expanded;
+        }
+    }
+}
+
+
+.btn-danger  {
+    @extend .red;
+}
+
+.btn-warning {
+    @extend .amber;
+    @extend .darken-2;
+}
+
+.btn-primary {
+    @extend .blue;
+    @extend .darken-4;
+}
+
+
+
+
+
+main {
+    background: $light-gray;
+    padding-left: $sidebar-expanded;
+}
+
+
+

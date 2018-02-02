@@ -1,0 +1,106 @@
+<div class="table-body"
+     [class.treeMode]="hasActiveGroups">
+
+    <ng-container *ngIf="hasActiveGroups && !rowExpand">
+        <ng-container *ngTemplateOutlet="treeList; context:{ records: records }"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="hasActiveGroups && rowExpand">
+        <ng-container *ngTemplateOutlet="expandableTreeList; context:{ records: records }"></ng-container>
+    </ng-container>
+    <ng-container *ngIf="!hasActiveGroups">
+        <ng-container *ngTemplateOutlet="simpleList; context:{ records: records }"></ng-container>
+    </ng-container>
+    <div *ngIf="!isLoading && !records.length"
+         class="table-row no-content"
+    ></div>
+    <div *ngIf="isLoading" class="loading-indicator-container">
+        <img src="assets/images/atom_loading_spinner.gif" style="width: 60px; height: auto;">
+    </div>
+</div>
+
+<ng-template #simpleList
+             let-records="records">
+    <div *ngIf="!isLoading">
+        <ng-container *ngFor="let rec of records; let rowIndex = index;">
+            <ng-container *ngTemplateOutlet="expandableRow; context: {record: rec, rowIndex: rowIndex}"></ng-container>
+        </ng-container>
+    </div>
+</ng-template>
+
+<ng-template #expandableRow
+             let-record="record"
+             let-rowIndex="rowIndex">
+    <div *ngIf="!isLoading" class="table-row expanding-menu"
+         [class.expanded]="record.expanded"
+         [class.disabled]="record.disabled">
+        <div class="row-header"
+             (click)="onRowClick(record)">
+            <div class="table-column {{column.cls}}"
+                 *ngFor="let column of columns;">
+                <ng-container *ngTemplateOutlet="column.bodyTmpl; context : {rowData: record}"></ng-container>
+                <span *ngIf="!column.bodyTmpl">{{record[column.field]}}</span>
+            </div>
+            <i *ngIf="rowExpand"
+               class="material-icons expand-icon">{{record.expanded ? 'expand_less' : 'expand_more'}}</i>
+        </div>
+        <div class="row-details"
+             *ngIf="rowExpand"
+             [hidden]="!record.expanded">
+            <div class="table-column {{column.cls}}"
+                 *ngFor="let column of columns;"
+                 [class.editable]="column.editorTmpl">
+                <ng-container *ngTemplateOutlet="column.editorTmpl; context : {rowData: record}"></ng-container>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #treeList
+             let-records="records">
+    <div *ngIf="!isLoading">
+        <ng-container *ngFor="let record of records;">
+            <div class="table-row level-{{getNrOfParents(record)}}"
+                 [class.disabled]="isDisabled(record)"
+                 [class.group]="isGroup(record)"
+                 (click)="onRowClick(record)">
+                <ng-container *ngTemplateOutlet="rowColumnsRenderer; context:{ record: record }"></ng-container>
+            </div>
+            <ng-container *ngIf="record.expanded">
+                <ng-container *ngTemplateOutlet="treeList; context:{ records: record.children }"></ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+</ng-template>
+
+<ng-template #rowColumnsRenderer
+             let-record="record">
+    <div class="table-column {{column.cls}} level-{{getNrOfParents(record)}}"
+         *ngFor="let column of columns;"
+         [class.tree]="column.showTree"
+         [class.group]="isGroup(record)"
+         [class.has-children]="column.showTree && record.children">
+        <i class="material-icons"
+           *ngIf="column.showTree && record.children">{{record.expanded ? 'expand_more' : 'chevron_right'}}</i>
+        <ng-container *ngTemplateOutlet="column.bodyTmpl; context : {record: record}"></ng-container>
+        <span *ngIf="!column.bodyTmpl">{{record[column.field]}}</span>
+    </div>
+</ng-template>
+
+
+<!-- Grouped by sets with expandable rows -->
+<ng-template #expandableTreeList
+             let-records="records">
+    <ng-container *ngFor="let record of records;">
+        <div class="table-row level-{{getNrOfParents(record)}}"
+             [class.disabled]="isDisabled(record)"
+             [class.expanding-menu]="rowExpand && !isSet(record)"
+             [class.group]="isGroup(record)"
+             (click)="onRowClick(record)">
+            <ng-container *ngTemplateOutlet="rowColumnsRenderer; context:{ record: record }"></ng-container>
+        </div>
+        <ng-container *ngIf="record.expanded">
+            <ng-container *ngTemplateOutlet="expandableTreeList; context:{ records: record.children }"></ng-container>
+        </ng-container>
+    </ng-container>
+</ng-template>
+

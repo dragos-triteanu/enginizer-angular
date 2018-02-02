@@ -1,0 +1,87 @@
+<app-table [data]="users"
+           [config]="tableConfig"
+           [isLoading]="isLoading"
+           [rowExpand]="rowExpand"
+           title="{{'admin.users.title' | translate}}"
+           (sortChange)="onSortChange($event)"
+           (filterChange)="onFilterChange($event)"
+           (pageChange)="onPageChange($event)">
+    <app-table-column header="{{'table.columns.index' | translate}}"
+                      cls="index"
+                      field="index">
+    </app-table-column>
+    <app-table-column header="{{'admin.users.table.columns.badge' | translate}}"
+                      filter="true"
+                      sortable="true"
+                      field="boschId">
+    </app-table-column>
+    <app-table-column header="{{'admin.users.table.columns.email' | translate}}"
+                      filter="true"
+                      sortable="true"
+                      field="email">
+    </app-table-column>
+    <app-table-column header="{{'admin.users.table.columns.fullMame' | translate}}"
+                      filter="true"
+                      sortable="true"
+                      field="firstName">
+        <ng-template #body
+                     let-user="rowData">
+            <span>{{user.fullName}}</span>
+        </ng-template>
+    </app-table-column>
+    <app-table-column header="{{'admin.users.table.columns.role' | translate}}"
+                      sortable="true"
+                      [filter]="true"
+                      field="role">
+        <ng-template #body
+                     let-user="rowData">
+            <span>{{user.roleName}}</span>
+        </ng-template>
+        <ng-template #editor
+                     let-user="rowData">
+            <app-dropdown [ngModel]="user.roleId"
+                          [items]="userRoles"
+                          valueField="name"
+                          label="{{'admin.users.table.rows.updateRole.label' | translate}}"
+                          emptyText="{{'admin.users.table.rows.updateRole.emptyText' | translate}}"
+                          (selectItem)="onUserRoleUpdate(user, $event)"></app-dropdown>
+        </ng-template>
+    </app-table-column>
+    <app-table-column header="{{'admin.users.table.columns.status' | translate}}"
+                      [sortable]="true"
+                      field="isActive">
+        <ng-template #filter
+                     let-column="column"
+                     let-table="table">
+            <app-dropdown [(ngModel)]="column.filterValue"
+                          [items]="userStates"
+                          valueField="value"
+                          displayField="name"
+                          emptyText="{{'admin.users.table.filters.status.label' | translate}}"
+                          (selectItem)="table.onFilterChange(column)"></app-dropdown>
+        </ng-template>
+        <ng-template #body
+                     let-user="rowData">
+            <span class="user {{user.isActive ? 'active' : 'inactive'}}">
+                {{(user.isActive ? 'admin.users.table.rows.active': 'admin.users.table.rows.disabled') | translate}}
+            </span>
+        </ng-template>
+        <ng-template #editor
+                     let-user="rowData">
+            <ng-template #editor
+                         let-user="rowData">
+                <app-dropdown [ngModel]="user.roleId"
+                              [items]="userRoles"
+                              valueField="name"
+                              label="{{'admin.users.table.rows.updateStatus.label' | translate}}"
+                              emptyText="{{'admin.users.table.rows.updateStatus.emptyText' | translate}}"
+                              (selectItem)="onUserRoleUpdate(user, $event)"></app-dropdown>
+            </ng-template>
+            <app-input-switch [(ngModel)]="user.isActive"
+                              onLabel="{{'admin.users.table.rows.updateStatus.onLabel' | translate}}"
+                              offLabel="{{'admin.users.table.rows.updateStatus.offLabel' | translate}}"
+                              topLabel="{{'admin.users.table.rows.updateStatus.topLabel' | translate}}"
+                              (inputChange)="onUserStatusUpdate(user, $event)"></app-input-switch>
+        </ng-template>
+    </app-table-column>
+</app-table>

@@ -1,0 +1,12 @@
+<label *ngIf="label && leftAlignLabel">{{label}}</label>
+<div class="input-field"
+     [class.invalid]="hasError">
+    <input [(ngModel)]="value"
+           [textMask]="{mask: numberMask, guide: false}"
+           [placeholder]="placeholder"
+           type="text">
+    <label class="active"
+           *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <app-form-error-list *ngIf="showErrors"
+                         [errorMap]="formControl.errors"></app-form-error-list>
+</div>

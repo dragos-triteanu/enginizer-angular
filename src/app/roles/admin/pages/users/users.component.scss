@@ -1,0 +1,55 @@
+@import 'src/styles/_variables.scss';
+
+:host {
+    .active-column {
+        button {
+            float: right;
+            width: 72px;
+        }
+    }
+    .page {
+        height: calc(100vh - #{$bosch_header} - #{$supergraphic_height});
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $default-page-padding;
+
+        .content {
+            flex: 1 1 0;
+            min-height: 0;
+            width: 100%;
+            height: 100%;
+            /deep/ app-table .table {
+                height: 100% !important;
+                max-height: unset !important;
+                app-table-header {
+                    height: 121px;
+                    &.show-filters {
+                        height: 200px;
+                    }
+                }
+                app-table-body{
+                    background-color: #fff !important;
+                    height: calc(100% - 121px - 48px);
+                    overflow-y: auto;
+                    &.show-filters{
+                        height: calc(100% - 200px - 48px);
+                    }
+                    .process-button {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        width: auto;
+                    }
+                }
+                app-table-footer{
+                    height: 48px;
+                }
+                .card {
+                    height: 100%;
+                    background: #fff;
+                }
+            }
+
+        }
+    }
+}

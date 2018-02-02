@@ -1,0 +1,50 @@
+:host {
+    .page {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        .not-found-error{
+            position: relative;
+            background-color: #fff;
+            padding: 18px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                width: 430px;
+                height: auto;
+                margin-bottom: 10%;
+                margin-top: 5%;
+            }
+            h1{
+                font-weight: 700;
+                font-size: 190px;
+                margin-bottom: 0px;
+            }
+            p{
+                font-size: 40px;
+                margin-top: 0;
+            }
+        }
+        .page-header {
+            margin: 0;
+            border: none;
+        }
+
+        .page-content {
+            flex: 1 1 0;
+            min-height: 0;
+        }
+
+        .page-header, .page-content {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+}

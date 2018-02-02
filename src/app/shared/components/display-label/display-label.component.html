@@ -1,0 +1,16 @@
+<div [ngClass]="{'inline': inlineLabel}">
+    <label for="value" class="atom-label" [ngClass]="labelClass" [ngStyle]="labelStyle">{{label}}</label>
+    <ng-container *ngIf="!hyperlinkValue;else withHyperlink">
+        <ng-container *ngTemplateOutlet="withouthHyperlink"></ng-container>
+    </ng-container>
+</div>
+
+
+<ng-template #withouthHyperlink>
+    <p id="value" [ngClass]="valueClass" [ngStyle]="valueStyle">{{displayValue}}</p>
+</ng-template>
+<ng-template #withHyperlink>
+    <a id="value" [href]="hyperlinkValue" [ngClass]="valueClass" [ngStyle]="valueStyle">{{displayValue}}</a>
+</ng-template>
+
+

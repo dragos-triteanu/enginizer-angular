@@ -1,0 +1,25 @@
+@import 'src/styles/_variables.scss';
+
+$warning-color: #FFAB00;
+$important-color: #C62828;
+
+$warning-color-light: lighten($warning-color, 25%) !default;
+$important-color-light: lighten($important-color, 25%) !default;
+
+:host {
+
+    .tooltip-icon {
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        z-index: 2017;
+    }
+
+    .material-icons.warning-icon { color: $warning-color; }
+    .material-icons.warning-icon.md-inactive { color: $warning-color-light; }
+
+    .material-icons.important-icon { color: $important-color; }
+    .material-icons.important-icon.md-inactive { color: $important-color-light; }
+
+}

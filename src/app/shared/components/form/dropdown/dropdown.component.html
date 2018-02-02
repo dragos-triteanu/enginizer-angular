@@ -1,0 +1,15 @@
+<label *ngIf="label && leftAlignLabel" style="width: 200px">{{label}}</label>
+<div class="input-field" [class.invalid]="hasError">
+    <select materialize="material_select"
+      [ngModel]="value"
+      [disabled]="isDisabled"
+      (ngModelChange)="onItemSelect($event)"
+      [materializeSelectOptions]="items"
+      [materializeActions]="selectActions">
+            <option value="" disabled selected>{{emptyText}}</option>
+            <option  *ngFor="let item of items; trackBy: trackByFn" [value]="item[valueField]">{{item[displayField]}}</option>
+    </select>
+    <label *ngIf="label && !leftAlignLabel">{{label}}</label>
+    <app-form-error-list *ngIf="showErrors"
+    [errorMap]="formControl.errors"></app-form-error-list>
+</div>

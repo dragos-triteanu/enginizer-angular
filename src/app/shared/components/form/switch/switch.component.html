@@ -1,0 +1,10 @@
+<label>{{topLabel}}</label>
+<div class="switch"
+  [class.enabled]="value">
+    <label>
+        <span class="off">{{offLabel}}</span>
+        <input type="checkbox" [(ngModel)]="value" [disabled]="isDisabled">
+        <span class="lever"></span>
+        <span class="on">{{onLabel}}</span>
+    </label>
+</div>

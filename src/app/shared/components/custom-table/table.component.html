@@ -1,0 +1,35 @@
+<div class="table scroll"
+     [class.no-background]="rowExpand"
+    >
+    <app-table-header [ngClass]="{'show-filters': showFilters}"
+                      [columns]="columns"
+                      [config]="config"
+                      [title]="title"
+                      [rowExpand]="rowExpand"
+                      [allExpanded]="allExpanded"
+                      [filtersToggle]="filtersToggle"
+                      [showFilters]="showFilters"
+                      [showGroupFilters]="showGroupFilters"
+                      [groupFilters]="groupFilters"
+                      [showGroupers]="showGroupers"
+                      [groupableColumns]="groupableColumns"
+                      [directlyGrouped]="directlyGrouped"
+                      (expandAll)="onExpandAll($event)"
+                      (sort)="onSortChange($event)"
+                      (filter)="onFilterChange($event)"
+                      (filterToggled)="onFilterToggled($event)"
+                      (groupFilter)="onFilterGroupChanged($event)"
+                      (group)="onGroupChange($event)">
+    </app-table-header>
+    <app-table-body [ngClass]="{'show-filters': showFilters}"
+                    [records]="data"
+                    [isLoading]="isLoading"
+                    [columns]="columns"
+                    [rowExpand]="rowExpand"
+                    [hasActiveGroups]="groupableColumns.length"
+                    (rowClick)="onRowClick($event)">
+    </app-table-body>
+    <app-table-footer [config]="config"
+                      (pageChange)="onPageChange($event)">
+    </app-table-footer>
+</div>

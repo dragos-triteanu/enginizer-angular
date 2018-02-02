@@ -1,0 +1,49 @@
+:host {
+    .modal-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .modal-body {
+        text-align: center;
+    }
+
+    .modal-footer {
+        button {
+            width: 100%;
+        }
+    }
+
+    .modal-content {
+        margin-top: 50%;
+    }
+    /deep/ .popup-info {
+        .modal {
+            width: 25%;
+            height: auto;
+            min-width: 390px;
+            overflow-y: hidden;
+            padding: 20px;
+        }
+        .modal-body {
+            p:last-child {
+                font-weight: 800;
+                font-size: 17px;
+            }
+        }
+        .modal-footer {
+            height: auto;
+            .btn {
+                height: 65px;
+                &:last-child {
+                    background: #bd4647;
+                    color: #ffffff;
+                    box-shadow: none;
+                }
+                &:last-child:hover {
+                    background: #c36162;
+                }
+            }
+        }
+    }
+}

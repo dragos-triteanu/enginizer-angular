@@ -1,0 +1,16 @@
+<div class="input-file">
+    <p-fileUpload #fileInput
+                  name="file[]"
+                  [customUpload]="true"
+                  [showUploadButton]="false"
+                  [showCancelButton]="false"
+                  multiple="multiple"
+                  [accept]="acceptedTypes"
+                  (onSelect)="onSelect()"
+                  (onRemove)="onRemove()"
+                  maxFileSize="52428800">
+    </p-fileUpload>
+    <div *ngIf="_hasError && required" class="invalid">
+        {{'admin.tools.details.documentsPage.create-modal.file-input.required' | translate}}
+    </div>
+</div>

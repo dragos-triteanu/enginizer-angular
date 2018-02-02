@@ -1,0 +1,38 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/style.scss';
+
+:host ::ng-deep {
+    .ui-autocomplete {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+
+    }
+    .ui-autocomplete-panel {
+        position: absolute !important;;
+        overflow: auto !important;;
+        opacity: 1 !important;
+        background: white !important;
+        width: 90% !important;
+        margin-top: 5px;
+    }
+    .ui-autocomplete-list-item:hover {
+        background-color: $bosch_primary_button_color !important;
+        color: white;
+    }
+    .ui-inputtext {
+        width: 94% !important;
+    }
+    .ui-autocomplete-dropdown {
+    }
+
+    .ui-button {
+        background-color: $bosch_primary_button_color !important;
+        color: white;
+        margin-left: 5px;
+        border-radius: 2px;
+        min-width: 20px;
+        flex: 1;
+        border: 0;
+    }
+}

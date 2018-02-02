@@ -1,0 +1,86 @@
+<app-modal [dismissible]="false" [class.vertical-steps]="verticalSteps">
+    <ng-container modal-header>
+        <div class="wizard-title">
+            <ng-content select="app-wizard-title"></ng-content>
+            <ng-container *ngFor="let step of steps; let index = index;">
+                <div *ngIf="verticalSteps && index === activeStepIndex"
+                     class="step-title">
+                    <ng-container *ngTemplateOutlet="step.title"></ng-container>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+    <ng-container modal-body>
+        <div class="body-wrapper">
+            <ul class="steps">
+                <li *ngFor="let step of steps; let index = index;"
+                    [class.active]="isStepActive(index)"
+                    [class.complete]="isStepComplete(index)">
+                    <div class="step-card">
+                        <div class="step-counter">
+                            <i *ngIf="isStepComplete(index)"
+                               class="material-icons">check</i>
+                            <span *ngIf="!isStepComplete(index)">{{index + 1}}</span>
+                        </div>
+                        <div class="step-label">
+                            <ng-container *ngTemplateOutlet="step.title"></ng-container>
+                        </div>
+                    </div>
+                    <span class="separator"></span>
+                </li>
+            </ul>
+            <div class="step-content"
+                 *ngIf="activeStep">
+                <ng-container *ngFor="let step of steps; let index = index;">
+                    <div [hidden]="index !== activeStepIndex">
+                        <ng-container *ngTemplateOutlet="step.content; context: {step: step}"></ng-container>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container modal-footer>
+        <div class="actions"
+             *ngIf="activeStep">
+            <button type="button"
+                    *ngIf="isFirstStep"
+                    class="waves-effect btn-flat back"
+                    (click)="onCancelClick()">
+                {{'generic.buttons.close'| translate}}
+            </button>
+            <button type="button"
+                    *ngIf="!isFirstStep && !isStepAfterSubmit"
+                    class="btn btn-primary back"
+                    (click)="prev()">
+                <i class="material-icons">chevron_left</i> {{'generic.buttons.back'| translate}}
+            </button>
+            <div class="spacer"></div>
+            <button *ngIf="!isLastStep && !canStepSave"
+                    [disabled]="nextDisabled"
+                    type="button"
+                    class="btn btn-default next"
+                    (click)="next()">
+                {{'generic.buttons.next'| translate}}
+                <i class="material-icons">chevron_right</i>
+            </button>
+            <button *ngIf="(isLastStep || canStepSave) && !isStepAfterSubmit"
+                    type="button"
+                    class="btn btn-default next"
+                    (click)="finalSubmit()">
+                {{'generic.buttons.save'| translate}}
+            </button>
+            <button *ngIf="canSkipStep"
+                    type="button"
+                    class="btn btn-warning next"
+                    (click)="skipStep()">
+                {{'generic.buttons.skip'| translate}}
+            </button>
+            <button *ngIf="isStepAfterSubmit"
+                    type="button"
+                    class="btn btn-warning next"
+                    (click)="onCancelClick()">
+                {{'generic.buttons.skip'| translate}}
+            </button>
+        </div>
+    </ng-container>
+</app-modal>

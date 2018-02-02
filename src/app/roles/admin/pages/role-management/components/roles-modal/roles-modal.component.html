@@ -1,0 +1,67 @@
+<app-modal class="roles-create-modal">
+    <ng-container modal-header>
+        <h5 class="modal-title"
+            *ngIf="!isEditMode; else editTitle">{{'admin.roles.create-modal.title' | translate}}</h5>
+        <ng-template #editTitle>
+            <h5 class="modal-title">{{'admin.roles.update-modal.title' | translate}}</h5>
+        </ng-template>
+    </ng-container>
+    <ng-container modal-body>
+        <div class="row">
+            <div class="col s12">
+                <app-alert *ngIf="isOobRole()"
+                           [fullWidth]="true"
+                           type="warning"
+                           message="{{'admin.roles.update-modal.oob.warning'| translate}}"></app-alert>
+            </div>
+        </div>
+        <form class="picklist-form"
+              [formGroup]="form">
+            <div class="form-group row">
+                <div class="col s12">
+                    <app-input formControlName="name"
+                               [formControl]="form.controls.name"
+                               [showErrors]="showValidations"
+                               [isDisabled]="isOobRole()"
+                               placeholder="{{'admin.roles.create-modal.name-input.placeholder' | translate }}"
+                               label="{{'admin.roles.create-modal.name-input.label' | translate}}">
+                    </app-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <app-picklist [source]="permissions"
+                                  [(target)]="role.permissions"
+                                  [disabled]="isOobRole()"
+                                  sourceHeader="{{'admin.roles.create-modal.pick-list.leftHeader' | translate}}"
+                                  targetHeader="{{'admin.roles.create-modal.pick-list.rightHeader' | translate}}"
+                                  infoLabel="{{'admin.roles.create-modal.alert.message' | translate}}"></app-picklist>
+                </div>
+            </div>
+        </form>
+    </ng-container>
+    <ng-container modal-footer>
+        <button *ngIf="!isEditMode && shouldRenderModifiers()"
+                type="button"
+                class="btn btn-primary"
+                (click)="createRole()">
+            {{'admin.roles.create-modal.button.create'| translate}}
+        </button>
+        <button *ngIf="isEditMode && !isOobRole() && shouldRenderModifiers()"
+                type="button"
+                class="btn btn-warning"
+                (click)="updateRole()">
+            {{'admin.roles.create-modal.button.update'| translate}}
+        </button>
+        <button class="btn btn-danger"
+                *ngIf="isEditMode && !isOobRole() && shouldRenderModifiers()"
+                [class.disabled]="role.inUse"
+                (click)="deleteRole()">
+            {{'admin.roles.create-modal.button.delete' | translate}}
+        </button>
+        <button type="button"
+                class="waves-effect btn-flat"
+                (click)="modal.close()">{{'generic.buttons.close' | translate}}
+        </button>
+    </ng-container>
+</app-modal>

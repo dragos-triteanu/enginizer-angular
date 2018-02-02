@@ -1,0 +1,86 @@
+@import 'src/styles/style.scss';
+
+:host::ng-deep {
+
+    .sort-icon {
+        font-size: 15px;
+    }
+
+    .groupers {
+        .input-field {
+            height: 48px;
+            margin: 0;
+        }
+    }
+
+    .tooltip-icon {
+        margin-top: 3px;
+        margin-left: 10px;
+    }
+
+}
+
+.table-head {
+    .table-row {
+        padding-right: 17px;
+    }
+}
+
+.filters {
+    background: rgba(241, 241, 241, .5);
+
+    .column {
+        cursor: default;
+    }
+}
+
+.groupers {
+    height: 80px;
+
+    .table-column {
+        overflow: visible;
+        display: flex;
+        align-items: center;
+
+        .section-label {
+            padding-right: 24px;
+        }
+
+        ul {
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    a {
+        border-radius: 1rem;
+        color: #fff;
+        padding: 0 1em;
+        height: 2em;
+        line-height: 2em;
+
+        i {
+            vertical-align: middle;
+            font-size: 1em;
+        }
+    }
+
+    .group-name {
+        vertical-align: middle;
+    }
+}
+
+.grouper-disabled {
+    background-color: grey !important;
+    opacity: 0.3;
+}

@@ -1,0 +1,2092 @@
+{
+    "All": "All",
+    "InProgress": "In Progress",
+    "Available": "Available",
+    "Unavailable": "Unavailable",
+    "NotAvailable": "Not Available",
+    "New": "New",
+    "Ready": "Ready",
+    "Approved": "Approved",
+    "WaitingForProcessing": "Waiting For Processing",
+    "WaitingForApproval": "Waiting For Approval",
+    "WaitingForTools": "Waiting For Tools",
+    "Rejected": "Rejected",
+    "Pending": "Pending",
+    "Closed": "Closed",
+    "Canceled": "Canceled",
+    "Resolved": "Resolved",
+    "Delivered": "Delivered",
+    "Unresolved": "Unresolved",
+    "Processed": "Processed",
+    "InTransport": "In Transport",
+    "Confirmed": "Confirmed",
+    "WaitingForConfirmation": "Waiting For Confirmation",
+    "STORED_IN_LIFT": "Stored In Lift",
+    "STORED_IN_KARDEX": "Stored In Kardex",
+    "AT_ATOM_STATION": "At Atom Station",
+    "IN_TRANSPORT": "In Transport",
+    "AT_LINE": "At Line",
+    "AT_FACILITY": "At Facility",
+    "AT_MECHANICAL": "At Mechanical",
+    "home": {
+        "language": "Current language: English",
+        "select": "Change language",
+        "welcome": "Active Tool Order Management (ATOM)"
+    },
+    "nav": {
+        "sections": {
+            "usersAndRoles": {
+                "title": "Users & Roles",
+                "items": {
+                    "users": "Users",
+                    "roles": "Roles"
+                }
+            },
+            "infrastructure": {
+                "title": "Infrastructure",
+                "items": {
+                    "plants": "Plants",
+                    "lines": "Lines",
+                    "equipment": "Equipment",
+                    "partNumber": "Part Numbers"
+                }
+            },
+            "tools": {
+                "title": "Tools",
+                "items": {
+                    "tools": "Tools",
+                    "tool-history": "Tool History"
+                }
+            },
+            "issues": {
+                "title": "Issues",
+                "items": {
+                    "viewIssues": "Issues",
+                    "signalAnIssue": "Signal Issue",
+                    "pendingIssues": "Pending issues"
+                }
+            },
+            "tickets": {
+                "title": "Tickets",
+                "items": {
+                    "manageTickets": "Manage Tickets"
+                }
+            },
+            "tool-requests":{
+                "title": "Tool requests",
+                "items": {
+                    "requestTools": "Request Tools",
+                    "pendingToolRequests": "Pending Tool requests"
+                }
+            },
+            "tool-returns": {
+                "title": "Tool returns",
+                "items": {
+                    "returnTools": "Return Tools",
+                    "pendingToolReturns": "Pending Tool returns"
+                }
+            },
+            "approve-tool-requests": {
+                "title": "Manage Tool requests",
+                "items": {
+                    "approveLineRequests": "Approve requests [Lines]",
+                    "approveFacilityRequests": "Approve requests [Facilities]"
+                }
+            },
+            "approve-tool-returns": {
+                "title": "Manage Tool returns",
+                "items": {
+                    "approveLineRequests": "Approve returns [Lines]",
+                    "approveFacilityRequests": "Approve returns [Facilities]"
+                }
+            },
+            "process-tool-requests": {
+                "title": "Process Tool requests",
+                "items": {
+                    "processLines": "Process requests [Lines]   ",
+                    "processFacilities": "Process requests [Facilities]"
+                }
+            },
+            "process-tool-returns": {
+                "title": "Process Tool returns",
+                "items": {
+                    "processLines": "Process returns [Lines]   ",
+                    "processFacilities": "Process returns [Facilities]"
+                }
+            },
+            "process-ticket-all": {
+                "title": "Process tickets",
+                "items":{
+                    "processAll": "All"
+                }
+            },
+            "process-ticket-categories": {
+                "title": "Categories"
+            }
+        }
+    },
+    "generic": {
+        "error": "ERROR",
+        "success": "SUCCESS",
+        "warning": "WARNING",
+        "info": "INFO",
+        "all": "All",
+        "pageNotFound": "Page not found",
+        "yes": "YES",
+        "no": "NO",
+        "file": "FILE",
+        "dropdown": {
+            "emptyMessage": "Select"
+        },
+        "tickets": {
+            "selectTools": "Select Tools",
+            "ticketDetails": "Ticket Details"
+        },
+        "buttons": {
+            "add": "Add",
+            "edit": "Edit",
+            "login": "Login",
+            "logout": "Logout",
+            "activate": "Activate",
+            "disable": "Disable",
+            "deactivate": "Deactivate",
+            "save": "Save",
+            "next": "Next",
+            "back": "Back",
+            "cancel": "Cancel",
+            "confirm": "Confirm",
+            "delete": "Delete",
+            "update": "Update",
+            "create": "Create",
+            "close": "Close",
+            "skip": "Skip",
+            "process": "Process",
+            "resume": "Resume processing",
+            "resumeProcessing": "Resume processing",
+            "reject": "Reject",
+            "reset": "Reset",
+            "approve": "Approve",
+            "promoteToTicket": "Raise Ticket",
+            "load": "Load",
+            "unload": "Unload",
+            "finishOperation": "Finish",
+            "startOperation": "Start",
+            "requestTools": "Request Tools"
+        },
+        "statuses": {
+            "all": "All",
+            "inProgress": "In Progress",
+            "available": "Available",
+            "unavailable": "Unavailable",
+            "notAvailable": "Not Available",
+            "new": "New",
+            "ready": "Ready",
+            "inTransport": "In Transport",
+            "approved": "Approved",
+            "waitingForProcessing": "Waiting For Processing",
+            "rejected": "Rejected",
+            "pending": "Pending",
+            "closed": "Closed",
+            "canceled": "Canceled",
+            "storedInLift": "Stored In Lift",
+            "atAtomStation": "At Atom Station",
+            "atLine": "At Line",
+            "atFacility": "At Facility",
+            "waitingForApproval": "Waiting For Approval",
+            "waitingForTools": "Waiting For Tools",
+            "atMechanical": "At Mechanical"
+        },
+        "scanner": {
+            "notFocused": "Out of focus! Please click this window",
+            "focused": "Waiting for scanner input"
+        },
+        "table": {
+            "columns": {
+                "action": "Action"
+            }
+        }
+    },
+    "toasts": {
+        "scanner-error": "Input error found during scan, please try again",
+        "upcoming-feature": "This feature will be added soon"
+    },
+    "table": {
+        "filter": "Search",
+        "groupFilter": "Filter by",
+        "pagination": {
+            "from": "from total of"
+        },
+        "totalPages": "Total pages:",
+        "totalRecords": "Total records:",
+        "columns": {
+            "index": "#"
+        },
+        "buttons": {
+            "addGroup": "Add"
+        }
+    },
+    "tree": {
+        "toolSelect": {
+            "title": "Select tools",
+            "emptyMessage": "Use scanner to scan for tools",
+            "toasts": {
+                "alreadyScanned": "Tool {{uid}} already scanned!",
+                "notRequired": "Tool {{uid}} is not part of this return request!"
+            }
+        }
+    },
+    "confirmModal": {
+        "reason": "Please type in the reason"
+    },
+    "timeUnits": {
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "days": "Days"
+    },
+    "datepicker": {
+        "labelMonthNext": "Next Month",
+        "labelMonthPrev": "Last Month",
+        "labelMonthSelect": "Select Month",
+        "labelYearSelect": "Select Year",
+        "monthsFull": [
+            "January",
+            "February",
+            "March",
+            "April",
+            "March",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+        ],
+        "monthsShort": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Mar",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ],
+        "weekdaysFull": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ],
+        "weekdaysShort": [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"
+        ],
+        "today": "Today",
+        "clear": "Clear",
+        "close": "Ok"
+    },
+    "reportDownloadForm": {
+        "startDatePicker": {
+            "placeholder": "Insert start date",
+            "label": "Start date"
+        },
+        "endDatePicker": {
+            "placeholder": "Insert end date",
+            "label": "End date"
+        },
+        "downloadButton": "Download .csv",
+        "toasts": {
+            "noEntriesError": "No entries were found. Try filtering by other criteria."
+        }
+    },
+    "form": {
+        "validations": {
+            "required": "This field is required",
+            "max": "Value must be less than {{max}}",
+            "roleNameRequired": "The role name is required",
+            "lineNameRequired": "The line name is required",
+            "lineDescriptionRequired": "The line description is required",
+            "plantNameRequired": "The plant name is required",
+            "plantDescriptionRequired": "The plant description is required",
+            "plantRequired": "The plant is required",
+            "invalidDateInterval": "The start date must be earlier than the end date",
+            "atLeastOneTool": "At least one tool must be selected",
+            "allToolsInspected": "All returned tools must be inspected",
+            "allIssuesSolved": "All tools issues must be solved"
+        }
+    },
+    "auth": {
+        "buttons": {
+            "login": "Login",
+            "badge": "Use access badge",
+            "credentials": "Use Bosch credentials"
+        },
+        "message": {
+            "existingBoschId": "Card already registered. Please use a new one."
+        },
+        "scanBadge": "Login with your badge",
+        "enterCredentials": "Login with your Bosch credentials",
+        "invalidCredentialsError": "Invalid credentials",
+        "scanSwitch": "Login using employee badge",
+        "credentialsSwitch": "Login using credentials",
+        "emailLabel": "Email",
+        "passwordLabel": "Password",
+        "authenticationInfo": "Authentication Info",
+        "missingRole": "You have no role assigned.Please contact the administrator.",
+        "missingBoschId": "Your access card is not activated.Please scan it."
+    },
+    "roles": {
+        "ADMIN": "Admin",
+        "LINE_SETTER": "Line setter",
+        "MILKRUN_OPERATOR": "Milkrun operator",
+        "KARDEX_OPERATOR": "Kardex operator",
+        "ATOM_OPERATOR": "Atom operator"
+    },
+    "permissions": {
+        "MANAGE_USERS": "Manage Users",
+        "VIEW_USERS": "View Users",
+        "MANAGE_ROLES": "Manage Roles",
+        "VIEW_ROLES": "View Roles",
+        "MANAGE_PLANTS": "Manage Plants",
+        "VIEW_PLANTS": "View Plants",
+        "MANAGE_EQUIPMENT": "Manage Equipment",
+        "VIEW_EQUIPMENT": "View Equipment",
+        "MANAGE_TICKETS": "Manage Tickets",
+        "VIEW_TICKETS": "View Tickets",
+        "MANAGE_PARTNUMBERS": "Manage Part Numbers",
+        "VIEW_PARTNUMBERS": "View Part Numbers",
+        "MANAGE_LINES": "Manage Lines",
+        "VIEW_LINES": "View Lines",
+        "MANAGE_TOOLS": "Manage Tools",
+        "VIEW_TOOLS": "View Tools"
+    },
+    "admin": {
+        "users": {
+            "title": "User Management",
+            "table": {
+                "columns": {
+                    "badge": "Badge Number",
+                    "email": "Email",
+                    "fullMame": "Name",
+                    "role": "Role",
+                    "status": "Status"
+                },
+                "rows": {
+                    "active": "Active",
+                    "disabled": "Disabled",
+                    "updateRole": {
+                        "label": "Assign new role",
+                        "emptyText": "Choose role for this user"
+                    },
+                    "updateStatus": {
+                        "topLabel": "Change status",
+                        "onLabel": "Active",
+                        "offLabel": "Disabled"
+                    }
+                },
+                "filters": {
+                    "byRole": "Filter By Role",
+                    "status": {
+                        "label": "Filter by status",
+                        "all": "All",
+                        "active": "Active",
+                        "disabled": "Disabled"
+                    }
+                }
+            },
+            "toasts": {
+                "updated": "The '{{user}}' was updated successfully",
+                "error": "Could not update user with id {{user}}"
+            }
+        },
+        "lines": {
+            "table": {
+                "title": "Line Management",
+                "columns": {
+                    "lineName": "Line name",
+                    "lineDescription": "Description"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Find by name",
+                        "description": "Find by description"
+                    }
+                }
+            },
+            "buttons": {
+                "addLine": "Create line"
+            },
+            "create-modal": {
+                "title": "Create line",
+                "name-input": {
+                    "label": "Line name",
+                    "placeholder": "Insert line name"
+                },
+                "description-input": {
+                    "label": "Line description",
+                    "placeholder": "Insert line description"
+                },
+                "plant-input": {
+                    "label": "Plant",
+                    "placeholder": "Select a plant"
+                },
+                "mesId-input": {
+                    "label": "MES Id",
+                    "placeholder": "Insert MES Id"
+                },
+                "mesStationIs-input": {
+                    "label": "MES Station Id",
+                    "placeholder": "Insert MES Station Id"
+                },
+                "pick-list": {
+                    "leftHeader": "Available equipment",
+                    "rightHeader": "Selected equipment"
+                },
+                "alert": {
+                    "message": "Drag and drop equipment from left to right in order to assign them to a line",
+                    "error": {
+                        "line-name-required": "The line name is required",
+                        "line-description-required": "The line description is required",
+                        "line-plant-required": "The line's assigned plant is required"
+                    }
+                },
+                "button": {
+                    "create": "Create",
+                    "update": "Update",
+                    "delete": "Delete"
+                }
+            },
+            "update-modal": {
+                "title": "Update line"
+            },
+            "toasts": {
+                "created": "The new '{{lineName}}' line has been created!",
+                "updated": "The '{{lineName}}' line was updated successfully",
+                "deleted": "The '{{lineName}}' line was deleted"
+            }
+        },
+        "plants": {
+            "table": {
+                "title": "Plant Management",
+                "columns": {
+                    "plantName": "Plant Name",
+                    "plantDescription": "Description"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Find by name",
+                        "description": "Find by description"
+                    }
+                }
+            },
+            "buttons": {
+                "addPlant": "Create plant"
+            },
+            "create-modal": {
+                "title": "Create plant",
+                "name-input": {
+                    "label": "Plant name",
+                    "placeholder": "Insert Plant name"
+                },
+                "description-input": {
+                    "label": "Plant description",
+                    "placeholder": "Insert plant description"
+                },
+                "pick-list": {
+                    "leftHeader": "Available lines",
+                    "rightHeader": "Selected lines"
+                },
+                "alert": {
+                    "message": "Drag and drop lines from left to right in order to assign them to a plant",
+                    "error": {
+                        "plant-name-required": "The plant name is required",
+                        "plant-description-required": "The plant description is required"
+                    }
+                },
+                "button": {
+                    "create": "Create",
+                    "update": "Update",
+                    "delete": "Delete"
+                }
+            },
+            "update-modal": {
+                "title": "Update plant"
+            },
+            "toasts": {
+                "created": "The new '{{plantName}}' has been created!",
+                "updated": "The '{{plantName}}' plant was updated successfully",
+                "deleted": "The '{{plantName}}' plant was deleted"
+            }
+        },
+        "equipment": {
+            "table": {
+                "title": "Equipment Management",
+                "columns": {
+                    "name": "Equipment name",
+                    "line": "Current line",
+                    "MESId": "MES ID/Layout Number"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Find by name",
+                        "line": "Find by line name",
+                        "MESId": "Find by MES ID/Layout Number"
+                    }
+                }
+            },
+            "buttons": {
+                "addEquipment": "Create equipment",
+                "manageProcessTypes": "Manage process types"
+            },
+            "create-modal": {
+                "title": "Create equipment",
+                "name-input": {
+                    "label": "Equipment name",
+                    "placeholder": "Insert equipment name"
+                },
+                "description-input": {
+                    "label": "Equipment description",
+                    "placeholder": "Insert equipment description"
+                },
+                "process-types-input": {
+                    "leftHeader": "Available process types",
+                    "rightHeader": "Selected process types"
+                },
+                "line-input": {
+                    "label": "Line",
+                    "placeholder": "Select a line"
+                },
+                "mes-id-input": {
+                    "label": "MES ID/Layout Number",
+                    "placeholder": "Insert equipment MES ID/Layout Number"
+                },
+                "button": {
+                    "create": "Create",
+                    "update": "Update",
+                    "delete": "Delete",
+                    "cancel": "Cancel"
+                }
+            },
+            "update-modal": {
+                "title": "Update equipment"
+            },
+            "toasts": {
+                "created": "The new '{{equipmentName}}' equipment has been created!",
+                "updated": "The '{{equipmentName}}' equipment was updated successfully",
+                "deleted": "The '{{equipmentName}}' equipment was deleted"
+            },
+            "processTypes": {
+                "table": {
+                    "title": "Process Types Management",
+                    "columns": {
+                        "name": "Process name",
+                        "description": "Process description",
+                        "inUse": "In use"
+                    },
+                    "filter": {
+                        "placeholder": {
+                            "name": "Find by name",
+                            "description": "Find by description",
+                            "inUse": "Find by usage status"
+                        }
+                    },
+                    "status": {
+                        "inUse": "YES",
+                        "notInUse": "NO"
+                    }
+                },
+                "buttons": {
+                    "backToEquipment": "Back to equipment",
+                    "addProcessType": "Create process type"
+                },
+                "create-modal": {
+                    "title": "Create Process Type",
+                    "name-input": {
+                        "label": "Process name",
+                        "placeholder": "Insert process name"
+                    },
+                    "description-input": {
+                        "label": "Process description",
+                        "placeholder": "Insert process description"
+                    },
+                    "button": {
+                        "create": "Create",
+                        "update": "Update",
+                        "delete": "Delete",
+                        "cancel": "Cancel"
+                    }
+                },
+                "update-modal": {
+                    "title": "Update Process Type"
+                },
+                "toasts": {
+                    "created": "The new '{{processTypeName}}' process type has been created!",
+                    "updated": "The '{{processTypeName}}' process type was updated successfully",
+                    "deleted": "The '{{processTypeName}}' process type was deleted"
+                }
+            }
+        },
+        "tickets": {
+            "table": {
+                "title": "Tickets Management",
+                "columns": {
+                    "id": "Ticket ID",
+                    "status": "Status",
+                    "createdBy": "Created by",
+                    "createdDate": "Created date",
+                    "startDate": "Start date",
+                    "endDate": "End date",
+                    "isAutomatic": "Is automatic"
+                },
+                "filter": {
+                    "placeholder": {
+                        "id": "Find by ticket ID",
+                        "status": "Find by status",
+                        "createdBy": "Find by user",
+                        "createdDate": "Find by date",
+                        "startDate": "Find by date",
+                        "endDate": "Find by date",
+                        "isAutomatic": "Find by state"
+                    }
+                },
+                "isAutomatic": {
+                    "true": "YES",
+                    "false": "NO"
+                }
+            },
+            "buttons": {
+                "addTicket": "Create ticket",
+                "manageOperationTypes": "Manage operation types"
+            },
+            "create-modal": {
+                "title": "Create ticket",
+                "selectedTool": "Selected tool",
+                "description-input": {
+                    "label": "Ticket description",
+                    "placeholder": "Insert ticket description"
+                },
+                "tools-input": {
+                    "leftHeader": "Available tools",
+                    "rightHeader": "Selected tools"
+                },
+                "operation-types-input": {
+                    "leftHeader": "Available operation types",
+                    "rightHeader": "Selected operation types"
+                },
+                "button": {
+                    "create": "Create",
+                    "close": "Close",
+                    "cancel": "Cancel"
+                }
+            },
+            "details-modal": {
+                "title": "Ticket Details",
+                "panel": {
+                    "selectedTools": "Tools part of this ticket",
+                    "currentOperation": "Current operation",
+                    "status": "Status",
+                    "createdDate": "Created date",
+                    "ticketStartDate": "Ticket start date",
+                    "ticketEndDate": "Ticket end date",
+                    "createdBy": "Created by",
+                    "description": "Description",
+                    "issue": "Issue",
+                    "accordion": {
+                        "title": "Operations",
+                        "startDate": "Start Date",
+                        "endDate": "Finish Date",
+                        "status": "Status",
+                        "assignedTo": "AssignedTo",
+                        "comment": "Comment",
+                        "instructionFile":"Instruction File",
+                        "description":"Description",
+                        "document": "Document"
+                    }
+                }
+            },
+            "toasts": {
+                "created": "The new '{{ticketId}}' ticket has been created!",
+                "closed": "The '{{ticketId}}' ticket was closed"
+            },
+            "operation-types": {
+                "table": {
+                    "title": "Operation types",
+                    "columns": {
+                        "name": "Name",
+                        "priority": "Priority"
+                    },
+                    "filter": {
+                        "name": "by Name",
+                        "priority": "by Priority"
+                    }
+                },
+                "buttons": {
+                    "createOperationTypes": "Create operation type"
+                },
+                "create-modal": {
+                    "title": "Create Operation Type",
+                    "name-input": {
+                        "placeholder": "Insert name",
+                        "label": "Name"
+                    },
+                    "priority-input": {
+                        "placeholder": "Insert priority",
+                        "label": "Priority"
+                    }
+                },
+                "update-modal": {
+                    "title": "Edit operation type"
+                },
+                "toasts": {
+                    "created": "The new '{{operationTypeName}}' process type has been created!",
+                    "updated": "The '{{operationTypeName}}' process type was updated successfully",
+                    "deleted": "The '{{operationTypeName}}' process type was deleted"
+                }
+            }
+        },
+        "roles": {
+            "table": {
+                "title": "Role Management",
+                "columns": {
+                    "roleName": "Role name"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Find by name"
+                    }
+                }
+            },
+            "buttons": {
+                "addRole": "Create role"
+            },
+            "create-modal": {
+                "title": "Create role",
+                "name-input": {
+                    "label": "Role name",
+                    "placeholder": "Insert role name"
+                },
+                "pick-list": {
+                    "leftHeader": "Available permissions",
+                    "rightHeader": "Selected permissions"
+                },
+                "alert": {
+                    "message": "Drag and drop permissions from left to right in order to assign them to a role",
+                    "error": {
+                        "role-name-required": "The role name is required"
+                    }
+                },
+                "button": {
+                    "create": "Create",
+                    "update": "Update",
+                    "delete": "Delete"
+                }
+            },
+            "update-modal": {
+                "title": "Update role",
+                "oob": {
+                    "warning": "This role is an OOB role and cannot be modified!"
+                }
+            },
+            "toasts": {
+                "created": "The new '{{roleName}}' role has been created!",
+                "updated": "The '{{roleName}}' role was updated successfully",
+                "deleted": "The '{{roleName}}' role was deleted"
+            },
+            "oobRoles": {
+                "ADMIN": "Admin",
+                "LINE_SETTER": "Line Setter",
+                "MILKRUN_OPERATOR": "Milkrun Operator",
+                "ATOM_OPERATOR": "Atom Operator",
+                "LIFT_OPERATOR": "Lift Operator",
+                "SERVICE_OPERATOR": "Service Operator",
+                "SYSTEM_SERVICE":"System Operator"
+            }
+        },
+        "tool-history": {
+            "header": {
+                "status": "Status",
+                "lifecycle": "Lifecycle"
+            },
+            "status-history-table": {
+                "title": "Tool Status History",
+                "columns": {
+                    "toolUid": "Tool UID",
+                    "toolName": "Tool name",
+                    "updatedBy": "Updated by",
+                    "toolStatus": "Status",
+                    "toolStance": "Stance",
+                    "date": "Date / Time"
+                },
+                "filter": {
+                    "placeholder": {
+                        "toolUid": "Find by UID",
+                        "toolName": "Find by name",
+                        "updatedBy": "Find by user",
+                        "toolStatus": "Find by status",
+                        "date": "Find by Date / Time"
+                    }
+                }
+            },
+            "lifecycle-history-table": {
+                "title": "Tool Lifecycle History",
+                "columns": {
+                    "toolUid": "Tool UID",
+                    "toolName": "Tool name",
+                    "line": "Line",
+                    "partNumber": "Part number",
+                    "CPCRPC": "CPC/RPC",
+                    "CPTRPT": "CPT/RPT",
+                    "TPCSPC": "TPC/SPC",
+                    "TPTSPT": "TPT/SPT",
+                    "date": "Date / Time"
+                },
+                "filter": {
+                    "placeholder": {
+                        "toolUid": "Find by UID",
+                        "toolName": "Find by name",
+                        "line": "Find by line",
+                        "partNumber": "Find by part number",
+                        "CPCRPC": "Find by CPC/RPC",
+                        "CPTRPT": "Find by CPT/RPT",
+                        "TPCSPC": "Find by TPC/SPC",
+                        "TPTSPT": "Find by TPT/SPT",
+                        "date": "Find by Date / Time"
+                    }
+                },
+                "tooltips": {
+                    "CPCRPC": "Current Production Cycles / Revision Production Cycles",
+                    "CPTRPT": "Current Production Time /  Revision Production Time",
+                    "TPCSPC": "Total Production Cycles / Scrap Production Cycles",
+                    "TPTSPT": "Total Production Time / Scrap Production Cycles"
+                }
+            }
+        },
+        "tools": {
+            "title": "Tool Management",
+            "tabs": {
+                "detailsTab": "Details",
+                "documentsTab": "Documents",
+                "interventionHistoryTab": "Interventions",
+                "maintenancePlan": "Maintenance Plan"
+            },
+            "table": {
+                "columns": {
+                    "toolUid": "Tool UID",
+                    "toolName": "Tool name",
+                    "toolOwner": "Tool owner",
+                    "toolStatus": "Status",
+                    "toolStance": "Stance",
+                    "toolAvailable": {
+                        "header": "Available for manufacturing",
+                        "available": "Available",
+                        "unavailable": "Not available"
+                    }
+                },
+                "filters": {
+                    "toolUid": "Find by UID",
+                    "toolName": "Find by name",
+                    "updatedBy": "Find by user",
+                    "toolAvailable": "Find by availability",
+                    "toolStatus": {
+                        "placeholder": "Find by status",
+                        "options": {
+                            "all": "All",
+                            "active": "Active",
+                            "disabled": "Disabled"
+                        }
+                    },
+                    "toolStance": "Find by stance"
+                },
+                "groupFilter": {
+                    "all": {
+                        "partNumbers": "All Part Numbers",
+                        "items": "All Lines",
+                        "equipment": "All Equipments"
+                    }
+                },
+                "rows": {
+                    "active": "Active",
+                    "disabled": "Disabled",
+                    "updateRole": {
+                        "label": "Assign new role",
+                        "emptyText": "Choose role for this user"
+                    },
+                    "updateStatus": {
+                        "topLabel": "Change status",
+                        "onLabel": "Active",
+                        "offLabel": "Disabled"
+                    }
+                },
+                "grouping": {
+                    "groupBy": "Group By",
+                    "addGroup": "Add",
+                    "options": {
+                        "equipment": "Equipment",
+                        "partNumber": "Part Number",
+                        "line": "Line"
+                    }
+                }
+            },
+            "toasts": {
+                "created": "Tool '{{toolName}}' created successfully",
+                "updated": "The '{{user}}' was updated successfully",
+                "deleted": "The '{{toolName}}' deleted successfully",
+                "reset": "Tool '{{toolName}}' successfully reset",
+                "error": "Could not update user with id {{user}}",
+                "engraved": "Tool '{{toolName}}' engraved successfully",
+                "errorEngraved": "The code {{scannedCode}} is invalid. Please make sure that you use the correct data matrix."
+            },
+            "details": {
+                "header": {
+                    "details-labels": {
+                        "toolName": "Name",
+                        "manufacturingLine": "Line",
+                        "mesCode": "MES Code",
+                        "uid": "UID",
+                        "setSize": "Set size",
+                        "owner": "Owner",
+                        "status": "Status",
+                        "stance": "Stance",
+                        "isValid": "Valid For Manufacturing"
+                    },
+                    "buttons": {
+                        "invalidate": "Invalidate",
+                        "revalidate": "Revalidate",
+                        "makeValid": "Make Valid",
+                        "intervention": "Raise Intervention",
+                        "engrave": "Engrave"
+                    }
+                },
+                "delete-confirmation-modal": {
+                    "title": "Confirm delete tool '{{toolName}}'",
+                    "question": "Are you sure you wish to delete tool '{{toolName}}' ?"
+                },
+                "reset-confirmation-modal": {
+                    "title": "Confirm reset of tool '{{toolName}}'",
+                    "question": "Are you sure you wish to reset the status and stance of tool '{{toolName}}' to 'STORED_IN LIFT' ?"
+                },
+                "toasts": {
+                    "invalidated": "Tool is now invalid for manufacturing",
+                    "revalidated": "Tool is now valid for manufacturing"
+                },
+                "detailsPage": {
+                    "sections": {
+                        "toolLifecycle": "Tool Lifecycle",
+                        "toolDescription": "Tool description"
+                    },
+                    "labels": {
+                        "description": "Description",
+                        "isSpare": "Is Spare",
+                        "partNumbers": "Part Numbers",
+                        "equipment": "Equipment",
+                        "monitoredInSAP": "Tool life monitored in SAP",
+                        "monitoredInMES": "Tool life monitored in MES",
+                        "monitoredInPLC": "Tool life monitored in PLC",
+                        "revisionPercent": "Revision Percent",
+                        "lifetimeEstimation": "Lifetime Estimation",
+                        "lifecycleEstimation": "Lifecycle Estimation",
+                        "timeUntilRevision": "Time until revision",
+                        "cyclesUntilRevision": "Cycles until revision",
+                        "currentProductionCycles": "Current Production cycles",
+                        "currentProductionTime": "Current Production time",
+                        "toolExpirationDate": "Expiration Date",
+                        "lifetimeEstimationTime": "Lifetime Estimation",
+                        "lifecycleEstimation": "LifeCycles Estimation",
+                        "toolRevisionCycles": "Revision Cycles",
+                        "toolRevisionTime": "Revision Time",
+                        "noEquipments": "Tool has no equipment defined!"
+                    },
+                    "maintenancePlanTable" : {
+                        "value": "Value",
+                        "operation": "Operation",
+                        "description": "Description",
+                        "document": "Document",
+                        "add": "Add new maintenance plan",
+                        "delete": {
+                            "name": "Delete",
+                            "popup": {
+                                "title": "Confirm remove maintenance plan",
+                                "question": "Are you sure you wish to remove the maintenance plan?",
+                                "message": "Continue by confirming your action"
+                            }
+                        }
+                    },
+                    "maintenancePlanAddModal": {
+                        "title": "Add maintenance plan"
+                    }
+                },
+                "documentsPage": {
+                    "labels": {
+                        "isDocumentationComplete": "Documentation complete"
+                    },
+                    "fileManager": {
+                        "title": "Tool Documents",
+                        "contextMenu": {
+                            "newVersion": "New Version",
+                            "uploadFile": "Upload File",
+                            "downloadFile": "Download File"
+                        }
+                    },
+                    "create-modal": {
+                        "title": "Create Version",
+                        "version-input": {
+                            "label": "Version name",
+                            "placeholder": "Please insert version name"
+                        },
+                        "file-input": {
+                            "required": "At least one file is required!"
+                        }
+                    }
+                },
+                "interventionsPage": {
+                    "table": {
+                        "title": "Interventions",
+                        "columns": {
+                            "header": {
+                                "launchDate": "Launch Date",
+                                "launchedBy": "Launched By",
+                                "interventionStart": "Intervention start",
+                                "interventionEnd": "Intervention end",
+                                "operationType": "Operation Type",
+                                "responsible": "Responsible"
+                            },
+                            "filter": {
+                                "placeholder": {
+                                    "launchDate": "by Lauch Date",
+                                    "launchedBy": "by Launched By",
+                                    "interventionStart": "by Intervention Start",
+                                    "interventionEnd": "by Intervention End",
+                                    "operationType": "by Operation Type",
+                                    "responsible": "by Responsible"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "form": {
+                "title": "Add tool",
+                "sections": {
+                    "details": "Details",
+                    "documentation": "Documentation",
+                    "lifecycle": "Lifecycle",
+                    "parts": "Part Numbers",
+                    "mainEquipments": "Main Equipments",
+                    "secondaryEquipments": "Secondary Equipments",
+                    "engrave": "Engraving",
+                    "maintenancePlan": "Maintenance Plan"
+                },
+                "table": {
+                    "title": "Maintanance Plans: {type}"
+                },
+                "labels": {
+                    "isSet": "Is part of a set",
+                    "setSize": "Set size",
+                    "spareSize": "Spare size",
+                    "name": "Name",
+                    "description": "Description",
+                    "owner": {
+                        "label": "Owner",
+                        "placeholder": "Search or select owner"
+                    },
+                    "line": {
+                        "label": "Main Line",
+                        "placeholder": "Select manufacturing area"
+                    },
+                    "MESCode": "MES Code",
+                    "lifeSAP": "Tool life monitored in SAP",
+                    "lifeMES": "Tool life monitored in MES",
+                    "lifePLC": "Tool life monitored in PLC",
+                    "lifeEstimationTime": "Tool lifetime estimation (min)",
+                    "lifeEstimationCycles": "Tool lifetime estimation (cycles)",
+                    "lifeRevisionCycles": "Tool lifetime revision (cycles)",
+                    "lifeRevisionTime": "Tool lifetime revision (min)",
+                    "lifeProductionTime": "Current production lifetime (min)",
+                    "lifeProductionCycles": "Current production lifetime (cycles)",
+                    "revisionPercent": "Tool revision percent",
+                    "expirationDate": "Tool expiration date",
+                    "partNumbersTitle": "Choose Part Numbers",
+                    "equipmentsTitle": "Choose Equipments",
+                    "maintenancePlanType": "Select maintenance type",
+                    "cycles": "Cycles",
+                    "time": "Time"
+                },
+                "notifications": {
+                    "success": "Tool created with success!",
+                    "error": "Tool could not be created!"
+                }
+            },
+            "create-modal": {
+                "pick-list": {
+                    "equipment": {
+                        "leftHeader": "Available equipment",
+                        "rightHeader": "Selected equipment"
+                    },
+                    "partNumbers": {
+                        "leftHeader": "Available part numbers",
+                        "rightHeader": "Selected part numbers"
+                    }
+                }
+            },
+            "engrave": {
+                "title": "Engrave tool",
+                "message": "Please scan following tools",
+                "status": "Status",
+                "waiting": "Waiting for tool DMC scan input",
+                "outOfFocus": "Out of focus! Please click this window",
+                "toolName": "Tool Name",
+                "complete": "Engraved Complete"
+            }
+        },
+        "partNumbers": {
+            "table": {
+                "title": "Part Numbers Management",
+                "columns": {
+                    "name": "PartNumber Name",
+                    "SAPFamily": "SAP Family Group",
+                    "SAPGroup": "SAP Product Group"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Find by name",
+                        "SAPFamily": "Find by SAP Family Group",
+                        "SAPGroup": "Find by SAP Product Group"
+                    }
+                }
+            },
+            "buttons": {
+                "addPartNumbers": "Create part number"
+            },
+            "toasts": {
+                "created": "The new '{{partNumberName}}' part number has been created",
+                "updated": "The '{{partNumberName}}' part number was updated successfully",
+                "deleted": "The '{{partNumberName}}' part number was deleted",
+                "error": "Error: '{{errorMessage}}'"
+            },
+            "create-modal": {
+                "title": "Create Part Number",
+                "pick-list": {
+                    "lines": {
+                        "leftHeader": "Available lines",
+                        "rightHeader": "Selected lines"
+                    },
+                    "equipment": {
+                        "leftHeader": "Available equipment",
+                        "rightHeader": "Selected equipment",
+                        "tooltip": {
+                            "line": "Line: ",
+                            "processTypes": "Process types: "
+                        }
+                    }
+                }
+            },
+            "update-modal": {
+                "title": "Update Part Number"
+            },
+            "form": {
+                "sections": {
+                    "details": "Details",
+                    "lines": "Lines",
+                    "equipment": "Equipment"
+                },
+                "placeholders": {
+                    "name": "Name",
+                    "description": "Description",
+                    "sapFamily": "SAP Family Group",
+                    "sapGroup": "SAP Product Group",
+                    "valueStream": "Value Stream"
+                },
+                "labels": {
+                    "name": "Name",
+                    "description": "Description",
+                    "sapFamily": "SAP Family Group",
+                    "sapGroup": "SAP Product Group",
+                    "valueStream": "Value Stream"
+                }
+            }
+        },
+        "issues": {
+            "table": {
+                "title": "Issues Management",
+                "columns": {
+                    "toolUid": "Tool UID",
+                    "status": "Status",
+                    "reason": "Reason",
+                    "createdAt": "Created Date",
+                    "createdBy": "Created By"
+                },
+                "filter": {
+                    "placeholder": {
+                        "toolUid": "Find by tool Uid",
+                        "status": "Find by status",
+                        "reason": "Find by reason",
+                        "createdAt": "Find by date",
+                        "createdBy": "Find by user"
+                    }
+                }
+            },
+            "modal": {
+                "title": {
+                    "add": "Signal Issue",
+                    "view": "Issue Details"
+                },
+                "toolUid": {
+                    "label": "Tool Uid",
+                    "placeholder": "Scan tool"
+                },
+                "reason": {
+                    "label": "Reason",
+                    "placeholder": "Choose a reason"
+                },
+                "description": {
+                    "label": "Description",
+                    "placeholder": "Insert description"
+                },
+                "createdAt": {
+                    "label": "Created At"
+                },
+                "status": {
+                    "label": "Status"
+                },
+                "line": {
+                    "label": "Line"
+                },
+                "createdBy": {
+                    "label": "Created By"
+                },
+                "isReplacementOrdered": {
+                    "label": "Is Replacement Ordered"
+                }
+            },
+            "buttons": {
+                "manageReasons": "Manage Reasons"
+            }
+        },
+        "reasons": {
+            "table": {
+                "title": "Manage Issue Reasons",
+                "columns": {
+                    "name": "Name"
+                },
+                "filter": {
+                    "placeholder": {
+                        "name": "Filter by Name"
+                    }
+                }
+            },
+            "buttons": {
+                "addReasons": "Create Reason"
+            },
+            "toasts": {
+                "created": "The new '{{reasonName}}' has been created!",
+                "updated": "The '{{reasonName}}' reason was updated successfully",
+                "deleted": "The '{{reasonName}}' reason was deleted"
+            },
+            "modal": {
+                "title": {
+                    "add": "Add new reason",
+                    "edit": "Edit reason"
+                },
+                "name": {
+                    "label": "Name",
+                    "placeholder": "Name"
+                }
+            }
+        }
+    },
+    "lineSetter": {
+        "toolRequest": {
+            "pages": {
+                "cancelToolRequest": {
+                    "popupTitle": "Confirm close tool request",
+                    "popupQuestion": "Are you sure you to close the request?"
+                },
+                "changeoverRequest": "Changeover request",
+                "requestType": "Please select the request type",
+                "buttonIndividual": "Individual",
+                "buttonPartNumber": "Part number changeover",
+                "selectManufacturingLine": "Please select the Manufacturing Line",
+                "searchManufacturingLine": "Search manufacturing lines",
+                "scanTreeLabel": "Proceed with order",
+                "buttonOrder": "Order",
+                "buttonOrderPriority": "Order with priority",
+                "popupTitle": "Confirm cancel tool request",
+                "popupQuestion": "Are you sure you want to cancel the selected Tool Request?",
+                "popupMessage": "Scan badge to confirm!",
+                "selectLineAndPartNumber": "Please select the Manufacturing Line and Part Number",
+                "groupSubtitle": "Select line and part number",
+                "groupPartNumber": "Part Number",
+                "searchPartNumber": "Search part numbers"
+            },
+            "stepper": {
+                "individualTitle": "Create individual tool request",
+                "groupTitle": "Create group tool request",
+                "selectLine": "Select line",
+                "selectTools": "Select tools",
+                "manufacturingLine": "Manufacturing line:",
+                "partNumber": "Part Number:",
+                "neededToolsTitle": "Please select the needed tools for the selected Part Number"
+            },
+            "table": {
+                "title": "Select tools",
+                "groupFilter": {
+                    "all": {
+                        "items": "All Part Numbers",
+                        "equipment": "All Equipments"
+                    }
+                }
+            },
+            "messages": {
+                "maxToolRequests": "Max number of tool requests (3) per line reached",
+                "maxPriorityToolRequests": "Maximum number of prioritised tool requests (3) is reached",
+                "toolRequestCreated": "Tool request created",
+                "priorityMessagePlaceholder": "Please type in the priority reason",
+                "priorityMessageLabel": "Priority reason"
+            },
+            "toasts": {
+                "maxToolRequests": "Max number of tool requests (3) per line reached",
+                "maxPriorityToolRequests": "Maximum number of prioritised tool requests (3) is reached",
+                "toolRequestCreated": "Tool request created"
+            }
+        },
+        "signalIssue": {
+            "sectionTitle": "Signal an issue",
+            "stepTitles": {
+                "selectLine": "Select a line",
+                "scanTool": "Scan tool",
+                "issueDetails": "Issue details",
+                "confirm": "Confirmation"
+            },
+            "form": {
+                "line": {
+                    "label": "Production line",
+                    "placeholder": "Select production line"
+                },
+                "tool": {
+                    "label": "Tool",
+                    "placeholder": "Proceed by scanning a tool"
+                },
+                "reason": {
+                    "label": "Reason",
+                    "placeholder": "Select a reason"
+                },
+                "description": {
+                    "label": "Description",
+                    "placeholder": "Insert issue description"
+                },
+                "isReplacementOrdered": {
+                    "topLabel": "Order a replacement",
+                    "onLabel": "Yes",
+                    "offLabel": "No"
+                }
+            },
+            "toasts": {
+                "created": "The issue with ID: '{{issueId}}' was created!"
+            }
+        },
+        "tool-returns": {
+            "stepper": {
+                "select-line-and-tool-request": {
+                    "title": "Select line and tool request",
+                    "panel": {
+                        "line-input": {
+                            "label": "Select a line",
+                            "placeholder": "None"
+                        }
+                    }
+                },
+                "select-tools": {
+                    "title": "Select Tools",
+                    "table": {
+                        "title": "Select tools to return"
+                    },
+                    "tool-requests-dropdown": {
+                        "label": "Select a Tool Request",
+                        "placeholder": "None"
+                    },
+                    "currentLine": "Selected Line",
+                    "currentPartNumber": "Changeover for",
+                    "panel": {
+                    }
+                },
+                "confirm": {
+                    "title": "Confirm",
+                    "panel": {
+                        "toolsTreeNeededAtLine": "Tools that are needed at line",
+                        "toolsTreeNeededToBeReturned": "Tools that will be returned"
+                    },
+                    "alert": {
+                        "toolsNeededAtLine": "The tools part of the tool return are needed at the line!"
+                    }
+                }
+            },
+            "toasts": {
+                "created": "The tool return request '{{toolReturnRequestName}}' was created!",
+                "error": "Could not create tool return!"
+            },
+            "pages": {
+                "cancelToolReturn": {
+                    "popupTitle": "Confirm close tool return",
+                    "popupQuestion": "Are you sure you to close the request?"
+                },
+                "selectLineAndToolRequest": "Please select the Manufacturing Line and Tool Request",
+                "toolRequest": "Tool request",
+                "popupTitle": "Confirm return tools",
+                "popupQuestion": "Are you sure you want to return these tools from request?",
+                "popupMessage": "Scan badge to confirm!"
+            }
+        },
+        "pending-tool-returns": {
+            "table": {
+                "title": "Pending Tool Returns",
+                "columns": {
+                    "toolRequestName": "Returned For",
+                    "line": "Line",
+                    "creator": "Creator",
+                    "status": "Status"
+                },
+                "filter": {
+                    "byLine": "by Line",
+                    "byToolRequestName": "by Name",
+                    "byCreator": "by Creator",
+                    "byStatus": "by Status"
+                },
+                "details-modal": {
+                    "title": "Pending Tool Return Details",
+                    "toolRequestName": "Returned For",
+                    "selectedTools": "Tools",
+                    "createdDate": "Created Date",
+                    "assignedTo": "Assigned To",
+                    "createdBy": "Created By",
+                    "closedDate": "Closed Date",
+                    "status": "Status"
+                },
+                "toasts": {
+                    "closed": "The '{{pendingToolReturnRequestName}}' pending tool return request was closed"
+                }
+            }
+        },
+        "pending-tool-requests": {
+            "table": {
+                "title": "Pending Tool Requests",
+                "columns": {
+                    "name": "Name",
+                    "line": "Line",
+                    "partNumber": "Part Number",
+                    "creator": "Creator",
+                    "status": "Status"
+                },
+                "filter": {
+                    "byLine": "by Line",
+                    "byName": "by Name",
+                    "byCreator": "by Creator",
+                    "byStatus": "by Status",
+                    "byPartNumber": "by PartNumber"
+                },
+                "details-modal": {
+                    "title": "Pending Tool Request Details",
+                    "name": "Name",
+                    "selectedTools": "Tools",
+                    "createdDate": "Created Date",
+                    "assignedTo": "Assigned To",
+                    "createdBy": "Created By",
+                    "closedDate": "Closed Date",
+                    "status": "Status"
+                },
+                "toasts": {
+                    "closed": "The '{{pendingToolRequestName}}' pending tool request was closed"
+                }
+            }
+        }
+    },
+    "lift-operator": {
+        "incoming-tool-request": {
+            "table-title": "Incoming Tool Requests",
+            "manufacturing-line": "Manufacturing line",
+            "part-number": "Part number",
+            "facility": "Facility",
+            "createdBy": "Created by",
+            "date": "Date",
+            "status": "Status",
+            "title": "Confirm withdraw tools",
+            "question": "Are you sure you want to withdraw the selected tools?",
+            "message": "Confirm by scanning badge",
+            "tree-title": "Preview Request",
+            "toasts": {
+                "processed": "Tool Request {{toolRequestName}} has been processed"
+            }
+        },
+        "incoming-tools-returned": {
+            "table-title": "Incoming Tool Returns",
+            "title": "Confirm withdraw tools",
+            "question": "Are you sure you want to store in kardex the selected tools?",
+            "message": "Confirm by scanning badge",
+            "tree-title": "Preview Return",
+            "toasts": {
+                "processed": "Tool Return for request {{toolRequestName}} has been processed"
+            }
+        },
+        "incoming-tools-table": {
+            "createdAt": "Date/Time Requested",
+            "manufactureLine": "Manufacturing Line",
+            "facility": "Facility",
+            "byLine": "by Line",
+            "partNumber": "Part Number",
+            "byPartNumber": "by Part Number",
+            "byFacility": "by Facility",
+            "status": "Status",
+            "byStatus": "by Status",
+            "actions": "Actions",
+            "process": "Process",
+            "resumeProcess": " Resume Process"
+        }
+    },
+    "atom": {
+        "tool-returns": {
+            "table": {
+                "title-lines": "Tool returns from Lines",
+                "title-facilities": "Tool returns from Facilities",
+                "columns": {
+                    "toolRequest": "Returned for",
+                    "line": "Line",
+                    "facility": "Facility",
+                    "createdBy": "Created by",
+                    "createdDate": "Created Date",
+                    "status": "Status",
+                    "action": "Action"
+                },
+                "filter": {
+                    "toolRequest": "By request",
+                    "line": "By line",
+                    "facility": "By facility",
+                    "createdBy": "By user",
+                    "createdDate": "By date",
+                    "status": "By status"
+                }
+            },
+            "inspect-details": {
+                "title": "Inspect returned tools",
+                "display": {
+                    "toolRequest": "Returned for",
+                    "line": "Line",
+                    "facility": "Facility",
+                    "createdDate": "Created Date",
+                    "createdBy": "Created by"
+                },
+                "scanner": {
+                    "label": "Scan the returned tools",
+                    "emptyText": "Waiting for returned tools to load..."
+                }
+            },
+            "toasts": {
+                "approved": "The tool return request with id {{toolReturnId}} was approved",
+                "error": "Tool return cannot be approved until all the tools are scanned.",
+                "couldNotOpenIssue": "Failed to open issue",
+                "rejectFail": "Failed to reject issue",
+                "rejectSuccess": "Issue rejected"
+            }
+        },
+        "tool-requests-lines": {
+            "table": {
+                "title": "Pending Tool Requests from Lines",
+                "columns": {
+                    "toolRequestName": "Name",
+                    "createdAt": "Date / Time Requested",
+                    "line": "Manufacturing Line",
+                    "partNumber": "Part Number",
+                    "status": "Status",
+                    "actions": "Actions"
+                },
+                "filters": {
+                    "byCreatedTime": "by Creation Date",
+                    "byLine": "by Line",
+                    "byPartNumber": "by Part Number",
+                    "byStatus": "by Status"
+                }
+            },
+            "process-details": {
+                "title": "Inspect requested tools"
+            },
+            "process": {
+                "title": "Process Tool Request",
+                "labels": {
+                    "toolRequestName": "Name",
+                    "manufacturingLine": "Manufacturing Line",
+                    "dateRequested": "Date Requested",
+                    "partNumber": "Part Number",
+                    "hasPriority": "Has Priority",
+                    "priorityReason": "Priotiry Reason",
+                    "noPartNumber": "Individual Tool Request",
+                    "createdBy": "Created by"
+                },
+                "table": {
+                    "columns": {
+                        "name": "Tool Name",
+                        "uid": "Tool Uid",
+                        "status": "Status",
+                        "stance": "Stance"
+                    },
+                    "filters": {
+                        "byName": "by Name",
+                        "byUid": "by UID",
+                        "byStatus": "by Status"
+                    }
+                },
+                "warnings": {
+                    "isAlreadyReservedForLine": "Tool is already reserved for line",
+                    "shouldBeReplaced": "Tool should be replaced. Click to choose a replacement."
+                },
+                "error": {
+                    "requestContainsUnavailableTools": "Tool Request cannot be approved until all the tools are available.",
+                    "allToolsAtLine": "Tool Request cannot be approved because all the tools are already reserved to Line."
+                }
+            },
+            "replaceTools": {
+                "modal": {
+                    "selectedTool": "Tool that will be replaced",
+                    "reasonForReplacement": "Reason for replacement",
+                    "replacementTool": "Replacement tool",
+                    "label": "Tools",
+                    "placeholder": "Select a tool",
+                    "title": "Replace tool",
+                    "message": "Select a replacement for",
+                    "errors": {
+                        "noReplacementTools": "No tools available for replacement!"
+                    }
+                },
+                "unavailabilityReason": {
+                    "notAvailableForManufacturing": "Tool is not available for manufacturing",
+                    "atOtherLine": "The tool is currently at another line",
+                    "hasIssue": "The tool has an issue, and thus is not fit for production",
+                    "returnedFromCurrentLine": "The tool is being returned from the current line",
+                    "notStoredInLift": "The tool is not available in the lift"
+                }
+            },
+            "toasts": {
+                "cannotStartProcess": "Cannot start approval for Tool Request '{{toolRequestName}}'",
+                "toolRequestApproved": "Tool request '{{toolRequestName}}' has been approved",
+                "toolRequestRejected": "Tool request '{{toolRequestName}}' has been rejected",
+                "cannotProcess": "Cannot process '{{toolRequestName}}' due to issues. Please contact technical support.",
+                "cannotReplace": "Could not replace tool '{{toolName}}' with replacement '{{replaceName}}'"
+            }
+        },
+        "tool-requests-facilities": {
+            "table": {
+                "title": "Pending Tool Requests from Facilities",
+                "columns": {
+                    "toolRequestName": "Name",
+                    "createdAt": "Date / Time Requested",
+                    "line": "Manufacturing Line",
+                    "facility": "Facility",
+                    "partNumber": "Part Number",
+                    "status": "Status",
+                    "actions": "Actions"
+                },
+                "filters": {
+                    "byCreatedTime": "by Creation Date",
+                    "byLine": "by Line",
+                    "byPartNumber": "by Part Number",
+                    "byFacility": "by Facility",
+                    "byStatus": "by Status"
+                }
+            },
+            "process": {
+                "title": "Process Tool Request",
+                "labels": {
+                    "toolRequestName": "Name",
+                    "manufacturingLine": "Manufacturing Line",
+                    "dateRequested": "Date Requested",
+                    "partNumber": "Part Number",
+                    "hasPriority": "Has Priority",
+                    "facility": "Facility",
+                    "priorityReason": "Priotiry Reason",
+                    "createdBy": "Created by"
+                },
+                "table": {
+                    "columns": {
+                        "name": "Tool Name",
+                        "uid": "Tool Uid",
+                        "status": "Status",
+                        "stance": "Stance"
+                    },
+                    "filters": {
+                        "byName": "by Name",
+                        "byUid": "by UID"
+                    }
+                }
+            },
+            "toasts": {
+                "cannotStartProcess": "Cannot start approval for Tool Request '{{toolRequestName}}'",
+                "toolRequestApproved": "Tool request '{{toolRequestName}}' has been approved",
+                "toolRequestRejected": "Tool request '{{toolRequestName}}' has been rejected",
+                "cannotProcess": "Cannot process '{{toolRequestName}}' due to issues. Please contact technical support."
+            }
+        },
+        "tickets": {
+            "closeTicketPopup": {
+                "popupTitle": "Confirm close ticket",
+                "popupQuestion": "Are you sure you want to close the selected ticket?",
+                "popupMessage": "Scan badge to confirm!"
+            }
+        }
+    },
+    "milkrun": {
+        "transportation-requests": {
+            "title": "Shipping list",
+            "atom-requests": {
+                "title": "ATOM Station",
+                "table": {
+                    "title": "Pending tool requests"
+                },
+                "confirmation": {
+                    "popupTitle": "Confirm tool request transport",
+                    "popupQuestion": "Are you sure you want to load/unload the requested tools?",
+                    "popupMessage": "Continue by confirming your action"
+                }
+            },
+            "line-requests": {
+                "title": "Manufacturing Line",
+                "table": {
+                    "title": "Pending tool returns"
+                },
+                "confirmation": {
+                    "popupTitle": "Confirm tool return transport",
+                    "popupQuestion": "Are you sure you want to load/unload the returned tools?",
+                    "popupMessage": "Continue by confirming your action"
+                }
+            },
+            "table": {
+                "columns": {
+                    "label": "Label",
+                    "location": "Location",
+                    "destination": "Destination"
+                }
+            },
+            "toasts": {
+                "toolRequestLoaded": "Loaded tool request with label: {{toolRequestName}}",
+                "toolRequestUnloaded": "Unloaded tool request with label: {{toolRequestName}}",
+                "toolReturnLoaded": "Loaded tool return with label: {{toolRequestName}}",
+                "toolReturnUnloaded": "Unloaded tool return with label: {{toolRequestName}}"
+            }
+        }
+    },
+    "service": {
+        "tickets": {
+            "title": "Service tickets",
+            "table": {
+                "title": "Service tickets",
+                "columns": {
+                    "date": "Date / Time",
+                    "createdBy": "Created by",
+                    "status": "Status"
+                }
+            },
+            "details": {
+                "title": "Ticket details",
+                "display": {
+                    "id": "Ticket ID",
+                    "currentOperation": "Current operation",
+                    "status": "Status",
+                    "createdDate": "Created date",
+                    "ticketStartDate": "Ticket start date",
+                    "ticketEndDate": "Ticket end date",
+                    "createdBy": "Created by",
+                    "description": "Description",
+                    "issue": "Issue"
+                },
+                "tools": {
+                    "label": "Tools part of this ticket",
+                    "emptyText": "Waiting for ticket tools to load..."
+                },
+                "accordion": {
+                    "title": "Service operations",
+                    "startDate": "Start date",
+                    "endDate": "End date",
+                    "status": "Operation status",
+                    "assignedTo": "Assigned to",
+                    "comment": "Comment",
+                    "document": "Document"
+                },
+                "confirmation-modal": {
+                    "requestTools": {
+                        "popupTitle": "Confirm tool request",
+                        "popupQuestion": "Are you sure you want to request the tools?",
+                        "popupMessage": "Scan badge to confirm!"
+                    },
+                    "startOperation": {
+                        "popupTitle": "Confirm operation start",
+                        "popupQuestion": "Are you sure you want to start the {{currentOperation}} operation?",
+                        "popupMessage": "Scan badge to confirm!"
+                    },
+                    "finishOperation": {
+                        "popupTitle": "Confirm finish operation",
+                        "popupQuestion": "Are you sure you want to finish the {{currentOperation}} operation?",
+                        "popupMessage": "Scan badge to confirm!"
+                    }
+                },
+                "intervention-modal": {
+                    "popupTitle": "Intervention details",
+                    "popupMessage": "The ticket will be moved to the next operation",
+                    "popupConfirm": "Scan badge to confirm!"
+                },
+                "transport-tools-modal": {
+                    "popupTitle": "Transport tools alert",
+                    "popupMessage": "Please proceed by transporting the tools to {{nextOperation}}"
+                },
+                "toasts": {
+                    "toolsRequested": "Requested tools for ticket with ID: {{ticketId}}",
+                    "operationStarted": "Started {{currentOperationName}} operation for ticket with ID: {{ticketId}}",
+                    "operationFinished": "Finished {{currentOperationName}} operation for ticket with ID: {{ticketId}}"
+                },
+                "info-modal": {
+                    "title": "Information",
+                    "lastOperation": {
+                        "infoMessage": "The ticket was closed because all the operations are done.",
+                        "actionMessage": "Please transport the tools to ATOM station."
+                    },
+                    "operationPending": {
+                        "infoMessage": "The ticket was moved to the next operation ( {{nextOperation}} )",
+                        "actionMessage": "Please transport the tools to {{nextOperation}}."
+                    }
+                }
+            }
+        }
+    },
+    "errorMessage": {
+        "correlationId": "If you don't manage to fix the problem,contact the administrator and use this code {{correlationId}}",
+        "401": {
+            "missingBoschId": "Bosch Id is missing",
+            "invalidBoschId": "Bosch Id is invalid",
+            "user": {
+                "notAuthorized": "The user is not authorized."
+            }
+        },
+        "400": {
+            "createTicket": "Equipment cannot be created. Please make sure that all the properties are filled in with correct values.",
+            "invalidEngraveData": "The scanned code is invalid. Please make sure that you use the correct data matrix.",
+            "invalidLines": "Selected lines are not valid",
+            "invalidEquipment": "Selected equipment are not valid",
+            "ticket": {
+                "createToolReturn": "Tool return wasn't created because the selected ticket has no tool request.",
+                "createToolRequest": "Tools can be requested only for tickets that have status New",
+                "create": {
+                    "invalidTools": "One or more tools are invalid",
+                    "invalidOperation": "One or more operations are invalid",
+                    "invalidIssue": "Only new issues can be converted to tickets"
+                },
+                "close": {
+                    "invalidStatus": "Ticket cannot be forced closed in the current state."
+                },
+                "startOperation": {
+                    "invalidTicketStatus": "Operations can be started on a ticket only if the ticket has the status Ready or InProgress",
+                    "invalidOperation": "Invalid Operation",
+                    "invalidOperationStatus": "Only the operations with status New can be started"
+                },
+                "finishOperation": {
+                    "invalidTicketStatus": "Operations can be finished on a ticket only if the ticket has the status In Progress",
+                    "invalidOperation": "Invalid Operation",
+                    "invalidOperationStatus": "Only the operations with status In progress can be finished",
+                    "create": "The operation cannot be completed because the description is missing"
+                }
+            },
+            "toolRequest": {
+                "approve": "Tool request cannot be approved in the current status",
+                "startApprove": "Approve process cannot be start on the current tool request.",
+                "startProcessing": "Processing phase cannot be started for the current tool request",
+                "process": "Tool request cannot be marked as processed in the current status.",
+                "createToolRequest": {
+                    "invalidTools": "Invalid tools. Tool request cannot be created"
+                },
+                "replaceTools": {
+                    "replace": "Tools cannot be replaced. Please make sure that all the properties are filled in with correct values.",
+                    "invalidStatus": "Tools cannot be replaced for the current tool request",
+                    "oldToolNotFound": "The tool sent for replacement is part of the current tool request",
+                    "newToolNotFound": "The replacement tool is not found.",
+                    "newToolNotAvailable": "The replacement tool is not longer available"
+                },
+                "reject": "Tool request cannot be rejected in the current status.",
+                "cancel": "Tool request cannot be canceled in the current status.",
+                "unavailableTool": "One or more tools are not available for request",
+                "load": "Tool request cannot be transported in the current status",
+                "close": "Tool request cannot be closed in the current status",
+                "create": "Tool request cannot be created. Please make sure that all the properties are filled in with correct values."
+            },
+            "toolReturn": {
+                "startApprove": "Approve process cannot be start on the current tool return.",
+                "approve": {
+                    "invalidStatus": "Tool return cannot be approved in the current status.",
+                    "notAllToolsAreScanned": "Tool return cannot be approved until all the tools are scanned.",
+                    "notAllIssuesAreProcessed": "Tool return cannot be approved until all the issues are processed"
+                },
+                "confirmScan": {
+                    "invalidTool": "Tool is not part from the current tool return."
+                },
+                "startProcessing": "Processing cannot be start on the current tool return.",
+                "close": "Tool return cannot be closed in the current status.",
+                "cancel": "Tool return cannot be canceled in the current status.",
+                "load": "Tool return cannot be transported in the current status",
+                "unload": "Tool return cannot be dispatched in the current status",
+                "create": {
+                    "invalidToolRequest": "Invalid Tool Request",
+                    "toolsNotPartOfToolRequests": "Invalid Tools. One or more tools are not part of the selected tool request",
+                    "toolsShouldNotBeReturn": "Invalid Tools : One or more tools should not be returned",
+                    "toolsWithInvalidStatus": "Invalid Tools : One or more tools have invalid status"
+                },
+                "createToolReturn": "Tool return cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "getToolsForReturn": "Line and Tool Request are required in order to calculate the tools available for return"
+            },
+            "issue": {
+                "create": "Issue cannot be created. Please make sure that all the properties are filled in with correct values."
+            },
+            "tool": {
+                "create": "Tool cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "uploadDocuments": {
+                    "missingData": "Upload failed. Please make sure that all the properties are filled in with correct values.",
+                    "exceedMaximumSize": "Upload failed. One or more file exceed the maximum allowed size.",
+                    "invalidDataType": "Upload failed. One or more file have invalid type."
+                },
+                "maintenancePlan": {
+                    "missingValue": "Tool Maintenance Plan value is missing.",
+                    "operationMissing": "Tool Maintenance Plan operation is missing.",
+                    "descriptionMissing": "Tool Maintenance Plan description is missing.",
+                    "fileMissing": "Tool Maintenance Plan file is missing.",
+                    "wrongValueType": "Tool Maintenance Plan value type is wrong.",
+                    "invalidValue": "Tool Maintenance Plan value is invalid.",
+                    "notSet": "Tool Maintenance Plan was not set.",
+                    "wrongOperationIdType": "Tool Maintenance Plan operation type id is wrong.",
+                    "uploadFailed": "Tool Maintenance Plan file failed upload.",
+                    "invalidOperationId": "Tool Maintenance Plan operation id is invalid."
+                }
+            },
+            "equipment": {
+                "create": "Equipment cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Equipment cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "partNumber": {
+                "create": "PartNumber cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "PartNumber cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "line": {
+                "create": "Line cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Line cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "processType": {
+                "create": "Process Type cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Process Type cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "facilityOperation": {
+                "create": "Facility Operation cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Facility Operation cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "reason": {
+                "create": "Reason cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Reason cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "role": {
+                "create": "Role cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Role cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "plant": {
+                "create": "Plant cannot be created. Please make sure that all the properties are filled in with correct values.",
+                "update": "Plant cannot be updated. Please make sure that all the properties are filled in with correct values."
+            },
+            "user": {
+                "update": "User cannot be updated. Please make sure that all the properties are filled in with correct values.",
+                "setBoschId": "The Bosch id cannot be assigned to the current user.Please make sure that you are using a valid code"
+            }
+        },
+        "403": {
+            "maxIssues": "Only one issue can be signaled on a tool",
+            "partNumber": {
+                "inUse": "The selected PartNumber cannot be deleted because it is used in line-equipment configurations."
+            },
+            "line": {
+                "inUse": "The selected Line cannot be deleted because it is part of a Plant."
+            },
+            "processType": {
+                "isUse": "The selected Process Type cannot be deleted because it is used by Equipment."
+            },
+            "role": {
+                "inUse": "The selected Role cannot be deleted because it is assigned to at least one user."
+            },
+            "plant": {
+                "inUse": "The selected Plant cannot be deleted because it has assigned to at least one line."
+            },
+            "equipment": {
+                "inUse": "The selected Equipment cannot be deleted because it is assigned to at least one line"
+            },
+            "generic": {
+                "inUse": "The selected entity cannot be deleted because it is used by the system."
+            }
+        },
+        "404": {
+            "toolRequestNotFound": "Tool request not found",
+            "toolReturnNotFound": "Tool return not found",
+            "toolNotFound": "Tool not found",
+            "ticketNotFound": "Ticket not found",
+            "equipment": "Equipment not found",
+            "partNumber": "Part number not found",
+            "line": "Line not found",
+            "issueNotFound": "Issue not found",
+            "processType": "Process Type not found",
+            "facilityOperation": "Facility Operation not found",
+            "reason": "Reason not found.",
+            "plant": "Plant not found.",
+            "user":"User not found.",
+            "tool": {
+                "maintenancePlan": {
+                    "notFound": "Maintenance Plan not found"
+                }
+            }
+        },
+        "409": {
+            "tool": {
+                "nameUsed": "The name is already used for other tool.Please use a different name."
+            },
+            "equipment": {
+                "nameMesIdInUse": "The name - layout number pair is already used for other equipment. Please update at least one of them."
+            },
+            "partNumber": {
+                "nameUsed": "The name is already used for other PartNumber.Please use a different name."
+            },
+            "processType": {
+                "nameUsed": "The name is already used for other Process Type.Please use a different name."
+            },
+            "facilityOperation": {
+                "nameUsed": "The name is already used for other Facility Operation.Please use a different name."
+            },
+            "line": {
+                "nameUsed": "The name is already used for other Line.Please use a different name."
+            },
+            "reason": {
+                "nameUsed": "The name is already used for other Reason.Please use a different name."
+            },
+            "role": {
+                "nameUsed": "The name is already used for other Role.Please use a different name."
+            },
+            "plant": {
+                "nameUsed": "The name is already used for other Plant.Please use a different name."
+            }
+        }
+    },
+    "intervention-modal": {
+        "title": "Intervention Details",
+        "description": {
+            "label": "Description",
+            "placeholder": "Please insert details regarding about operation"
+        }
+    }
+}
