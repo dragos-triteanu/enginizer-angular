@@ -1,6 +1,6 @@
 <ul class="errors"
     *ngIf="errorList.length">
-    <li *ngFor="let error of errorList">
-        {{error}}
+    <li class="error">
+        {{errorList[0]}} <!-- Displaying only the first error in the array -->
     </li>
 </ul>

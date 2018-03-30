@@ -1,297 +1,136 @@
 {
-    "generic": {
-        "nav": {
-            "sections": {
-                "usersAndRoles": {
-                    "title": "Useri și Roluri",
-                    "items": {
-                        "users": "Useri",
-                        "roles": "Roluri"
-                    }
-                },
-                "demo": {
-                    "title": "Demo"
-                }
-            }
-        },
-        "components": {
-            "input-duration": {
-                "timeUnits": {
-                    "minutes": "Minute",
-                    "hours": "Ore",
-                    "days": "Secunde"
-                }
-            },
-            "date-picker": {
-                "labelMonthNext": "Luna viitoare",
-                "labelMonthPrev": "Luna trecută",
-                "labelMonthSelect": "Selectează luna",
-                "labelYearSelect": "Selectează anul",
-                "monthsFull": [
-                    "Ianuari",
-                    "Februarie",
-                    "Martie",
-                    "Aprilie",
-                    "Mai",
-                    "Iunie",
-                    "Iulie",
-                    "August",
-                    "Septembrie",
-                    "Octombrie",
-                    "Noiembrie",
-                    "Decembrie"
-                ],
-                "monthsShort": [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "Mar",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec"
-                ],
-                "weekdaysFull": [
-                    "Sunday",
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                ],
-                "weekdaysShort": [
-                    "Sun",
-                    "Mon",
-                    "Tue",
-                    "Wed",
-                    "Thu",
-                    "Fri",
-                    "Sat"
-                ],
-                "today": "Today",
-                "clear": "Clear",
-                "close": "Ok"
-            },
-            "form": {
-                "validations": {
-                    "required": "This field is required",
-                    "max": "Value must be less than {{max}}",
-                    "roleNameRequired": "The role name is required",
-                    "lineNameRequired": "The line name is required",
-                    "lineDescriptionRequired": "The line description is required",
-                    "plantNameRequired": "The plant name is required",
-                    "plantDescriptionRequired": "The plant description is required",
-                    "plantRequired": "The plant is required",
-                    "invalidDateInterval": "The start date must be earlier than the end date",
-                    "atLeastOneTool": "At least one tool must be selected",
-                    "allToolsInspected": "All returned tools must be inspected",
-                    "allIssuesSolved": "All tools issues must be solved"
-                }
-            },
-            "auth": {
-                "buttons": {
-                    "login": "Login",
-                    "badge": "Folosește badge",
-                    "credentials": "Utilizează credențiale"
-                },
-                "message": {
-                    "existingBadgeId": "Badge deja existent în sistem"
-                },
-                "scanBadge": "Autentificare cu badge",
-                "enterCredentials": "Login cu badge",
-                "invalidCredentialsError": "Credențiale invalide",
-                "scanSwitch": "Authentificare cu badge angajat",
-                "credentialsSwitch": "Autentificare cu credențiale",
-                "emailLabel": "Email",
-                "passwordLabel": "Parolă",
-                "authenticationInfo": "Info Autentificare",
-                "missingRole": "Nu aveți rol asignat. Contactați admin.",
-                "badgeNotActive": "Badge-ul nu este activat.Va rugăm scanați-l."
-            },
-            "home": {
-                "language": "Limba: Română",
-                "select": "Schimbă limba",
-                "welcome": "Bun venit la ngnizr"
-            },
-            "scanner": {
-                "focused": "Focusat",
-                "notFocused": "Ne-focusat"
-            },
-            "table": {
-                "totalRecords": "Total",
-                "columns": {
-                    "index": "Id"
-                }
-            },
-            "report-download": {
-                "startDatePicker": {
-                    "placeholder": "Selectează dată start",
-                    "label": "Dată start"
-                },
-                "endDatePicker": {
-                    "placeholder": "Selectează data final",
-                    "label": "Dată final"
-                },
-                "downloadButton": "Descarcă"
-            }
-        },
-        "buttons": {
-            "add": "Adaugă",
-            "edit": "Editează",
-            "login": "Login",
+    "general": {
+        "actions": {
+            "login": "Logheaza-te",
             "logout": "Logout",
-            "disable": "Dezactivează",
-            "save": "Salvează",
-            "next": "Următorul",
+            "register": "Inregistreaza-te",
+            "submit": "Submit",
+            "forward": "Înainte",
             "back": "Înapoi",
-            "cancel": "Anulează",
-            "confirm": "Confirmă",
-            "delete": "Șterge",
-            "update": "Modifiă",
-            "create": "Crează",
+            "next": "Următorul",
+            "save": "Salvează",
+            "skip": "Sari peste",
             "close": "Închide",
-            "skip": "Sari peste"
+            "yes": "Da",
+            "no": "Nu",
+            "continue": "Continua",
+            "click": "Apasa aici"
         },
-        "statuses": {
-            "all": "Toate",
-            "inProgress": "In Progress"
-        },
-        "label": {
-            "error": "Error"
-        },
-        "toasts": {
+        "texts": {
+            "motto": "Modul de interacțiune schimbă contextul problemei",
+            "confirmAccount": "Contul a fost confirmat cu succes",
+            "confirmAccountError": "A intervenit o eroare. Te rugam sa reincerci",
+            "demo": {
+                "textInput": "Whateva'",
+                "datepicker": "d8 m8",
+                "openModal": "Open Modal",
+                "openWizard": "Open Wizard",
+                "toggleSidebar": "Toggle Sidebar",
+                "sectionHeader": "Section Header",
+                "sectionText": "Section Text"
+            }
         },
         "messages": {
-            "correlationId": "If you don't manage to fix the problem,contact the administrator and use this code {{correlationId}}",
             "401": {
-                "missingBadgeId": "Badge Id is missing",
-                "invalidBadgeId": "Badge Id is invalid",
-                "user": {
-                    "notAuthorized": "The user is not authorized."
+                "login": {
+                    "unauthorized": "Credențiale invalide"
                 }
             },
             "400": {
-                "role": {
-                    "create": "Role cannot be created. Please make sure that all the properties are filled in with correct values.",
-                    "update": "Role cannot be updated. Please make sure that all the properties are filled in with correct values."
+                "register": {
+                    "passwordNotMatch": "Passrola nu este identica"
                 },
-                "user": {
-                    "update": "User cannot be updated. Please make sure that all the properties are filled in with correct values.",
-                    "setBadgeId": "The badge id cannot be assigned to the current user.Please make sure that you are using a valid code"
+                "changePassword": {
+                    "tokenEmpty": "Am intampinat o eroare. Te rugam sa reincerci."
+                },
+                "resetPassword": {
+                    "notMatch": "Parola nu este identica"
                 }
-            },
-            "403": {
-                "role": {
-                    "inUse": "The selected Role cannot be deleted because it is assigned to at least one user."
-                }
-            },
-            "404": {
-                "user": "User not found."
             },
             "409": {
-                "role": {
-                    "nameUsed": "The name is already used for other Role. Please use a different name."
+                "createUser": {
+                    "duplicate": "Email-ul este deja folosit"
                 }
+            },
+            "500": {
+                "emailSendingError": "A fost o eroare in trimiterea email-ului. Te rugăm sa reincerci"
+            },
+            "demo":{
+                "demoSuccess": "Cocaine and caviar!"
+            }
+        },
+        "components": {
+            "form": {
+                "placeholders": {
+                    "email": "Email",
+                    "password": "Parola",
+                    "passwordConfirmation": "Confirma Parola",
+                    "firstName": "Prenume",
+                    "lastName": "Nume",
+                    "birthDate": "Ziua de nastere"
+                },
+                "errors": {
+                    "required": "Câmp obligatoriu",
+                    "email": "Adresa de mail invalidă",
+                    "password": "Parola invalidă",
+                    "min": "Valoarea trebuie să fie mai mare decât {{min}}",
+                    "max": "Valoarea trebuie să fie mai mică decât {{max}}",
+                    "minlength": "Valoarea trebuie să fie mai mare decât {{requiredLength}}"
+                },
+                "text": {
+                    "loginSocial": "Sau logheaza-te cu reteaua ta socială preferată",
+                    "registerRedirect": "Nu ai un cont?",
+                    "loginRedirect": "Ai deja un cont?",
+                    "passwordForgot": "Ai uitat parola?"
+                }
+            },
+            "navigation": {
+                "companies": "Companii",
+                "projects": "Proiecte",
+                "demo": "Demo",
+                "tabs": {
+                    "home": "Acasa",
+                    "taxInfo": "Date Fiscale",
+                    "associates": "Asociati",
+                    "employees": "Angajati",
+                    "expenses": "Cheltuieli",
+                    "assets": "Active"
+                }
+            },
+            "languagePicker": {
+                "language": "Limba"
+            }
+        },
+        "pages": {
+            "register": {
+                "text": {
+                    "registerSuccess": "Cont intregistrat cu success. Verifica adresa de email."
+                }
+            },
+            "forgetPassword": {
+                "text": {
+                    "emailNotFound": "Email-ul introdus este invalid sau nu există!",
+                    "emailFound": "Un link de resetare parolă a fost trimis pe email!"
+                }
+            },
+            "confirmPassword": {
+                "text": {
+                    "passwordChanged": "Parola a fost schimbata cu succes"
+                }
+            },
+            "companies": {
+                "title": "Companiile Tale",
+                "associates": "asociati"
             }
         }
     },
     "roles": {
-        "admin": {
-            "users": {
-                "title": "Gestiune Useri",
-                "table": {
-                    "columns": {
-                        "badge": "Număr badge",
-                        "email": "Email",
-                        "fullMame": "Nume",
-                        "role": "Rol",
-                        "status": "Status"
-                    },
-                    "rows": {
-                        "active": "Activ",
-                        "disabled": "Dezactivat",
-                        "updateRole": {
-                            "label": "Asignează rol",
-                            "emptyText": "Alege rol"
-                        },
-                        "updateStatus": {
-                            "topLabel": "Schimbă status",
-                            "onLabel": "Activ",
-                            "offLabel": "Dezactivat"
-                        }
-                    },
-                    "filters": {
-                        "byRole": "Filtrare după rol",
-                        "status": {
-                            "label": "Filtrare după status",
-                            "all": "Toate",
-                            "active": "Activ",
-                            "disabled": "Dezactivat"
-                        }
+        "company": {
+            "pages": {
+                "projects": {
+                    "createProjectModal": {
+                        "title": "Creeaza un proiect nou"
                     }
-                },
-                "toasts": {
-                    "updated": "Utilizatoru '{{user}}' modificat cu success",
-                    "error": "Nu s-a putut modifica utilizatorul {{user}}"
-                }
-            },
-            "roles": {
-                "table": {
-                    "title": "Getsiune Roluri",
-                    "columns": {
-                        "roleName": "Nume rol"
-                    },
-                    "filter": {
-                        "placeholder": {
-                            "name": "Filtrează după nume"
-                        }
-                    }
-                },
-                "buttons": {
-                    "addRole": "Creare rol"
-                },
-                "create-modal": {
-                    "title": "Creare rol nou",
-                    "name-input": {
-                        "label": "Nume rol",
-                        "placeholder": "Inserați un nume"
-                    },
-                    "pick-list": {
-                        "leftHeader": "Permisiuni existente",
-                        "rightHeader": "Permisiuni selectate"
-                    },
-                    "alert": {
-                        "message": "Faceți drag și drop  cu permisiunile petru a le asigna unui rol",
-                        "error": {
-                            "role-name-required": "Nume rol necesar"
-                        }
-                    },
-                    "button": {
-                        "create": "Crează",
-                        "update": "Modifică",
-                        "delete": "Șterge"
-                    }
-                },
-                "update-modal": {
-                    "title": "Modifică rol",
-                    "oob": {
-                        "warning": "Acesta este un rol Out Of the Box si nu poate fi modificat!"
-                    }
-                },
-                "toasts": {
-                    "created": "Rolul '{{roleName}}' creat!",
-                    "updated": "Rolul '{{roleName}}' modificat!",
-                    "deleted": "Rolul '{{roleName}}' șters!"
-                },
-                "oobRoles": {
-                    "ADMIN": "Admin",
-                    "COMPANY": "Company",
-                    "OTHER": "Other"
                 }
             }
         }

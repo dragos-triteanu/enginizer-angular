@@ -7,22 +7,28 @@ import { ToastOptions, ToastsManager } from 'ng2-toastr';
 import { AuthRoutingModule } from './authentication.routing';
 import { SharedModule } from '../shared/shared.module';
 
-import { AuthGuard } from './guards/auth.guard';
 
-import { AuthenticationComponent } from './pages/authentication.component';
-import { CredentialsFormComponent } from './components/login-form/login-form.component';
-import { AuthenticationInfoModalComponent } from "@app/authentication/components";
+import { AuthenticationComponent } from './pages/authentication/authentication.component';
+import { LoginFormComponent } from './components/index';
 
 import { AuthenticationService } from './services/authentication.service';
 import { IntroGuard } from '@app/authentication/guards/intro.guard';
 import { PermissionService } from "@app/authentication/services/permission.service";
 import { PermissionBasedGuard } from "@app/authentication/guards/permission-based-auth.guard";
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { UserService } from "@services/user.service";
+import { AccountConfirmComponent } from './pages/account-confirm/account-confirm.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ConfirmPasswordComponent } from './components/confirm-password/confirm-password.component';
 
 @NgModule({
     declarations: [
         AuthenticationComponent,
-        CredentialsFormComponent,
-        AuthenticationInfoModalComponent
+        LoginFormComponent,
+        RegisterFormComponent,
+        AccountConfirmComponent,
+        ForgetPasswordComponent,
+        ConfirmPasswordComponent
     ],
     imports: [
         SharedModule,
@@ -30,8 +36,8 @@ import { PermissionBasedGuard } from "@app/authentication/guards/permission-base
     ],
     providers: [
         AuthenticationService,
+        UserService,
         PermissionService,
-        AuthGuard,
         IntroGuard,
         PermissionBasedGuard,
         JwtHelper,

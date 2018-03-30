@@ -1,0 +1,40 @@
+@import 'src/styles/themes/base/_theme-base.scss';
+
+:host {
+    .material {
+        min-width: $material-component-min-width;
+        min-height: $material-component-min-height;
+        display: flex;
+        flex-direction: column;
+        padding: $material-component-padding;
+
+        .material-title {
+            height: $material-component-header-height;
+        }
+
+        .material-body {
+            height: calc(100% - #{$material-component-header-height});;
+            overflow: auto;
+        }
+
+        .material-footer {
+            height: $material-component-header-height;
+            padding-top: 30px;
+            .right, .left {
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .material {
+            width: 100% !important;
+            min-width: 100%;
+        }
+    }
+
+}
+
+
+
+
+

@@ -1,14 +1,5 @@
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
-import {
-    AfterViewInit,
-    Component,
-    ElementRef,
-    EventEmitter,
-    HostBinding,
-    Input,
-    Output,
-    ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, Output, ViewChild, } from '@angular/core';
 
 import * as moment from 'moment';
 
@@ -17,7 +8,7 @@ import { Log } from "ng2-logger";
 
 declare const $: any;
 
-const dateFormat = 'dd/mm/yyyy';
+const dateFormat = 'dd-mm-yyyy';
 
 @Component({
     selector: "app-input-datepicker",
@@ -28,25 +19,22 @@ const dateFormat = 'dd/mm/yyyy';
             multi: true
         }
     ],
-    templateUrl: './datepicker.component.html'
+    templateUrl: './datepicker.component.html',
+    styleUrls: ['./datepicker.component.scss']
 })
 export class DatepickerComponent implements ControlValueAccessor, AfterViewInit {
     _logger = Log.create(DatepickerComponent.name);
 
     @Input() label;
-    @Input() labelAlign = 'top';
+    @Input() id;
     @Input() placeholder;
     @Input() formControl: FormControl;
     @Input() showErrors;
     @Input() isDisabled = false;
+    @Input() stringFormat = false;
 
     @Output() dateChange = new EventEmitter<any>();
-    @ViewChild('input') input: ElementRef;
-
-    @HostBinding('class.label-left')
-    get leftAlignLabel() {
-        return this.labelAlign === 'left';
-    }
+    @ViewChild('input') input;
 
     private onChangeCallback: (_: any) => {};
     private onTouchedCallback: (_: any) => {};
@@ -117,10 +105,17 @@ export class DatepickerComponent implements ControlValueAccessor, AfterViewInit 
     }
 
     private propagateChange(value: Date) {
-        const time = value ? value.getTime() : null;
-        this.onChangeCallback(time);
-        if (!isNaN(value.getTime())) {
+        if (this.stringFormat) {
+            const date = value ? moment(value).format(dateFormat.toUpperCase()) : null;
+            this.onChangeCallback(date);
+            this.dateChange.emit(date);
+        } else {
+            const time = value ? value.getTime() : null;
+            this.onChangeCallback(time);
             this.dateChange.emit(time);
+            if (!isNaN(time)) {
+                this.dateChange.emit(time);
+            }
         }
     }
 

@@ -1,13 +1,6 @@
-:host {
-    /deep/ {
-        .left-labels {
-            padding-left: 40px;
+@import 'src/styles/main';
 
-            label {
-                flex-basis: 200px;
-            }
-        }
-    }
+:host {
 
     .page-header {
         text-align: center;
@@ -15,10 +8,18 @@
 
     .page-content {
         padding: 0 24px;
+        background-color: theme-color('background', 'base');
 
         .card {
             h5 {
                 padding: 24px 0;
+
+                .invalid {
+                    color: darkred;
+                }
+                .valid {
+                    color: darkgreen;
+                }
             }
             padding: 40px;
             min-height: 60vh;

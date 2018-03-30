@@ -1,0 +1,14 @@
+<div class="range-field" [class.invalid]="hasError">
+    <input type="range"
+           #range
+           [(ngModel)]="value"
+           [min]="min"
+           [max]="max"
+           [step]="step"
+           (input)="onChange($event)"
+    />
+    <app-form-error-list
+        *ngIf="showErrors"
+        [errorMap]="formControl.errors">
+    </app-form-error-list>
+</div>

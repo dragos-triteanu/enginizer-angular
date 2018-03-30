@@ -1,0 +1,15 @@
+<main class="companies">
+    <h3 class="companies__title">{{'pages.companies.title' | translate}}</h3>
+
+    <section class="companies-list">
+        <div class="company">
+            <app-card
+                *ngFor="let company of companies"
+                [record]="adaptCompanyToCard(company)"
+                [isHorizontal]="true"
+                [style]="{width: '40%'}">
+            </app-card>
+        </div>
+    </section>
+
+</main>

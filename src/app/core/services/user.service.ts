@@ -1,18 +1,17 @@
 import { environment } from '../../../environments/environment';
 import { User } from '@models/user.model';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import 'rxjs/add/operator/map';
 import { TableConfig } from '@app/shared/util/table-config.utils';
 import { AppUtils } from '@app/shared/util/app.utils';
 import { PagedResponse } from '@models/response.model';
 import { UserRole } from '@models/role.model';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class UserService {
-    static readonly API_USERS_BASE_PATH = `${environment.baseURL}/api/users`;
+    static readonly API_USERS_BASE_PATH = `${environment.baseURL}/api/auth/register`;
     static readonly API_ROLES_BASE_PATH = `${environment.baseURL}/api/roles`;
 
     roles = new Array<UserRole>();
@@ -42,9 +41,6 @@ export class UserService {
         return this.updateUser(user, {isActive: isActive});
     }
 
-    updateUserRole(user: User, role: any) {
-        return this.updateUser(user, {roleId: role.id});
-    }
 
     private mapUsers = res => {
         return {

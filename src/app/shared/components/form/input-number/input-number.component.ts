@@ -12,7 +12,8 @@ import createNumberMask from 'text-mask-addons/dist/createNumberMask'
             multi: true
         }
     ],
-    templateUrl: './input-number.component.html'
+    templateUrl: './input-number.component.html',
+    styleUrls: ['./input-number.component.scss']
 })
 export class InputNumberComponent implements ControlValueAccessor, OnInit {
     @Input() label;

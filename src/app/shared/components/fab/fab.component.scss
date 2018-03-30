@@ -1,0 +1,7 @@
+@import 'src/styles/_main.scss';
+
+:host {
+    .btn-floating {
+        background-color: theme-color('accent', 'base');
+    }
+}

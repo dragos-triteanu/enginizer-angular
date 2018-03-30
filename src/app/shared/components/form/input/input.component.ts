@@ -1,5 +1,5 @@
-import {ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {Component, EventEmitter, HostBinding, Input, Output} from "@angular/core";
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, EventEmitter, HostBinding, Input, Output } from "@angular/core";
 
 @Component({
     selector: "app-input",
@@ -10,13 +10,16 @@ import {Component, EventEmitter, HostBinding, Input, Output} from "@angular/core
             multi: true
         }
     ],
-    templateUrl: './input.component.html'
+    templateUrl: './input.component.html',
+    styleUrls: ['./input.component.scss'],
+
 })
 export class InputComponent implements ControlValueAccessor {
-    @Input() label;
-    @Input() labelAlign = 'top';
+    @Input() id;
     @Input() placeholder;
     @Input() isDisabled = false;
+    @Input() type;
+    @Input() label;
     @Input() formControl: FormControl;
     @Input() showErrors = false;
 
@@ -24,10 +27,6 @@ export class InputComponent implements ControlValueAccessor {
 
     get hasError() {
         return this.formControl && this.formControl.errors && this.showErrors;
-    }
-
-    @HostBinding('class.label-left') get leftAlignLabel() {
-        return this.labelAlign === 'left';
     }
 
     private onChangeCallback: (_: any) => {};

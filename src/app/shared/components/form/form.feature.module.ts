@@ -18,12 +18,9 @@ import {
     InputDurationComponent,
     InputNumberComponent,
     SwitchComponent,
-    TextareaComponent,
-    ToolScanComponent
+    TextareaComponent
 } from './';
-
-
-import { HIDScannerDirective } from "@app/shared/directives/hidscanner.directive";
+import { RangeComponent } from "@app/shared/components";
 
 
 @NgModule({
@@ -49,9 +46,8 @@ import { HIDScannerDirective } from "@app/shared/directives/hidscanner.directive
         FormErrorListComponent,
         FileInputComponent,
         TextareaComponent,
-        ToolScanComponent,
-        HIDScannerDirective,
-        DropdownAutocompleteComponent
+        DropdownAutocompleteComponent,
+        RangeComponent
     ],
     exports: [
         InputComponent,
@@ -63,9 +59,8 @@ import { HIDScannerDirective } from "@app/shared/directives/hidscanner.directive
         FormErrorListComponent,
         FileInputComponent,
         TextareaComponent,
-        ToolScanComponent,
-        HIDScannerDirective,
-        DropdownAutocompleteComponent
+        DropdownAutocompleteComponent,
+        RangeComponent
     ]
 })
 export class FormFeatureModule {

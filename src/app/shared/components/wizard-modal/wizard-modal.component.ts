@@ -47,6 +47,7 @@ export class WizardStepComponent {
 })
 export class WizardModalComponent {
     @Input() verticalSteps = false;
+    @Input() dismissible = false;
     @Output() stepChange = new EventEmitter();
     @Output() submit = new EventEmitter();
     @Output() cancel = new EventEmitter();
@@ -82,6 +83,10 @@ export class WizardModalComponent {
         this.modal.open();
     }
 
+    close() {
+        this.modal.close();
+    }
+
     finalSubmit() {
         this.submit.emit();
     }
@@ -90,9 +95,6 @@ export class WizardModalComponent {
         this.cancel.emit();
     }
 
-    close() {
-        this.modal.close();
-    }
 
     reset() {
         this.activeStepIndex = 0;

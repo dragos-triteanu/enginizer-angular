@@ -1,0 +1,29 @@
+<div class="fab-container">
+    <ng-container [ngSwitch]="type">
+        <ng-container *ngSwitchCase="'add'">
+            <ng-container *ngTemplateOutlet="add"></ng-container>
+        </ng-container>
+        <ng-container *ngSwitchCase="'toolbar'">
+            <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+        </ng-container>
+    </ng-container>
+</div>
+
+<ng-template #add>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large" (click)="fabClick()">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+</ng-template>
+
+<ng-template #toolbar>
+    <div class="fab-container">
+        <div class="fixed-action-btn toolbar">
+            <a class="btn-floating btn-large">
+                <i class="large material-icons">add</i>
+            </a>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</ng-template>

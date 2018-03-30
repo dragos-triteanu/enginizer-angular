@@ -1,11 +1,9 @@
-@import 'src/styles/_variables.scss';
-@import 'src/styles/style.scss';
+@import 'src/styles/_main.scss';
 
 :host {
     display: flex;
     height: 100%;
     flex-direction: column;
-    overflow: hidden;
 
     main {
         flex: 1;
@@ -19,11 +17,5 @@
         &.no-sidebar {
             padding-left: 0;
         }
-    }
-}
-
-@media #{$medium-and-down} {
-    main {
-        padding-left: 0;
     }
 }

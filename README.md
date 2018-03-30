@@ -8,6 +8,7 @@ https://travis-ci.com/dragos-triteanu/atom-ui.svg?token=VcsipzzjcsgKdCYTMPLV&bra
   - feature    --> used for creating new features
   - components --> used for continuous of UI components
   - bugfix     --> used for fixing up found issues or bugs
+  - refactor   --> used for refactoring
 
 Ex. `https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow`
 

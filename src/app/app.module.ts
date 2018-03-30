@@ -1,7 +1,6 @@
-import { ErrorHandler, Injector, NgModule } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -21,8 +20,6 @@ import { AuthorizationHeaderInterceptor } from './shared/interceptors/auth-heade
 import { ErrorHandlingInterceptor } from '@app/shared/interceptors/error-handling.interceptor';
 
 import { environment } from 'environments/environment';
-import { UserMockInterceptor } from '@app/shared/mocks/user.mock.interceptor';
-import { AuthenticationInterceptor } from '@app/authentication/mock/authentication.mock';
 import { RolesMockInterceptor } from '@app/shared/mocks/roles.mock.interceptor';
 import { PermissionsMockInterceptor } from '@app/shared/mocks/permissions.mock.interceptor';
 
@@ -36,8 +33,6 @@ let mockProviders: any[] = [];
 
 if (environment.useFakeBackend) {
     mockProviders = [
-        {provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true},
-        {provide: HTTP_INTERCEPTORS, useClass: UserMockInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: RolesMockInterceptor, multi: true},
         {provide: HTTP_INTERCEPTORS, useClass: PermissionsMockInterceptor, multi: true}
     ]

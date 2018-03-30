@@ -1,163 +1,211 @@
-@import 'src/styles/style.scss';
+@import 'src/styles/_main.scss';
 
-$completed: rgb(61, 153, 112);
-$active: $blue-75;
-$inactive: $silver;
+// Component variables
+$steps_padding_mobile: 5px;
+$steps_padding: 15px;
+$title_height: 50px;
+$completed: theme-color('misc','completed');
+$active: theme-color('primary', 'light');
+$inactive: theme-color('background', 'dark');
+$vertical_steps_width: 100px;
 
-.step-counter {
-    background: $inactive;
-    color: #fff;
-}
+:host {
 
-.step-label {
-}
-
-.separator {
-    height: 1px;
-    background: rgba(0, 0, 0, .1);
-}
-
-.complete {
-    .step-counter {
-        background: $completed;
-    }
-
-    .step-label {
-        color: $completed;
-    }
-
-    .separator {
-        height: 2px;
-        background: rgba(61, 153, 112, .5);
-    }
-}
-
-.active {
-    .step-counter {
-        background: $active;
-    }
-
-    .step-label {
-        color: $active;
-        font-weight: 800;
-    }
-}
-
-.steps {
-    display: flex;
-    position: relative;
-
-    li {
-        flex-basis: 100px;
-        display: flex;
-        align-items: center;
-        flex: 1;
-
-        &:last-child {
-            flex-grow: 0;
-            flex-basis: auto;
-
-            .separator {
-                display: none;
-            }
-        }
-
-        .step-card {
-        }
-
-        .step-counter {
-            display: inline-block;
-            vertical-align: middle;
-            width: 2rem;
-            height: 2rem;
-            font-size: 1rem;
-            padding: .4rem;
-            border-radius: 50%;
-            text-align: center;
-            margin-right: 10px;
-
-            i {
-                font-size: 1rem;
-            }
-        }
-
-        .step-label {
-            display: inline-block;
-            vertical-align: middle;
-            max-width: 80px;
-        }
-
-        .separator {
-            flex: 1;
-            margin: 0 20px;
-            transition: all .4s;
-        }
-    }
-}
-
-.step-content {
-    border-top: solid 1px lightgray;
-    padding: 2rem 2rem 0;
-}
-
-.actions {
-    padding: 0 1rem;
-    display: flex;
-
-    button {
-        display: flex;
-    }
-
-    .spacer {
-        flex: 1;
-    }
-}
-
-.wizard-title {
-    font-size: 2rem;
-    width: 100%;
-    height: 90px;
-}
-
-:host ::ng-deep {
-    .vertical-steps {
-        app-wizard-title {
-            width: 280px;
-        }
-    }
-}
-
-.vertical-steps {
     .wizard-title {
-        display: flex;
-
-        app-wizard-title {
-            width: 280px;
-        }
+        font-size: 2rem;
+        width: 100%;
+        height: $title_height;
     }
 
     .body-wrapper {
         height: 100%;
-        display: flex;
 
         .steps {
-            display: block;
-            width: 250px;
-            border-right: solid 1px #ddd;
+            display: flex;
+            position: relative;
+            padding: $steps_padding;
 
-            .step-card {
-                width: 100%;
-                padding-bottom: 10px;
+            .step-label {
+            }
+
+            .step-counter {
+                background: $inactive;
+                color: #fff;
+            }
+
+            li {
+                flex-basis: 100px;
+                display: flex;
+                align-items: center;
+                flex: 1;
+
+                &:last-child {
+                    flex-grow: 0;
+                    flex-basis: auto;
+
+                    .separator {
+                        display: none;
+                    }
+                }
+
+                .step-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .step-counter {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1rem;
+                    padding: .4rem;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin-right: 10px;
+
+                    i {
+                        font-size: 1rem;
+                    }
+                }
 
                 .step-label {
-                    max-width: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 80px;
+                }
+
+                .separator {
+                    flex: 1;
+                    margin: 0 20px;
+                    transition: all .4s;
+                    height: 1px;
+                    background: rgba(0, 0, 0, .1);
                 }
             }
         }
 
         .step-content {
-            flex: 1;
-            border: none;
+            height: 100%;
+            overflow: auto;
+            border-top: solid 1px lightgray;
+            padding: 2rem 2rem 0;
+        }
+
+        .complete {
+            .step-counter {
+                background: $completed;
+            }
+
+            .step-label {
+                color: $completed;
+            }
+
+            .separator {
+                height: 2px;
+                background: rgba(61, 153, 112, .5);
+            }
+        }
+
+        .active {
+            .step-counter {
+                background: $active;
+            }
+
+            .step-label {
+                color: $active;
+                font-weight: 800;
+            }
         }
     }
+
+    // Behavior
+
+    .actions {
+        padding: 0 1rem;
+        display: flex;
+
+        button {
+            display: flex;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+    }
+
+    .vertical-steps {
+        .wizard-title {
+            display: flex;
+
+            app-wizard-title {
+                width: 280px;
+            }
+        }
+
+        .body-wrapper {
+            height: 100%;
+            display: flex;
+
+            .steps {
+                display: block;
+                width: $vertical_steps_width;
+                border-right: solid 1px #ddd;
+
+                .step-card {
+                    padding-bottom: 10px;
+
+                    .step-label {
+                        max-width: 100%;
+                    }
+                }
+
+                .separator {
+                    display: none;
+                }
+            }
+
+            .step-content {
+                flex: 1;
+                border: none;
+            }
+        }
+    }
+
+    ::ng-deep {
+        .modal-body {
+            overflow: hidden !important;
+        }
+
+        @media screen and (max-width: 992px) {
+            .modal {
+                max-width: 95%;
+                width: 95% !important;
+            }
+        }
+
+    }
+
+    // Mobile
+    //TODO Add media queries for mobile look'n'feel
+    @media screen and (max-width: 992px) {
+
+        .steps {
+            padding: $steps_padding_mobile;
+
+            li {
+                .step-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+
+    }
+
 }
+
+

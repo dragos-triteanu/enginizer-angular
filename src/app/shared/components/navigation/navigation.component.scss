@@ -1,0 +1,166 @@
+@import 'src/styles/main';
+
+/*** Tabs ***/
+
+::ng-deep {
+    .tabs {
+        background-color: theme-color('primary', 'base');
+    }
+
+    .tabs .tab a {
+        letter-spacing: $base-letter-spacing;
+        color: theme-color('background', 'light');
+
+        &:hover {
+            color: theme-color('accent', 'base');;
+        }
+    }
+
+    .tabs .tab a.active {
+        color: theme-color('accent', 'base');
+    }
+
+    .tabs .indicator {
+        background-color: theme-color('accent', 'base');;
+    }
+
+    .tab:hover {
+        cursor: pointer;
+    }
+
+    .tab:focus {
+        outline: none;
+    }
+}
+
+:host {
+
+    .navigation {
+        background-color: theme-color('primary', 'base');
+    }
+
+    .navigation--shadow {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 0 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-logo {
+        align-items: center;
+        display: flex;
+        height: 100%;
+    }
+
+    .logo {
+        max-height: $dim-xl;
+    }
+
+    /* Mobile Navigation */
+    .button-collapse {
+        color: theme-color('background', 'light');
+        margin: 0;
+        padding: 0 $dim-md;
+    }
+
+    .side-nav {
+        background-color: theme-color('background', 'light');
+    }
+
+    .user-info {
+        background: linear-gradient(#{theme-color('accent', 'dark')}, #{theme-color('accent', 'light')});
+        color: theme-color('foreground', 'dark');
+        line-height: $base-line-height;
+        padding: doubleDim($dim-md) doubleDim($dim-base) 0;
+    }
+
+    .user-info__avatar {
+        border-radius: 50%;
+        max-width: tripleDim($dim-xl);
+    }
+
+    .user-info__name {
+        font-weight: font-weight('medium');
+        margin-top: $dim-xl;
+    }
+
+    .user-info__email {
+        font-weight: font-weight('regular');
+        padding: $dim-sm 0 $dim-base;
+    }
+
+    .mobile-navigation__item {
+        width: $dim-full;
+    }
+
+    .mobile-navigation__link {
+        align-items: center;
+        color: theme-color('foreground', 'dark');
+        display: flex;
+        letter-spacing: $base-letter-spacing;
+        width: $dim-full;
+    }
+
+    .navigation__divider {
+        background-color: theme-color('background', 'dark');
+        border: 0;
+        display: block;
+        height: 1px;
+        margin: 0;
+        width: $dim-full;
+    }
+
+    @media screen and (min-width: 993px) {
+
+        .brand-logo {
+            padding: $dim-none $dim-xl;
+        }
+
+        .desktop-navigation__link {
+            align-items: center;
+            color: theme-color('background', 'light');
+            display: flex;
+            letter-spacing: $base-letter-spacing;
+            transition: all .3s;
+
+            &:hover {
+                color: theme-color('accent', 'base');
+                transition: all .3s;
+            }
+        }
+
+        .desktop-navigation__link--active {
+            color: theme-color('accent', 'base');
+        }
+
+        .desktop-navigation__icon {
+            display: inline-block;
+            margin-right: $dim-xs;
+        }
+
+        .desktop-navigation__item--user-dropdown {
+            margin: $dim-none $dim-xl;
+        }
+        .user-menu {
+            background-color: theme-color('primary', 'base');
+            color: theme-color('background', 'light');;
+            line-height: $base-line-height;
+            text-align: center;
+            top: 64px !important;
+        }
+
+        .user-info__avatar {
+            margin-top: $dim-xl;
+        }
+
+        .navigation__divider {
+            background: theme-color('primary', 'light');
+        }
+
+        .lang-dropdown {
+            display: inline-block;
+            position: absolute;
+            left: 300px;
+        }
+
+    }
+
+}
+

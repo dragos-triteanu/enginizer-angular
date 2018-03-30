@@ -1,5 +1,3 @@
-import { UserService } from './services/user.service';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared/shared.module';
@@ -7,32 +5,31 @@ import { CoreRoutingModule } from './core.routing';
 
 import { CoreComponent } from './core.component';
 
-import { AdminModule, } from '../roles';
-
-import { HeaderComponent, SidebarComponent } from './layout';
+import { AdminModule } from '../roles';
+import { HeaderComponent } from './layout';
 
 import { IntroComponent } from './layout/intro/intro.component';
-import { NotificationService } from '@services/notification.service';
 import { RoleService } from "@services/role.service";
 import { PermissionService } from "@app/authentication/services/permission.service";
+import { UserModule } from "@app/roles/user/user.module";
+import { CompanyService } from '@app/core/services/company.service';
 
 @NgModule({
     declarations: [
         CoreComponent,
         HeaderComponent,
-        SidebarComponent,
         IntroComponent
     ],
     imports: [
+        UserModule,
         AdminModule,
         SharedModule,
-        CoreRoutingModule,
+        CoreRoutingModule
     ],
     providers: [
-        UserService,
         RoleService,
-        PermissionService,
-        NotificationService,
+        CompanyService,
+        PermissionService
     ]
 })
 export class CoreModule {

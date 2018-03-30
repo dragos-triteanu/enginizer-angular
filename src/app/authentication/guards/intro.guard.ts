@@ -1,33 +1,30 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
-
-import { AuthenticationService } from '../services/authentication.service';
-
-import { Role } from '@models/enums/roles.enum';
 import { Log } from 'ng2-logger';
+import { AuthenticationService } from "@app/authentication/services/authentication.service";
 
 /**
- * Guard class for allowing access only for users with the {@link Role} of atom operator
+ * Guard class for allowing access only for users that have a jwt token in the local storage.
  */
 @Injectable()
 export class IntroGuard implements CanActivate {
     _logger = Log.create(IntroGuard.name);
 
-    constructor(private router: Router, private authenticationService: AuthenticationService) {
+    constructor(private router: Router, private authService: AuthenticationService) {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
-        const isAllowedLogin = this.authenticationService.isAllowedLogin();
-        this._logger.info('canActivate:: Is allowed login', isAllowedLogin);
-        if (!isAllowedLogin) {
-            this.router.navigate(['/auth']);
-            return false;
+        this.authService.getUserDetails();
+
+        if (localStorage.getItem('user_token')) {
+            // logged in so return true
+            return true;
         }
 
-        const isCurrentUserMilkrun = this.authenticationService.isCurrentUserWithRole(Role.COMPANY);
-        this._logger.info('canActivate:: Is current user with role', Role.COMPANY, isCurrentUserMilkrun);
+        // not logged in so redirect to login page with the return url
+        this.router.navigate(['/auth'], {queryParams: {returnUrl: state.url}});
 
-        return true;
+        return false;
     }
 }

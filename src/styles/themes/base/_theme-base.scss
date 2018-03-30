@@ -1,0 +1,31 @@
+/*** Main Variables ***/
+@import "variables/variables";
+
+html, body {
+    background-color: theme-color('background', 'dark');
+    height: $dim-full;
+    font-weight: font-weight('light');
+    letter-spacing: $base-letter-spacing;
+    line-height: $base-line-height;
+    width: $dim-full;
+    background-color: theme-color('background', 'container');
+}
+
+//Material component
+$material-component-header-height: 70px;
+$material-component-footer-height: 70px;
+$material-component-padding: $dim-xl;
+$material-component-min-width: 600px;
+$material-component-min-height: 400px;
+
+
+
+.btn-default {
+    background-color: theme-color('primary', 'base');
+}
+
+
+//Fix for truncated words in toasts
+.toast {
+    word-break: keep-all;
+}

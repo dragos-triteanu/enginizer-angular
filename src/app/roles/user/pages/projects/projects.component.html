@@ -1,0 +1,17 @@
+<div class="page">
+    <div class="header">
+    </div>
+    <div class="content">
+
+    </div>
+    <div class="footer">
+
+    </div>
+</div>
+<app-fab (click)="openProjectsModal()"></app-fab>
+<app-create-projects-modal
+    [verticalSteps]="false"
+    [dismissible]="true"
+    (submit)="onProjectSubmit($event)"
+    (modalClose)="onClose($event)">
+</app-create-projects-modal>

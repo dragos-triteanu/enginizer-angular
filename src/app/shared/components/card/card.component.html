@@ -1,0 +1,33 @@
+<div class="card"
+     [ngClass]="{'horizontal': isHorizontal}"
+     [ngStyle]="style">
+
+    <ng-template [ngIf]="isHorizontal">
+        <div class="card-image">
+            <img src="{{record.imageURL}}" alt="">
+        </div>
+        <div class="card-content">
+            <p class="card-title">{{record.title}}</p>
+            <p class="card-subtitle">{{record.subtitle}}</p>
+            <p class="card-footer">
+                <span class="card-date">{{record.date}}</span> -
+                <span class="card-details">{{record.details}}</span>
+            </p>
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="!isHorizontal">
+        <div class="card-image">
+            <img src="{{record.imageURL}}" alt="">
+            <p class="card-title">{{record.title}}</p>
+        </div>
+        <div class="card-content">
+            <h4>ACI PAPUSE LE ARANJEZI CUM A TA INIMA-TI POFTESTE</h4>
+            <p class="card-subtitle">{{record.subtitle}}</p>
+            <p class="card-footer">
+                <span class="card-date">{{record.date}}</span> -
+                <span class="card-details">{{record.details}}</span>
+            </p>
+        </div>
+    </ng-template>
+</div>

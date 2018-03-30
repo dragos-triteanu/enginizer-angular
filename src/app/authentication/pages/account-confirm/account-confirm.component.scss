@@ -1,0 +1,31 @@
+@import 'src/styles/main';
+
+:host {
+    .confirm-account {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        max-width: 400px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: $dim-9-out-of-10;
+    }
+
+    .confirm-account__logo {
+        width: $dim-2-out-of-4;
+        margin-top: $dim-xl;
+    }
+
+    .confirm-account__message {
+        font-size: font-size('lg');
+        font-weight: font-weight('bold');
+        margin: doubleDim($dim-lg);
+    }
+
+    .confirm-account__action {
+        background-color: theme-color('primary', 'base');
+        margin: $dim-sm $dim-none $dim-xl;
+    }
+}

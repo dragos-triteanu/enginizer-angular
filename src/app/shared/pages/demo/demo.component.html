@@ -3,104 +3,202 @@
         <h3>Demo components</h3>
     </div>
     <div class="page-content">
-        <div class="card">
-            <form [formGroup]="form">
-                <h5>Form elements</h5>
-                <div class="row">
-                    <div class="col s6">
-                        <app-input formControlName="text"
-                                   [formControl]="form.controls.text"
-                                   [showErrors]="showValidations"
-                                   placeholder="Insert text"
-                                   label="Textfield">
-                        </app-input>
-                        <app-input-number formControlName="number"
-                                          [formControl]="form.controls.number"
-                                          [showErrors]="showValidations"
-                                          placeholder="Insert number"
-                                          label="Numberfield">
-                        </app-input-number>
-                        <app-input-datepicker formControlName="datepicker"
-                                              [formControl]="form.controls.datepicker"
+        <!-- Form stuff -->
+        <section class="formComponents row">
+            <div class="card">
+                <form [formGroup]="form">
+                    <h4>Form state : <span
+                        [ngClass]="computeFormState()">{{computeFormState()}}</span>
+                    </h4>
+                    <div class="row">
+                        <div class="col s4">
+                            <h5>Inputs (text, date, number)</h5>
+                            <app-input
+                                [formControl]="form.controls.textInput"
+                                [showErrors]="showValidations"
+                                [id]="'textInput'"
+                                type="text"
+                                label="{{'general.texts.demo.textInput' | translate}}">
+                            </app-input>
+                            <app-input-datepicker [formControl]="form.controls.datepicker"
+                                                  [showErrors]="showValidations"
+                                                  placeholder="{{'general.texts.demo.datepicker' | translate}}">
+                            </app-input-datepicker>
+                            <app-input-number [formControl]="form.controls.numberInput"
                                               [showErrors]="showValidations"
-                                              placeholder="Insert date"
-                                              label="Datepicker">
-                        </app-input-datepicker>
-                        <app-dropdown formControlName="dropdown"
-                                      [formControl]="form.controls.dropdown"
-                                      [showErrors]="showValidations"
-                                      [items]="items"
-                                      displayField="name"
-                                      valueField="id"
-                                      label="Dropdown"
-                                      emptyText="Select items">
-                        </app-dropdown>
-                        <app-input-duration formControlName="duration"
-                                            [formControl]="form.controls.duration"
-                                            [showErrors]="showValidations"
-                                            placeholder="Insert text"
-                                            label="Time duration picker">
-                        </app-input-duration>
-                        <div class="row">
-                            <div class="col s12">
-                                <app-input-switch formControlName="switch"
-                                                  onLabel="On"
-                                                  offLabel="Off"
-                                                  topLabel="Toggle switch"></app-input-switch>
-                            </div>
+                                              placeholder="NumNum intre 0-10">
+                            </app-input-number>
+                        </div>
+                        <div class="col s4">
+                            <h5>Form components (dropdown, textarea, switch)</h5>
+                            <app-dropdown [formControl]="form.controls.simpleDrodown"
+                                          [showErrors]="showValidations"
+                                          [emptyText]="'Dropdown'"
+                                          [items]="dropdownItems">
+                            </app-dropdown>
+                            <app-textarea [formControl]="form.controls.textarea"
+                                          [showErrors]="showValidations"
+                                          [dataLength]="120"
+                                          [label]="'Textarea'"
+                                          [placeholder]="'nica'">
+                            </app-textarea>
+                            <app-input-switch [formControl]="form.controls.switchInput"
+                                              onLabel="Nay"
+                                              offLabel="Yay">
+                            </app-input-switch>
+                            <app-range
+                                [formControl]="form.controls.range"
+                                [showErrors]="showValidations"
+                                [min]="0"
+                                [max]="150"
+                                [step]="1"
+                                [limit]="70">
+                            </app-range>
+
                         </div>
                     </div>
-                    <div class="col s6 left-labels">
-                        <app-input formControlName="text"
-                                   labelAlign="left"
-                                   [formControl]="form.controls.text"
-                                   [showErrors]="showValidations"
-                                   placeholder="Insert text"
-                                   label="Textfield">
-                        </app-input>
-                        <app-input-number formControlName="number"
-                                          labelAlign="left"
-                                          [formControl]="form.controls.number"
-                                          [showErrors]="showValidations"
-                                          placeholder="Insert number"
-                                          label="Numberfield">
-                        </app-input-number>
-                        <app-input-datepicker formControlName="datepicker"
-                                              labelAlign="left"
-                                              [formControl]="form.controls.datepicker"
-                                              [showErrors]="showValidations"
-                                              placeholder="Insert date"
-                                              label="Datepicker">
-                        </app-input-datepicker>
-                        <app-dropdown formControlName="dropdown"
-                                      labelAlign="left"
-                                      [formControl]="form.controls.dropdown"
-                                      [showErrors]="showValidations"
-                                      [items]="items"
-                                      displayField="name"
-                                      valueField="id"
-                                      label="Dropdown"
-                                      emptyText="Click to view items">
-                        </app-dropdown>
-                        <app-input-duration formControlName="duration"
-                                            labelAlign="left"
-                                            [formControl]="form.controls.duration"
-                                            [showErrors]="showValidations"
-                                            placeholder="Insert text"
-                                            label="Time duration picker">
-                        </app-input-duration>
-                        <app-dropdown-autocomplete formControlName="autocomplete"
-                                                   labelAlign="left"
-                                                   [formControl]="form.controls.autocomplete"
-                                                   [showErrors]="showValidations"
-                                                   [items]="items"
-                                                   label="Dropdown autocomplete"
-                                                   displayField="name"
-                                                   emptyText="Select items">
-                        </app-dropdown-autocomplete>
+                    <div class="row">
+                        <button type="button"
+                                class="btn btn-primary"
+                                (click)="validateForm()">
+                            {{'general.actions.submit'| translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Material component -->
+        <app-material [style]="{width: '800px'}"
+                      [class]="'z-depth-5'">
+            <ng-container material-header>
+                <h5>Material Component</h5>
+            </ng-container>
+            <ng-container material-body>
+                Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and
+                printing in place of English to emphasise design elements over content. It's also
+                called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps
+                to outline the visual elements of a document or presentation, eg typography, font,
+                or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and
+                philosopher Cicero. Its words and letters have been changed by addition or removal,
+                so to deliberately render its content nonsensical; it's not genuine, correct, or
+                comprehensible Latin anymore. While lorem ipsum's still resembles classical Latin,
+                it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters
+                K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic
+                the typographic appearence of European languages, as are digraphs not to be found in
+                the original.
+            </ng-container>
+            <ng-container material-footer class="right">
+                <div class="left">
+                    <button type="button"
+                            class="btn btn-primary">
+                        {{'general.actions.back'| translate}}
+                    </button>
+                </div>
+                <div class="right">
+                    <button type="button"
+                            class="btn btn-primary">
+                        {{'general.actions.forward'| translate}}
+                    </button>
+                </div>
+            </ng-container>
+        </app-material>
+
+
+        <app-sidebar [currentUser]="currentUser">
+        </app-sidebar>
+
+
+        <app-modal class="modal-component">
+            <ng-container modal-header>
+                <h5 class="modal-title">Modal header</h5>
+            </ng-container>
+            <ng-container modal-body>
+                <div
+                    style="height: 100%; display: flex;flex-direction: column;justify-content: flex-end;">
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                Lorem ipsum is a pseudo-Latin text used in web design, typography,
+                                layout, and
+                                printing in place of English to emphasise design elements over
+                                content.
+                                It's also
+                                called placeholder (or filler) text. It's a convenient tool for
+                                mock-ups. It helps
+                                to outline the visual elements of a document or presentation, eg
+                                typography, font,
+                                or layout. Lorem ipsum is mostly a part of a Latin text by the
+                                classical
+                                author and
+                                philosopher Cicero. Its words and letters have been changed by
+                                addition
+                                or removal,
+                                so to deliberately render its content nonsensical; it's not genuine,
+                                correct, or
+                                comprehensible Latin anymore. While lorem ipsum's still resembles
+                                classical Latin,
+                                it actually has no meaning whatsoever. As Cicero's text doesn't
+                                contain
+                                the letters
+                                K, W, or Z, alien to latin, these, and others are often inserted
+                                randomly to mimic
+                                the typographic appearence of European languages, as are digraphs
+                                not to
+                                be found in
+                                the original.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <app-alert [fullWidth]="true"
+                                       type="info"
+                                       message="Illustrative"></app-alert>
+                        </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </ng-container>
+            <ng-container modal-footer>
+                <button type="button"
+                        class="waves-effect btn-flat"
+                        (click)="modal.close()">{{'general.actions.close' | translate}}
+                </button>
+            </ng-container>
+        </app-modal>
+
+        <app-demo-wizard-modal
+            [verticalSteps]="false"
+            [dismissible]="true"
+            (submit)="onWizardSubmit($event)"
+            (modalClose)="onWizardClose($event)">
+        </app-demo-wizard-modal>
+
+
     </div>
+
+    <app-fab [type]="'toolbar'">
+        <ul>
+            <li class="fab-item">
+                <a (click)="openModal()">
+                    <i class="fab fa-accessible-icon" aria-hidden="true"></i>
+                    {{'general.texts.demo.openModal' | translate}}
+                </a>
+            </li>
+            <li class="fab-item">
+                <a (click)="openWizardModal()">
+                    <i class="fab fa-accessible-icon" aria-hidden="true"></i>
+                    {{'general.texts.demo.openWizard' | translate}}
+                </a>
+            </li>
+            <li class="fab-item">
+                <a (click)="toggleSidebar()">
+                    <i class="fab fa-accessible-icon" aria-hidden="true"></i>
+                    {{'general.texts.demo.toggleSidebar' | translate}}
+                </a>
+            </li>
+        </ul>
+    </app-fab>
+
 </div>
+

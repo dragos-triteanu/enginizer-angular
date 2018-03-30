@@ -9,14 +9,16 @@ import { TranslateService } from '@ngx-translate/core';
 export class FormErrorListComponent {
 
     @Input('errorMap')
-    get errorMap() { return this.errorList; }
+    get errorMap() {
+        return this.errorList;
+    }
+
     set errorMap(errorMap) {
         this.currentErrorMap = errorMap;
         this.generateErrorMessages(this.currentErrorMap);
     }
 
     errorList = [];
-
     private currentErrorMap = {};
 
     constructor(private translateService: TranslateService) {
@@ -26,7 +28,7 @@ export class FormErrorListComponent {
         this.errorList = [];
         for (const errorKey in errorMap) {
             if (errorMap.hasOwnProperty(errorKey)) {
-                this.errorList.push(this.translateService.instant(`form.validations.${errorKey}`, errorMap[errorKey]));
+                this.errorList.push(this.translateService.instant(`general.components.form.errors.${errorKey}`, errorMap[errorKey]));
             }
         }
     }

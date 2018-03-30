@@ -20,8 +20,8 @@ export class AuthorizationHeaderInterceptor implements HttpInterceptor {
     }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        let headers = req.headers.set(this.AUTHORIZATION_HEADER, 'Bearer ' + localStorage.getItem('user_token'));
-        headers = headers.set(this.X_CORRELATION_ID, this.getRandom(6).toString());
+        const headers = req.headers.set(this.AUTHORIZATION_HEADER, 'Bearer ' + localStorage.getItem('user_token'));
+        // headers = headers.set(this.X_CORRELATION_ID, this.getRandom(6).toString());
         const clonedRequest = req.clone({
             headers: headers
         });

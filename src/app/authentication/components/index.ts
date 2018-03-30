@@ -1,1 +1,2 @@
-export { AuthenticationInfoModalComponent} from "./authentication-info-modal/authentication-info-modal.component";
+export { LoginFormComponent } from "./login-form/login-form.component";
+

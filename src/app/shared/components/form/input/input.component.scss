@@ -1,0 +1,31 @@
+@import 'src/styles/main';
+
+:host {
+    .input-field {
+        input {
+            border-bottom: 1px solid theme-color('background', 'dark');
+            color: theme-color('background', 'light');
+            letter-spacing: $base-letter-spacing;
+        }
+
+        label {
+            color: theme-color('background', 'dark');
+        }
+    }
+
+    @media screen and (min-width: 993px) {
+
+        .input-field {
+            input {
+                border-bottom: 1px solid theme-color('foreground', 'light');
+                color: theme-color('foreground', 'dark');
+            }
+
+            label {
+                color: theme-color('foreground', 'light');
+            }
+        }
+
+    }
+
+}

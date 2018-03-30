@@ -1,0 +1,133 @@
+<nav class="nav-extended navigation">
+    <div class="nav-wrapper">
+
+        <!-- Logo -->
+        <a routerLink="/" class="brand-logo">
+            <img src="../../../../assets/images/bizmod_white.png"
+                 srcset="../../../../assets/images/bizmod_white.png 1x, ../../../../assets/images/bizmod_white@2x.png 2x"
+                 alt="" class="logo">
+        </a>
+        <!-- End of Logo -->
+
+        <ul class="lang-dropdown">
+            <li class="desktop-navigation__item desktop-navigation__item--user-dropdown">
+                <a class="dropdown-button desktop-navigation__link"
+                   data-activates="lang-switcher-dropdown">
+                    lang
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
+        </ul>
+
+
+        <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <!-- Mobile Navigation -->
+        <div class="side-nav" id="mobile-nav">
+
+            <div class="user-info">
+                <img src="https://api.adorable.io/avatars/140/abott@adorable.png" alt="" class="user-info__avatar">
+                <p class="user-info__name">{{ user.given_name }}</p>
+                <p class="user-info__email">{{ user.sub }}</p>
+            </div>
+
+            <ul class="mobile-navigation">
+
+                <li class="mobile-navigation__item">
+                    <a routerLink="/companies"
+                       class="mobile-navigation__link sidenav-close">
+                        <i class="material-icons mobile-navigation__icon">business</i>
+                        {{'general.components.navigation.companies' | translate}}
+                    </a>
+                </li>
+
+                <li class="mobile-navigation__item">
+                    <a routerLink="/projects"
+                       class="mobile-navigation__link">
+                        <i class="material-icons mobile-navigation__icon">dashboard</i>
+                        {{'general.components.navigation.projects' | translate}}
+                    </a>
+                </li>
+
+                <hr class="navigation__divider">
+
+                <li (click)="onLogout()" class="mobile-navigation__item">
+                    <a href="" class="mobile-navigation__link">
+                        <i class="material-icons mobile-navigation__icon">person</i>
+                        {{'general.actions.logout' | translate}}
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- End of Mobile Navigation -->
+
+        <!-- Desktop Navigation -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down desktop-navigation">
+
+            <li class="desktop-navigation__item">
+                <a routerLink="/companies"
+                   routerLinkActive="desktop-navigation__link--active"
+                   class="desktop-navigation__link">
+                    <i class="material-icons desktop-navigation__icon">business</i>
+                    {{'general.components.navigation.companies' | translate}}
+                </a>
+            </li>
+
+            <li class="desktop-navigation__item">
+                <a routerLink="/projects"
+                   routerLinkActive="desktop-navigation__link--active"
+                   class="desktop-navigation__link">
+                    <i class="material-icons desktop-navigation__icon">dashboard</i>
+                    {{'general.components.navigation.projects' | translate}}
+                </a>
+            </li>
+
+            <li class="desktop-navigation__item">
+                <a routerLink="/demo"
+                   routerLinkActive="desktop-navigation__link--active"
+                   class="desktop-navigation__link">
+                    <i class="material-icons desktop-navigation__icon">face</i>
+                    {{'general.components.navigation.demo' | translate}}
+                </a>
+            </li>
+
+            <li class="desktop-navigation__item desktop-navigation__item--user-dropdown">
+                <a class="dropdown-button desktop-navigation__link"
+                   data-activates="user-info-dropdown">
+                    {{ user.sub }}
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
+            </li>
+
+            <!-- Desktop Navigation -->
+
+        </ul>
+    </div>
+</nav>
+
+<!-- User Info Dropdown -->
+<div id="user-info-dropdown" class="dropdown-content user-menu navigation--shadow">
+    <img src="https://api.adorable.io/avatars/140/abott@adorable.png" alt=""
+         class="user-info__avatar">
+    <p class="user-info__name">{{ user.given_name }}</p>
+    <p class="user-info__email">{{ user.sub }}</p>
+    <hr class="navigation__divider">
+    <li (click)="onLogout()">
+        <a class="desktop-navigation__link"><i class="material-icons mobile-navigation__icon">person</i>
+            {{'general.actions.logout' | translate}}
+        </a>
+    </li>
+</div>
+<!-- End of User Info Dropdown -->
+
+
+<!-- Language Switcher (for demo purposes) -->
+<div id="lang-switcher-dropdown" class="dropdown-content" style="margin-top: 60px">
+    <img src="/assets/i18n/en.png"
+         class="img-responsive"
+         (click)="translate('en')" style="width: 100px">
+    <img src="/assets/i18n/ro.png"
+         class="img-responsive"
+         (click)="translate('ro')" style="width: 100px">
+</div>

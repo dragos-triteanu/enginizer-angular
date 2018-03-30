@@ -1,0 +1,35 @@
+$theme-colors: (
+    'primary': (// Brand's Color
+        'base': #286676,
+        'light': #5994a5,
+        'dark': #003b4a
+    ),
+    'accent': (// Brand's Secondary Color
+        'base': #FFA000,
+        'light': #FFB300,
+        'dark': #FF8F00
+    ),
+    'foreground': (// Objects with Darker Colors
+        'base': #424242,
+        'light': #616161,
+        'dark': #212121
+    ),
+    'background': (// Objects with Lighter Colors
+        'base': #F5F5F5,
+        'light': #FAFAFA,
+        'dark': #EEEEEE
+    ),
+    'misc': (// Miscellaneous Colors
+        'error': #F44336,
+        'completed': #3d9970
+    ),
+    'social': (// Social Icons
+        'google': #DD4B39,
+        'linkedin': #007BB5
+    )
+);
+
+@function theme-color($color, $variant) {
+    @return map-get(map-get($theme-colors, $color), $variant);
+}
+

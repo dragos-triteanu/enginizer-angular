@@ -1,0 +1,61 @@
+@import 'src/styles/main';
+
+:host ::ng-deep {
+
+    .companies__title {
+        font-size: doubleDim($dim-sm);
+        font-weight: font-weight('bold');
+        margin: $dim-xl auto $dim-xs;
+        width: $dim-9-out-of-10;
+    }
+
+    .companies-list {
+        margin: $dim-none auto;
+        width: $dim-9-out-of-10;
+        max-width: 1280px;
+    }
+
+    .card-title {
+        color: theme-color('foreground', 'dark');
+        font-size: $dim-lg;
+        font-weight: font-weight('bold');
+        margin-bottom: $dim-xs;
+    }
+
+    .company__motto {
+        font-style: italic;
+        margin-bottom: $dim-xs;
+    }
+
+    .card-info {
+        color: theme-color('foreground', 'light');
+    }
+
+    @media screen and (min-width: 600px) {
+
+        .companies__title {
+            font-size: doubleDim($dim-lg);
+            margin-top: doubleDim($dim-xl);
+        }
+
+        app-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .companies-list__company {
+            width: $dim-half-flex-margins;
+        }
+
+    }
+    @media screen and (min-width: 993px) {
+
+        .companies-list__company {
+            margin-bottom: $dim-lg;
+            width: $dim-3-out-of-10;
+        }
+
+    }
+}

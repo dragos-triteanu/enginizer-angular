@@ -1,297 +1,136 @@
 {
-    "generic": {
-        "nav": {
-            "sections": {
-                "usersAndRoles": {
-                    "title": "Users & Roles",
-                    "items": {
-                        "users": "Users",
-                        "roles": "Roles"
-                    }
-                },
-                "demo": {
-                    "title": "Demo"
-                }
-            }
-        },
-        "components": {
-            "input-duration": {
-                "timeUnits": {
-                    "minutes": "Minutes",
-                    "hours": "Hours",
-                    "days": "Days"
-                }
-            },
-            "date-picker": {
-                "labelMonthNext": "Next Month",
-                "labelMonthPrev": "Last Month",
-                "labelMonthSelect": "Select Month",
-                "labelYearSelect": "Select Year",
-                "monthsFull": [
-                    "January",
-                    "February",
-                    "March",
-                    "April",
-                    "March",
-                    "June",
-                    "July",
-                    "August",
-                    "September",
-                    "October",
-                    "November",
-                    "December"
-                ],
-                "monthsShort": [
-                    "Jan",
-                    "Feb",
-                    "Mar",
-                    "Apr",
-                    "Mar",
-                    "Jun",
-                    "Jul",
-                    "Aug",
-                    "Sep",
-                    "Oct",
-                    "Nov",
-                    "Dec"
-                ],
-                "weekdaysFull": [
-                    "Sunday",
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                ],
-                "weekdaysShort": [
-                    "Sun",
-                    "Mon",
-                    "Tue",
-                    "Wed",
-                    "Thu",
-                    "Fri",
-                    "Sat"
-                ],
-                "today": "Today",
-                "clear": "Clear",
-                "close": "Ok"
-            },
-            "form": {
-                "validations": {
-                    "required": "This field is required",
-                    "max": "Value must be less than {{max}}",
-                    "roleNameRequired": "The role name is required",
-                    "lineNameRequired": "The line name is required",
-                    "lineDescriptionRequired": "The line description is required",
-                    "plantNameRequired": "The plant name is required",
-                    "plantDescriptionRequired": "The plant description is required",
-                    "plantRequired": "The plant is required",
-                    "invalidDateInterval": "The start date must be earlier than the end date",
-                    "atLeastOneTool": "At least one tool must be selected",
-                    "allToolsInspected": "All returned tools must be inspected",
-                    "allIssuesSolved": "All tools issues must be solved"
-                }
-            },
-            "auth": {
-                "buttons": {
-                    "login": "Login",
-                    "badge": "Use access badge",
-                    "credentials": "Use Badge"
-                },
-                "message": {
-                    "existingBadgeId": "Card already registered. Please use a new one."
-                },
-                "scanBadge": "Login with your badge",
-                "enterCredentials": "Login with your badge",
-                "invalidCredentialsError": "Invalid credentials",
-                "scanSwitch": "Login using employee badge",
-                "credentialsSwitch": "Login using credentials",
-                "emailLabel": "Email",
-                "passwordLabel": "Password",
-                "authenticationInfo": "Authentication Info",
-                "missingRole": "You have no role assigned.Please contact the administrator.",
-                "badgeNotActive": "Your access card is not activated.Please scan it."
-            },
-            "home": {
-                "language": "Current language: English",
-                "select": "Change language",
-                "welcome": "Welcome to ngnizr"
-            },
-            "scanner": {
-                "focused": "Focused",
-                "notFocused": "Not Focused"
-            },
-            "table": {
-                "totalRecords": "Total",
-                "columns": {
-                    "index": "Id"
-                }
-            },
-            "report-download": {
-                "startDatePicker": {
-                    "placeholder": "Select start date",
-                    "label": "Start date"
-                },
-                "endDatePicker": {
-                    "placeholder": "Select end date",
-                    "label": "End date"
-                },
-                "downloadButton": "Download"
-            }
-        },
-        "buttons": {
-            "add": "Add",
-            "edit": "Edit",
+    "general": {
+        "actions": {
             "login": "Login",
             "logout": "Logout",
-            "disable": "Disable",
-            "save": "Save",
-            "next": "Next",
+            "register": "Register",
+            "submit": "Submit",
+            "forward": "Forward",
             "back": "Back",
-            "cancel": "Cancel",
-            "confirm": "Confirm",
-            "delete": "Delete",
-            "update": "Update",
-            "create": "Create",
+            "next": "Next",
+            "save": "Save",
+            "skip": "Skip",
             "close": "Close",
-            "skip": "Skip"
+            "yes": "Yes",
+            "no": "No",
+            "continue": "Continue",
+            "click": "Click Here"
         },
-        "statuses": {
-            "all": "All",
-            "inProgress": "In Progress"
-        },
-        "label": {
-            "error": "Error"
-        },
-        "toasts": {
+        "texts": {
+            "motto": "The interaction mode changes the context of the problem",
+            "confirmAccount": "Account confirmed successfully",
+            "confirmAccountError": "Something went wrong. Please try again",
+            "demo": {
+                "textInput": "Whateva'",
+                "datepicker": "d8 m8",
+                "openModal": "Open Modal",
+                "openWizard": "Open Wizard",
+                "toggleSidebar": "Toggle Sidebar",
+                "sectionHeader": "Section Header",
+                "sectionText": "Section Text"
+            }
         },
         "messages": {
-            "correlationId": "If you don't manage to fix the problem,contact the administrator and use this code {{correlationId}}",
             "401": {
-                "missingBadgeId": "Badge Id is missing",
-                "invalidBadgeId": "Badge Id is invalid",
-                "user": {
-                    "notAuthorized": "The user is not authorized."
+                "login": {
+                    "unauthorized": "Invalid credentials"
                 }
             },
             "400": {
-                "role": {
-                    "create": "Role cannot be created. Please make sure that all the properties are filled in with correct values.",
-                    "update": "Role cannot be updated. Please make sure that all the properties are filled in with correct values."
+                "register": {
+                    "passwordNotMatch": "Password don't match"
                 },
-                "user": {
-                    "update": "User cannot be updated. Please make sure that all the properties are filled in with correct values.",
-                    "setBadgeId": "The badge id cannot be assigned to the current user.Please make sure that you are using a valid code"
+                "changePassword": {
+                    "tokenEmpty": "There was an error. Please try again."
+                },
+                "resetPassword": {
+                    "notMatch": "Password don't match"
                 }
-            },
-            "403": {
-                "role": {
-                    "inUse": "The selected Role cannot be deleted because it is assigned to at least one user."
-                }
-            },
-            "404": {
-                "user": "User not found."
             },
             "409": {
-                "role": {
-                    "nameUsed": "The name is already used for other Role. Please use a different name."
+                "createUser": {
+                    "duplicate": "Email already registered"
                 }
+            },
+            "500": {
+                "emailSendingError": "There was a problem sending the email. Please try again"
+            },
+            "demo":{
+                "demoSuccess": "Cocaine and caviar!"
+            }
+        },
+        "components": {
+            "form": {
+                "placeholders": {
+                    "email": "Email",
+                    "password": "Password",
+                    "passwordConfirmation": "Password Confirmation",
+                    "firstName": "First Name",
+                    "lastName": "Last Name",
+                    "birthDate": "Date of Birth"
+                },
+                "errors": {
+                    "required": "Field can not be empty",
+                    "email": "Invalid email address",
+                    "password": "Invalid password",
+                    "min": "Value has to be greater than {{min}}",
+                    "max": "Value has to be less than {{max}}",
+                    "minlength": "Value has to be greater than {{requiredLength}}"
+                },
+                "text": {
+                    "loginSocial": "Or login with your favorite social profile",
+                    "registerRedirect": "Don't have an account?",
+                    "loginRedirect": "Already have an account?",
+                    "passwordForgot": "Forgot your password?"
+                }
+            },
+            "navigation": {
+                "companies": "Companies",
+                "projects": "Projects",
+                "demo": "Demo",
+                "tabs": {
+                    "home": "Home",
+                    "taxInfo": "Tax Info",
+                    "associates": "Associates",
+                    "employees": "Employees",
+                    "expenses": "Expenses",
+                    "assets": "Assets"
+                }
+            },
+            "languagePicker": {
+                "language": "Language"
+            }
+        },
+        "pages": {
+            "register": {
+                "text": {
+                    "registerSuccess": "Account registered successfully. Check your email address"
+                }
+            },
+            "forgetPassword": {
+                "text": {
+                    "emailNotFound": "The email is either invalid or not existent!",
+                    "emailFound": "A reset password link was sent to your email!"
+                }
+            },
+            "confirmPassword": {
+                "text": {
+                    "passwordChanged": "Your password was successfully updated"
+                }
+            },
+            "companies": {
+                "title": "Your Companies",
+                "associates": "associates"
             }
         }
     },
     "roles": {
-        "admin": {
-            "users": {
-                "title": "User Management",
-                "table": {
-                    "columns": {
-                        "badge": "Badge Number",
-                        "email": "Email",
-                        "fullMame": "Name",
-                        "role": "Role",
-                        "status": "Status"
-                    },
-                    "rows": {
-                        "active": "Active",
-                        "disabled": "Disabled",
-                        "updateRole": {
-                            "label": "Assign new role",
-                            "emptyText": "Choose role for this user"
-                        },
-                        "updateStatus": {
-                            "topLabel": "Change status",
-                            "onLabel": "Active",
-                            "offLabel": "Disabled"
-                        }
-                    },
-                    "filters": {
-                        "byRole": "Filter By Role",
-                        "status": {
-                            "label": "Filter by status",
-                            "all": "All",
-                            "active": "Active",
-                            "disabled": "Disabled"
-                        }
+        "company": {
+            "pages": {
+                "projects": {
+                    "createProjectModal": {
+                        "title": "Create new project"
                     }
-                },
-                "toasts": {
-                    "updated": "The '{{user}}' was updated successfully",
-                    "error": "Could not update user with id {{user}}"
-                }
-            },
-            "roles": {
-                "table": {
-                    "title": "Role Management",
-                    "columns": {
-                        "roleName": "Role name"
-                    },
-                    "filter": {
-                        "placeholder": {
-                            "name": "Find by name"
-                        }
-                    }
-                },
-                "buttons": {
-                    "addRole": "Create role"
-                },
-                "create-modal": {
-                    "title": "Create role",
-                    "name-input": {
-                        "label": "Role name",
-                        "placeholder": "Insert role name"
-                    },
-                    "pick-list": {
-                        "leftHeader": "Available permissions",
-                        "rightHeader": "Selected permissions"
-                    },
-                    "alert": {
-                        "message": "Drag and drop permissions from left to right in order to assign them to a role",
-                        "error": {
-                            "role-name-required": "The role name is required"
-                        }
-                    },
-                    "button": {
-                        "create": "Create",
-                        "update": "Update",
-                        "delete": "Delete"
-                    }
-                },
-                "update-modal": {
-                    "title": "Update role",
-                    "oob": {
-                        "warning": "This role is an OOB role and cannot be modified!"
-                    }
-                },
-                "toasts": {
-                    "created": "The new '{{roleName}}' role has been created!",
-                    "updated": "The '{{roleName}}' role was updated successfully",
-                    "deleted": "The '{{roleName}}' role was deleted"
-                },
-                "oobRoles": {
-                    "ADMIN": "Admin",
-                    "COMPANY": "Company",
-                    "OTHER": "Other"
                 }
             }
         }

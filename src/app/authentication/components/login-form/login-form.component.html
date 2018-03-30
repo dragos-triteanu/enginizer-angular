@@ -1,21 +1,47 @@
-<form data-toggle="validator" #loginForm="ngForm" class="col-sm-12" (ngSubmit)="onLogin(loginForm)">
-    <div class="credentials-content">
-        <div class="form-group">
-            <label for="email" class="control-label">{{ 'generic.components.auth.emailLabel' | translate }}</label>
-            <input #emailInput id="email" type="email" class="form-control" [placeholder]="'auth.emailLabel' | translate" name="email" ngModel required
-                   email/>
-        </div>
-        <div class="form-group">
-            <label for="password" class="control-label">{{ 'generic.components.auth.passwordLabel' | translate }}</label>
-            <input #passwordInput id="password" type="password" class="form-control" [placeholder]="'auth.passwordLabel' | translate" name="password"
-                   ngModel required/>
-        </div>
-    </div>
-    <button class="btn btn-success" [disabled]="loginForm.invalid || isLoading">{{ 'generic.components.auth.buttons.login' | translate }}</button>
-    <div id="loading-indicator-container">
-        <img *ngIf="isLoading" src="assets/images/atom_loading_spinner.gif" style="width: 60px; height: auto;">
-    </div>
-    <div class="alert alert-danger" *ngIf="loginError">
-        <strong>{{'generic.label.error' | translate}} </strong> {{'generic.components.auth.invalidCredentialsError' | translate }}
-    </div>
+<form data-toggle="validator" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" class="auth-form">
+
+    <app-input
+        [formControl]="loginForm.controls.email"
+        [id]="'email'"
+        [type]="'email'"
+        label="{{'general.components.form.placeholders.email' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <app-input
+        [formControl]="loginForm.controls.password"
+        [id]="'password'"
+        [type]="'password'"
+        label="{{'general.components.form.placeholders.password' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <button
+        type="submit"
+        class="btn-flat waves-effect waves-dark auth-form__submit">
+        {{'general.actions.login' | translate}}
+    </button>
 </form>
+
+<p class="forgot-password-text">{{'general.components.form.text.passwordForgot' | translate}}
+    <a routerLink="/auth/forgot-password" class="auth-social__link">{{'general.actions.click' | translate}}</a>
+</p>
+
+<div class="auth-social">
+    <p class="auth-social__text">{{'general.components.form.text.loginSocial' | translate}}</p>
+
+    <div class="auth-social-icons">
+        <img src="../../../assets/images/icons/google-plus-box.png" alt="Google Plus"
+             class="auth-social-icons__google">
+        <img src="../../../assets/images/icons/linkedin-box.png" alt="LinkedIn"
+             class="auth-social-icons__linkedin">
+    </div>
+
+    <p class="auth-social__text">{{'general.components.form.text.registerRedirect' | translate}}
+        <a routerLink="/auth/register" class="auth-social__link">{{'general.actions.register' | translate}}</a>
+    </p>
+</div>
+
+

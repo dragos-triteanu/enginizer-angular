@@ -1,0 +1,27 @@
+<main>
+    <section class="card confirm-account">
+        <ng-container *ngIf="confirmed; then acountConfirmed else notConfirmed"></ng-container>
+    </section>
+</main>
+
+<ng-template #acountConfirmed>
+    <img src="../../../../assets/images/bizmod-logo.png" alt="BizMod logo"
+         class="confirm-account__logo">
+    <p class="confirm-account__message">
+        {{'general.texts.confirmAccount' | translate}}
+    </p>
+    <a routerLink='/auth/login' class="waves-effect waves-light btn confirm-account__action">
+        {{'general.actions.continue' | translate}}
+    </a>
+</ng-template>
+
+<ng-template #notConfirmed>
+    <img src="../../../../assets/images/bizmod-logo.png" alt="BizMod logo"
+         class="confirm-account__logo">
+    <p class="confirm-account__message">
+        {{'general.texts.confirmAccountError' | translate}}
+    </p>
+    <a routerLink='/auth/register' class="waves-effect waves-light btn confirm-account__action">
+        {{'general.actions.back' | translate}}
+    </a>
+</ng-template>

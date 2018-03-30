@@ -1,5 +1,18 @@
-@import 'src/styles/_variables.scss';
+.app-listbox {
+    .ui-listbox {
+        width: 100%;
+        overflow-y: auto;
+        padding: 0;
+    }
+}
+
+
+
+
+/*@import 'src/styles/_variables.scss';
 @import 'src/styles/style.scss';
+
+
 
 .app-listbox {
 
@@ -38,7 +51,7 @@
         }
     }
 
-}
+}*/
 
 
 

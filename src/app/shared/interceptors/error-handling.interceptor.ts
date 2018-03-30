@@ -66,7 +66,6 @@ export class ErrorHandlingInterceptor implements HttpInterceptor {
                     }
                     break;
                 case 404:
-                    this.router.navigate(['/error404']).then();
                     break;
                 default:
                     if (res && res.status) {

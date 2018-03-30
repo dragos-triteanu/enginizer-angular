@@ -1,0 +1,14 @@
+<div #material
+     class="material card"
+     [ngClass]="class"
+     [ngStyle]="style">
+    <div class="material-title">
+        <ng-content select="[material-header]"></ng-content>
+    </div>
+    <div class="material-body">
+        <ng-content select="[material-body]"></ng-content>
+    </div>
+    <div class="material-footer">
+        <ng-content select="[material-footer]"></ng-content>
+    </div>
+</div>

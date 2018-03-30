@@ -1,0 +1,33 @@
+@import 'src/styles/main';
+
+:host {
+    .language-picker {
+        display: flex;
+        justify-content: flex-end;
+        left: 12.5%;
+        position: absolute;
+        top: $dim-base;
+        width: $dim-3-out-of-4;
+    }
+
+    .dropdown-trigger {
+        background-color: theme-color('primary', 'base');
+    }
+
+    @media screen and (min-width: 768px) {
+        .language-picker {
+            left: 25%;
+            width: $dim-2-out-of-4;
+        }
+    }
+
+    @media screen and (min-width: 993px) {
+        .language-picker {
+            left: 0;
+            margin: 0 auto;
+            position: relative;
+            width: $dim-3-out-of-4;
+        }
+    }
+
+}

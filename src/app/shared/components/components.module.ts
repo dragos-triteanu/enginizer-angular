@@ -9,26 +9,30 @@ import { FormFeatureModule } from '@components/form/form.feature.module';
 
 import {
     AccordionComponent,
+    AccordionItemComponent,
     AlertComponent,
     ConfirmationModalComponent,
-    InfoModalComponent,
     DisplayLabelComponent,
+    InfoModalComponent,
     ListboxComponent,
     ModalComponent,
+    PageStepperComponent,
     PicklistComponent,
-    ReportDownloadFormComponent,
+    SidebarComponent,
+    StepperComponent,
     TabsComponent,
     TextboxComponent,
     TooltipComponent,
     TreeComponent,
     WizardModalComponent,
     WizardStepComponent,
-    WizardTitleComponent,
-    AccordionItemComponent,
-    PageStepperComponent,
-    StepperComponent,
+    WizardTitleComponent
 } from './';
-
+import { NavigationComponent } from './navigation/navigation.component';
+import { MaterialComponent } from "@components/material/material.component";
+import { CardComponent } from "@components/card/card.component";
+import { FabComponent } from "@app/shared/components/fab/fab.component";
+import { LanguagePickerComponent } from './language-picker/language-picker.component';
 
 @NgModule({
     imports: [
@@ -41,7 +45,7 @@ import {
         PickListModule,
         TreeModule,
         ContextMenuModule,
-        FormFeatureModule
+        FormFeatureModule,
     ],
     declarations: [
         ModalComponent,
@@ -54,12 +58,16 @@ import {
         ListboxComponent,
         TreeComponent,
         TextboxComponent,
-        ReportDownloadFormComponent,
         TooltipComponent,
         AccordionComponent, AccordionItemComponent,
         PageStepperComponent,
         StepperComponent,
-        WizardModalComponent, WizardTitleComponent, WizardStepComponent
+        WizardModalComponent, WizardTitleComponent, WizardStepComponent, NavigationComponent,
+        MaterialComponent,
+        CardComponent,
+        FabComponent,
+        LanguagePickerComponent,
+        SidebarComponent
     ], exports: [
         ListboxModule,
         PickListModule,
@@ -78,12 +86,16 @@ import {
         ListboxComponent,
         TreeComponent,
         TextboxComponent,
-        ReportDownloadFormComponent,
         TooltipComponent,
         AccordionComponent, AccordionItemComponent,
         PageStepperComponent,
         StepperComponent,
-        WizardModalComponent, WizardTitleComponent, WizardStepComponent
+        WizardModalComponent, WizardTitleComponent, WizardStepComponent, NavigationComponent,
+        CardComponent,
+        FabComponent,
+        MaterialComponent,
+        LanguagePickerComponent,
+        SidebarComponent
     ]
 })
 export class ComponentsModule {

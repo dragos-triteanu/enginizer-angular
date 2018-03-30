@@ -1,0 +1,22 @@
+:host {
+    .card-content {
+        position: relative;
+        width: 100%;
+    }
+
+    .card-subtitle {
+        font-style: italic;
+        margin-bottom: 16px;
+    }
+
+    .card .card-content .card-footer {
+        color: #616161;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .horizontal .card-content .card-footer {
+        bottom: 16px;
+        position: absolute;
+    }
+}

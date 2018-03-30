@@ -1,38 +1,40 @@
 $footerHeight: 56px;
 
-.modal {
-    width: 60%;
-    max-width: 80%;
-    max-height: 95%;
-    height: 80%;
-    top: 5% !important;
+:host {
+    .modal {
+        width: 60%;
+        max-width: 80%;
+        max-height: 95%;
+        height: 80%;
+        top: 5% !important;
 
-    .modal-title {
-        width: 100%;
-    }
-
-    .modal-content {
-        height: calc(100% - #{$footerHeight});
-        display: flex;
-        padding: 15px;
-        flex-direction: column;
-
-        .modal-body {
-            flex: 1;
-            overflow: auto;
-
-            form {
-                height: 100%;
-            }
-
-            .stepper {
-                height: 100%;
-            }
-
-            .step-content {
-                padding-bottom: 20px;
-            }
+        .modal-title {
+            width: 100%;
         }
 
+        .modal-content {
+            height: calc(100% - #{$footerHeight});
+            display: flex;
+            padding: 15px;
+            flex-direction: column;
+
+            .modal-body {
+                flex: 1;
+                overflow: auto;
+
+                form {
+                    height: 100%;
+                }
+
+                .stepper {
+                    height: 100%;
+                }
+
+                .step-content {
+                    padding-bottom: 20px;
+                }
+            }
+
+        }
     }
 }

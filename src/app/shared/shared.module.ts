@@ -22,12 +22,14 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormFeatureModule } from '@components/form/form.feature.module';
 import { Error404Component } from "@app/shared/components";
 import { DemoComponent } from "@app/shared/pages/demo/demo.component";
+import { DemoWizardModalComponent } from "@app/shared/pages/demo/components/demo-wizard-modal/demo-wizard-modal.component";
 
 
 @NgModule({
     declarations: [
         Error404Component,
-        DemoComponent
+        DemoComponent,
+        DemoWizardModalComponent,
     ],
     imports: [
         CommonModule,
@@ -67,7 +69,8 @@ import { DemoComponent } from "@app/shared/pages/demo/demo.component";
         HttpClientModule,
 
         FileUploadModule,
-        Error404Component
+        Error404Component,
+        RouterModule
     ],
     providers: [],
     bootstrap: [],

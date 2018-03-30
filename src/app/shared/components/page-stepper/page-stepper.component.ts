@@ -10,7 +10,7 @@ import {
 })
 export class StepperComponent {
 
-    @Input() canContinue? = true;
+    @Input() canContinue ? = true;
 
     @ContentChild(forwardRef(() => 'title')) title: TemplateRef<any>;
     @ContentChild(forwardRef(() => 'content')) content: TemplateRef<any>;

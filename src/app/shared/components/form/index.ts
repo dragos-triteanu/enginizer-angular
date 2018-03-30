@@ -7,5 +7,5 @@ export { SwitchComponent } from './switch/switch.component';
 export { TextareaComponent } from './textarea/textarea.component';
 export { DropdownComponent } from './dropdown/dropdown.component';
 export { FileInputComponent } from './file/file-input.component';
-export { ToolScanComponent } from './tool-scan/tool-scan.component';
 export { DropdownAutocompleteComponent } from './dropdown-autocomplete/dropdown-autocomplete.component';
+export { RangeComponent } from './range/range.component';

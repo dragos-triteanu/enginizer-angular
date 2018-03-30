@@ -7,8 +7,7 @@ import 'rxjs/add/operator/map';
 
 import { environment } from '../../../environments/environment';
 import { JWTUser } from '../../shared/models/jwt-data.model';
-import { Role } from '../../shared/models/enums/roles.enum';
-import { UserService } from '@services/user.service';
+import { User } from "@models/user.model";
 
 /**
  * Service for handling authentication operations, and for retrieving decrypted information
@@ -18,37 +17,46 @@ import { UserService } from '@services/user.service';
 export class AuthenticationService {
     static readonly USER_TOKEN_KEY = 'user_token';
     static readonly USER_DATA_TOKEN = 'user_data_untill_refresh_token';
-    static readonly API_LOGIN_BASE_PATH = `${environment.baseURL}/api/authenticate/credentials`;
-    static readonly API_LOGIN_BOSCH_ID_BASE_PATH = `${environment.baseURL}/api/authenticate/boschidentifier`;
+    static readonly API_REGISTER_BASE_PATH = `${environment.baseURL}/api/auth/register`;
+    static readonly API_CONFIRM_ACCOUNT_PATH = `${environment.baseURL}/api/auth/confirmAccount`;
+    static readonly API_FORGET_PASSWORD_PATH = `${environment.baseURL}/api/auth/forgotPassword`;
+    static readonly API_RESET_PASSWORD_PATH = `${environment.baseURL}/api/auth/resetPassword`;
+    static readonly API_LOGIN_BASE_PATH = `${environment.baseURL}/api/auth/login`;
 
     isRefreshing = false;
 
-    constructor(private http: HttpClient, private jwtHelper: JwtHelper) {
+    constructor(private http: HttpClient, private jwtHelper: JwtHelper) { }
+
+    // Create a user
+    createUser(user) {
+        return this.http.post(AuthenticationService.API_REGISTER_BASE_PATH, user);
     }
 
+    // Confirm the account
+    confirmAccount(token) {
+        return this.http.post(AuthenticationService.API_CONFIRM_ACCOUNT_PATH, token);
+    }
+
+    // Forget Password
+    forgetPassword(email) {
+        return this.http.post(AuthenticationService.API_FORGET_PASSWORD_PATH, email);
+    }
+
+    // Reset Password
+    resetPassword(data) {
+        return this.http.post(AuthenticationService.API_RESET_PASSWORD_PATH, data);
+    }
+
+    // Login User
     login(user) {
         if (!localStorage.getItem(AuthenticationService.USER_DATA_TOKEN)) {
-            const userDataToken = btoa(JSON.stringify({email: user.email, password: user.password}));
+            const userDataToken = btoa(JSON.stringify({
+                email: user.email,
+                password: user.password
+            }));
             localStorage.setItem(AuthenticationService.USER_DATA_TOKEN, userDataToken);
         }
-
         return this.http.post(`${AuthenticationService.API_LOGIN_BASE_PATH}`, user)
-            .map(response => {
-                this.handleLoginSuccess(response);
-                return response;
-            });
-    }
-
-    loginWithBadgeId(badgeId) {
-        return this.http.post(`${AuthenticationService.API_LOGIN_BOSCH_ID_BASE_PATH}`, {'badgeId': badgeId})
-            .map(response => {
-                this.handleLoginSuccess(response);
-                return response;
-            });
-    }
-
-    addUserBadgeId(badgeId) {
-        return this.http.patch(`${UserService.API_USERS_BASE_PATH}`, {'badgeId': badgeId})
             .map(response => {
                 this.handleLoginSuccess(response);
                 return response;
@@ -81,18 +89,14 @@ export class AuthenticationService {
         return token ? this.jwtHelper.decodeToken(token) : null;
     }
 
-    isCurrentUserWithRole(role: Role) {
-        const userDetails = this.getUserDetails();
-        return userDetails ? userDetails.role === Role[role] : true;
-    }
-
-    isAllowedLogin() {
-        const userDetails = this.getUserDetails();
-        return null != userDetails.badgeId && null != userDetails.role;
-    }
-
     private handleLoginSuccess(data) {
         this.storeToken(data.token);
     }
 
+    private mapUsers = res => {
+        return {
+            users: res.items.map(user => new User(user)),
+            count: res.total
+        };
+    };
 }

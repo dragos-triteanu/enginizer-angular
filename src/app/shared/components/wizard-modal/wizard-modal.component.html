@@ -1,13 +1,8 @@
-<app-modal [dismissible]="false" [class.vertical-steps]="verticalSteps">
+<app-modal [dismissible]="dismissible"
+           [class.vertical-steps]="verticalSteps">
     <ng-container modal-header>
         <div class="wizard-title">
             <ng-content select="app-wizard-title"></ng-content>
-            <ng-container *ngFor="let step of steps; let index = index;">
-                <div *ngIf="verticalSteps && index === activeStepIndex"
-                     class="step-title">
-                    <ng-container *ngTemplateOutlet="step.title"></ng-container>
-                </div>
-            </ng-container>
         </div>
     </ng-container>
     <ng-container modal-body>
@@ -33,7 +28,8 @@
                  *ngIf="activeStep">
                 <ng-container *ngFor="let step of steps; let index = index;">
                     <div [hidden]="index !== activeStepIndex">
-                        <ng-container *ngTemplateOutlet="step.content; context: {step: step}"></ng-container>
+                        <ng-container
+                            *ngTemplateOutlet="step.content; context: {step: step}"></ng-container>
                     </div>
                 </ng-container>
             </div>
@@ -43,16 +39,16 @@
         <div class="actions"
              *ngIf="activeStep">
             <button type="button"
-                    *ngIf="isFirstStep"
+                    *ngIf="isFirstStep && !dismissible"
                     class="waves-effect btn-flat back"
                     (click)="onCancelClick()">
-                {{'generic.buttons.close'| translate}}
+                {{'general.actions.close'| translate}}
             </button>
             <button type="button"
                     *ngIf="!isFirstStep && !isStepAfterSubmit"
-                    class="btn btn-primary back"
+                    class="btn btn-default back"
                     (click)="prev()">
-                <i class="material-icons">chevron_left</i> {{'generic.buttons.back'| translate}}
+                <i class="material-icons">chevron_left</i> {{'general.actions.back'| translate}}
             </button>
             <div class="spacer"></div>
             <button *ngIf="!isLastStep && !canStepSave"
@@ -60,26 +56,26 @@
                     type="button"
                     class="btn btn-default next"
                     (click)="next()">
-                {{'generic.buttons.next'| translate}}
+                {{'general.actions.next'| translate}}
                 <i class="material-icons">chevron_right</i>
             </button>
             <button *ngIf="(isLastStep || canStepSave) && !isStepAfterSubmit"
                     type="button"
                     class="btn btn-default next"
                     (click)="finalSubmit()">
-                {{'generic.buttons.save'| translate}}
+                {{'general.actions.save'| translate}}
             </button>
             <button *ngIf="canSkipStep"
                     type="button"
                     class="btn btn-warning next"
                     (click)="skipStep()">
-                {{'generic.buttons.skip'| translate}}
+                {{'general.actions.skip'| translate}}
             </button>
             <button *ngIf="isStepAfterSubmit"
                     type="button"
                     class="btn btn-warning next"
                     (click)="onCancelClick()">
-                {{'generic.buttons.skip'| translate}}
+                {{'general.actions.skip'| translate}}
             </button>
         </div>
     </ng-container>

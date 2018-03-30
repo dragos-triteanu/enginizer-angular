@@ -1,10 +1,29 @@
 <div class="app-listbox">
     <h5 [ngClass]="labelClass" [ngStyle]="labelStyle">{{label}}</h5>
     <p-listbox id="listbox" [options]="items">
-        <ng-template let-record pTemplate="item">
+        <!-- Template for Companies List -->
+        <ng-template let-company pTemplate="item">
             <div class="ui-helper-clearfix">
-                <div [ngClass]="valueClass" [ngStyle]="valueStyle">{{record[displayField]}}</div>
+                <div class="card companies-list__company">
+                    <img class="company__logo" src="{{company.logo}}" alt="">
+                    <div class="company__details">
+                        <p class="company__name">{{company.name}}</p>
+                        <p class="company__motto">"{{company.motto}}"</p>
+                        <p class="company__aditional-details">
+                            {{company.date}}, {{company.associates}} {{'pages.companies.associates' | translate}}
+                        </p>
+                    </div>
+                    <div class="company__actions">
+                        <a href="">
+                            <i class="company__action material-icons">edit</i>
+                        </a>
+                        <a href="">
+                            <i class="company__action company__action--delete material-icons">delete</i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </ng-template>
     </p-listbox>
 </div>
+

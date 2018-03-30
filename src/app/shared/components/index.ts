@@ -7,13 +7,20 @@ export { DisplayLabelComponent } from './display-label/display-label.component';
 export { ListboxComponent } from './listbox/listbox.component';
 export { TreeComponent } from './tree/tree.component';
 export { TextboxComponent } from './textbox/textbox.component';
-export { ReportDownloadFormComponent } from './report-download-form/report-download-form.component';
 export { TooltipComponent } from './tooltip/tooltip.component';
 export { PageStepperComponent, StepperComponent } from './page-stepper/page-stepper.component';
-export { WizardModalComponent, WizardTitleComponent, WizardStepComponent } from './wizard-modal/wizard-modal.component';
+export {
+    WizardModalComponent,
+    WizardTitleComponent,
+    WizardStepComponent
+} from './wizard-modal/wizard-modal.component';
 export { AccordionComponent } from './accordion/accordion.component';
 export { AccordionItemComponent } from './accordion/components/accordion-item/accordion-item.component';
 export { InfoModalComponent } from "./info-modal/info-modal.component";
 export { Error404Component } from '../pages/error404/error404.component';
+export { CardComponent } from './card/card.component';
+export { SidebarComponent } from './sidebar/sidebar.component';
+export { FabComponent } from './fab/fab.component';
+
 
 export * from './form';

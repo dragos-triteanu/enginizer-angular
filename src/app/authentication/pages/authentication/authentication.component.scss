@@ -1,0 +1,156 @@
+@import 'src/styles/main';
+
+:host ::ng-deep {
+    .auth-page {
+        background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../../../../assets/images/auth-background.png"), fixed;
+        background-size: cover;
+        background-position: center;
+        height: $dim-full;
+        overflow-y: scroll;
+        position: relative;
+        width: $dim-full;
+    }
+
+    .auth-company__logo {
+        display: block;
+        margin: tripleDim($dim-xl) auto doubleDim($dim-xl);
+        max-width: $dim-2-out-of-4;
+    }
+
+    .auth-company__motto {
+        display: none;
+    }
+
+    .auth-form {
+        margin: $dim-none auto;
+        width: $dim-3-out-of-4;
+    }
+
+    .auth-form--centered {
+        left: 50%;
+        margin: $dim-none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .auth-form__submit {
+        background-color: theme-color('primary', 'base');
+        color: theme-color('background', 'light');
+        letter-spacing: $base-letter-spacing;
+        margin-top: $dim-xs;
+        width: $dim-full;
+
+        &:focus {
+            background-color: theme-color('primary', 'base');
+        }
+    }
+
+    .auth-social {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: doubleDim($dim-xl) auto;
+        width: $dim-3-out-of-4;
+
+        img {
+            margin: $dim-none $dim-xs;
+            height: doubleDim($dim-lg);
+            width: doubleDim($dim-lg);
+        }
+    }
+
+    .forgot-password-text {
+        color: theme-color('background', 'light');
+        margin-top: doubleDim($dim-sm);
+        text-align: center;
+        width: $dim-full;
+    }
+
+    .auth-social__text {
+        color: theme-color('background', 'light');
+        text-align: center;
+        width: $dim-full;
+    }
+
+    .auth-social__link {
+        color: theme-color('accent', 'base');
+    }
+
+    .auth-social-icons {
+        display: flex;
+        width: $dim-full;
+        justify-content: center;
+        margin: $dim-sm $dim-none doubleDim($dim-lg);
+    }
+
+    .auth-social-icons__google {
+        color: theme-color('social', 'google');
+    }
+
+    .auth-social-icons__linkedin {
+        color: theme-color('social', 'google');
+    }
+
+    @media screen and (min-width: 768px) {
+
+        .auth-form {
+            width: $dim-2-out-of-4;
+        }
+
+    }
+
+    @media screen and (min-width: 993px) {
+        .auth-page {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .auth-company {
+            width: $dim-2-out-of-3;
+        }
+
+        .auth-company__logo {
+            margin: $dim-none auto $dim-xl;
+        }
+
+        .auth-company__motto {
+            color: theme-color('background', 'light');
+            display: block;
+            font-size: font-size('lg');
+            text-align: center;
+        }
+
+        .auth-form-container {
+            background-color: theme-color('background', 'light');
+            height: $dim-full;
+            position: fixed;
+            overflow: scroll;
+            right: $dim-none;
+            top: $dim-none;
+            width: $dim-1-out-of-3;
+        }
+
+        .auth-form {
+            margin-top: tripleDim($dim-xl);
+            width: $dim-3-out-of-4;
+        }
+
+        .auth-form--centered {
+            margin: $dim-none;
+        }
+
+
+        .forgot-password-text {
+            color: theme-color('foreground', 'dark');
+        }
+
+        .auth-social__text {
+            color: theme-color('foreground', 'dark');
+            font-weight: font-weight('light');
+        }
+    }
+
+}

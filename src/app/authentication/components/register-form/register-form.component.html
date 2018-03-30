@@ -1,0 +1,80 @@
+<form [formGroup]="registerForm"
+      class="auth-form"
+      (ngSubmit)="onSubmit(registerForm)">
+
+    <app-input
+        [formControl]="registerForm.controls.firstName"
+        [id]="'firstName'"
+        [type]="'text'"
+        label="{{'general.components.form.placeholders.firstName' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <app-input
+        [formControl]="registerForm.controls.lastName"
+        [id]="'lastName'"
+        [type]="'text'"
+        label="{{'general.components.form.placeholders.lastName' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <app-input-datepicker
+        [formControl]="registerForm.controls.dateOfBirth"
+        label="{{'general.components.form.placeholders.birthDate' | translate}}"
+        [showErrors]="showValidations"
+        [placeholder]=" "
+        [stringFormat]="true">
+    </app-input-datepicker>
+
+    <app-input
+        [formControl]="registerForm.controls.email"
+        [id]="'email'"
+        [type]="'email'"
+        label="{{'general.components.form.placeholders.email' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <app-input
+        [formControl]="registerForm.controls.password"
+        [id]="'password'"
+        [type]="'password'"
+        label="{{'general.components.form.placeholders.password' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <app-input
+        [formControl]="registerForm.controls.confirmPassword"
+        [id]="'passwordConfirmation'"
+        [type]="'password'"
+        label="{{'general.components.form.placeholders.passwordConfirmation' | translate}}"
+        [placeholder]=" "
+        [showErrors]="showValidations">
+    </app-input>
+
+    <button
+        type="submit"
+        class="btn-flat waves-effect waves-dark auth-form__submit"
+        [attr.disabled]="loading ? 'true' : null">
+        {{'general.actions.register' | translate}}
+    </button>
+</form>
+
+<div class="auth-social">
+    <p class="auth-social__text">{{'general.components.form.text.loginSocial' | translate}}</p>
+
+    <div class="auth-social-icons">
+        <img src="../../../assets/images/icons/google-plus-box.png" alt="Google Plus"
+             class="auth-social-icons__google">
+        <img src="../../../assets/images/icons/linkedin-box.png" alt="LinkedIn"
+             class="auth-social-icons__linkedin">
+    </div>
+
+    <p class="auth-social__text">{{'general.components.form.text.loginRedirect' | translate}}
+        <a routerLink="/auth/login" class="auth-social__link">{{'general.actions.login' |
+            translate}}</a>
+    </p>
+</div>

@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    baseURL: 'http://atom-env.4uajeap82p.us-east-2.elasticbeanstalk.com',
+    baseURL: 'http://94.177.197.152:8090',
     notificationQueue: 'notificationsPublisher',
     useFakeBackend: true,
     toasts: {

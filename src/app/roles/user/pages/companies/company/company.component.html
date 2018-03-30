@@ -1,0 +1,66 @@
+<div class="navigation navigation--shadow">
+    <div class="nav-content">
+        <ul class="tabs tabs-fixed-width">
+            <li class="tab">
+                <a routerLink="./home"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{exact: true}">
+                    {{'general.components.navigation.tabs.home' | translate}}
+                </a>
+            </li>
+            <li class="tab">
+                <a routerLink="./tax-info"
+                   routerLinkActive="active">
+                    {{'general.components.navigation.tabs.taxInfo' | translate}}
+                </a>
+            </li>
+            <li class="tab">
+                <a routerLink="./associates"
+                   routerLinkActive="active">
+                    {{'general.components.navigation.tabs.associates' | translate}}
+                </a>
+            </li>
+            <li class="tab">
+                <a routerLink="./employees"
+                   routerLinkActive="active">
+                    {{'general.components.navigation.tabs.employees' | translate}}
+                </a>
+            </li>
+            <li class="tab">
+                <a routerLink="./expenses"
+                   routerLinkActive="active">
+                    {{'general.components.navigation.tabs.expenses' | translate}}
+                </a>
+            </li>
+            <li class="tab">
+                <a routerLink="./assets"
+                   routerLinkActive="active">
+                    {{'general.components.navigation.tabs.assets' | translate}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<main>
+    <router-outlet></router-outlet>
+
+    <!--
+    <p>
+        company works!
+    </p>
+    <p>COMPANY WITH {{ company.id }} LOADED</p>
+
+
+    <h4>Nume: Nume Companie</h4>
+    <p>Logo: Logo Img</p>
+    <p>Motto:
+
+        Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on
+        it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical
+        helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store.
+        And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+
+    </p> -->
+</main>
